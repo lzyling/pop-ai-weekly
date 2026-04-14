@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爆爆 AI 周报 · Vol.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #C41230;
+  --ink: #111;
+  --paper: #FAFAF7;
+  --warm-gray: #F0EDE6;
+  --mid-gray: #888;
+  --light-gray: #DDD;
+  --col-gap: 1px solid #CCC;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', Georgia, serif; font-size: 16px; }
+
+/* ─── TOP FLAG ─── */
+.flag-bar {
+  background: var(--red);
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 0;
+}
+
+/* ─── NAMEPLATE ─── */
+.nameplate {
+  padding: 18px 48px 14px;
+  border-bottom: 4px solid var(--ink);
+}
+.nameplate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.nameplate-tagline {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  max-width: 260px;
+  line-height: 1.5;
+}
+.nameplate-title {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+}
+.nameplate-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: var(--ink);
+}
+.nameplate-meta {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  text-align: right;
+  max-width: 260px;
+  line-height: 1.5;
+}
+.nameplate-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  color: var(--mid-gray);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─── LAYOUT ─── */
+.page { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
+
+/* ─── SECTION LABEL ─── */
+.section-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 5px;
+}
+
+/* ─── LEAD STORY ─── */
+.lead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 22px 0;
+}
+.lead-main { padding-right: 32px; border-right: var(--col-gap); }
+.lead-sidebar { padding-left: 32px; }
+
+.lead-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.lead-deck {
+  font-size: 17px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 10px 0;
+}
+.lead-body {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #222;
+}
+.lead-body p + p { margin-top: 10px; }
+
+/* ─── SIDEBAR BRIEFS ─── */
+.brief { padding: 12px 0; border-bottom: 1px solid var(--light-gray); }
+.brief:first-child { padding-top: 0; }
+.brief:last-child { border-bottom: none; }
+.brief-date {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.brief h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+.brief p { font-size: 13.5px; line-height: 1.6; color: #333; }
+
+/* ─── THREE COLUMN ─── */
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--ink);
+}
+.tri { padding: 20px 24px; border-right: var(--col-gap); }
+.tri:first-child { padding-left: 0; }
+.tri:last-child { border-right: none; padding-right: 0; }
+.tri h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  border-top: 2px solid var(--ink);
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+.tri p { font-size: 13.5px; line-height: 1.7; color: #333; }
+.tri .tag {
+  display: inline-block;
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: white;
+  padding: 2px 6px;
+  margin-bottom: 6px;
+}
+.tri .tag.hot { background: var(--red); }
+
+/* ─── QUOTE BAND ─── */
+.quote-band {
+  background: var(--warm-gray);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 18px 0;
+  text-align: center;
+  margin: 0 0;
+}
+.quote-band blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--ink);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.quote-band cite {
+  display: block;
+  font-family: 'Barlow', sans-serif;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--mid-gray);
+  margin-top: 8px;
+  font-style: normal;
+}
+
+/* ─── TWO WIDE SECTIONS ─── */
+.two-wide {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 20px 0;
+}
+.two-wide-main { padding-right: 32px; border-right: var(--col-gap); }
+.two-wide-aside { padding-left: 32px; }
+
+/* ─── ARTICLE ROW ─── */
+.article-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+.article-row:last-child { border-bottom: none; }
+.ar-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: white;
+  padding: 3px 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.ar-label.red { background: var(--red); }
+.article-row h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.article-row p { font-size: 13px; line-height: 1.6; color: #444; }
+
+/* ─── SCOREBOARD ─── */
+.scoreboard {
+  background: var(--ink);
+  color: white;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+.scoreboard h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  color: rgba(255,255,255,0.7);
+}
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+.score-row:last-child { border-bottom: none; }
+.score-rank {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  color: var(--red);
+  font-size: 14px;
+  width: 24px;
+}
+.score-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; flex: 1; padding: 0 8px; }
+.score-elo {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.05em;
+}
+
+/* ─── HARDWARE BOX ─── */
+.hw-box {
+  background: var(--warm-gray);
+  border: 1px solid var(--light-gray);
+  padding: 16px 18px;
+}
+.hw-box h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.hw-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 13.5px;
+}
+.hw-item:last-child { border-bottom: none; }
+.hw-item strong { font-family: 'Playfair Display', serif; font-size: 14.5px; display: block; margin-bottom: 2px; }
+.hw-item span { font-family: 'Barlow', sans-serif; font-size: 11px; color: var(--mid-gray); }
+
+/* ─── TTS TABLE ─── */
+.tts-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tts-table th {
+  font-family: 'Barlow', sans-serif;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: white;
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+.tts-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.tts-table tr:last-child td { border-bottom: none; }
+.tts-table tr:nth-child(even) td { background: var(--warm-gray); }
+.pill {
+  display: inline-block;
+  font-family: 'Barlow', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  background: var(--red);
+  color: white;
+  padding: 1px 5px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* ─── SECTION DIVIDER ─── */
+.divider {
+  border: none;
+  border-top: 3px solid var(--ink);
+  margin: 0;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 0;
+  margin-bottom: 0;
+}
+.section-header h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.section-header-line { flex: 1; height: 1px; background: var(--light-gray); }
+
+/* ─── FOOTER ─── */
+.footer-bar {
+  background: var(--ink);
+  color: rgba(255,255,255,0.6);
+  font-family: 'Barlow', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 48px;
+  margin-top: 0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 680px) {
+  .page { padding: 0 16px; }
+  .nameplate { padding: 12px 16px 10px; }
+  .nameplate-title h1 { font-size: 38px; }
+  .nameplate-top { flex-direction: column; gap: 6px; text-align: center; }
+  .nameplate-tagline, .nameplate-meta { max-width: 100%; text-align: center; }
+  .lead, .three-col, .two-wide { grid-template-columns: 1fr; }
+  .lead-main { padding-right: 0; border-right: none; border-bottom: 1px solid var(--light-gray); padding-bottom: 16px; margin-bottom: 16px; }
+  .lead-sidebar { padding-left: 0; }
+  .tri { padding: 16px 0; border-right: none; border-bottom: var(--col-gap); }
+  .tri:last-child { border-bottom: none; }
+  .two-wide-main { padding-right: 0; border-right: none; border-bottom: 1px solid var(--light-gray); padding-bottom: 16px; margin-bottom: 16px; }
+  .two-wide-aside { padding-left: 0; }
+  .footer-bar { flex-direction: column; gap: 4px; padding: 12px 16px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP FLAG -->
+<div class="flag-bar">📡 爆爆 AI 周报 — 本地部署 · 开源前沿 · 仅关注可落地模型</div>
+
+<!-- NAMEPLATE -->
+<div class="nameplate">
+  <div class="nameplate-top">
+    <div class="nameplate-tagline">本地部署 · 开源模型<br>视频生成 · 语音合成</div>
+    <div class="nameplate-title">
+      <h1>爆爆 AI 周报</h1>
+    </div>
+    <div class="nameplate-meta">Vol.1 · 第 1 期<br>2026年4月14日</div>
+  </div>
+  <div class="nameplate-bottom">
+    <span>每周一早 09:00 推送</span>
+    <span>专注可在 MBP M5 Max 本地运行的模型</span>
+    <span>覆盖：LLM · 视频 · TTS</span>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- LEAD STORY -->
+  <hr class="divider">
+  <div class="section-header"><h2>🧠 本周头条 · 语言模型</h2><div class="section-header-line"></div></div>
+
+  <div class="lead">
+    <div class="lead-main">
+      <div class="section-label">大模型爆发周</div>
+      <h2 class="lead-headline">四大巨头一周内集中开源，本地部署门槛再破历史低点</h2>
+      <p class="lead-deck">Qwen 3、Gemma 4、Llama 4、GLM-5.1 密集亮相，开源模型综合能力首次全面追平 GPT-4o。MBP M5 Max 128GB 迎来运行旗舰级模型的最佳时机。</p>
+      <div class="lead-body">
+        <p><strong>Gemma 4（Google · Apr 6）</strong>是本周最适合 M5 Max 立即部署的选择。Apache 2.0 协议，31B 版本仅需约 14GB 内存，Metal 加速实测 85 tokens/s，256K 超长上下文，多模态图文双输入——性能/体积比为目前开源之最。</p>
+        <p><strong>Qwen 3（阿里 · Apr 8）</strong>全系发布，从 0.6B 到 235B MoE 全线 Apache 2.0。72B Q4 版约 44GB，235B MoE 激活参数仅 22B，中文理解与代码能力双料第一，是中文场景的无脑首选。</p>
+        <p><strong>Llama 4 Scout（Meta · Apr 5）</strong>以 10M token 超长上下文震撼登场，Q4 量化约 24GB，整本书、完整代码库一口吞入，长文档处理划时代。</p>
+      </div>
+    </div>
+    <div class="lead-sidebar">
+      <div class="section-label" style="margin-bottom:12px;">本周其他发布</div>
+      <div class="brief">
+        <div class="brief-date">Apr 初 · 智谱</div>
+        <h3>GLM-5.1 — 编程全球第一</h3>
+        <p>744B MoE，MIT 协议，SWE-Bench Pro 排行榜 #1，超越所有闭源模型。多卡运行，个人用户暂时门槛较高。</p>
+      </div>
+      <div class="brief">
+        <div class="brief-date">Apr 7 · Cohere</div>
+        <h3>Command A — 11B 激活高效推理</h3>
+        <p>111B MoE，CC-BY-NC，Q4 约 18GB，企业合规场景友好，适合 RAG/Agent 应用。</p>
+      </div>
+      <div class="brief">
+        <div class="brief-date">Apr 3 · Ai2</div>
+        <h3>OLMo 2 32B — 学术全开放</h3>
+        <p>Apache 2.0，32B 稠密，Q4 约 20GB，权重/训练代码/数据集全部开放，学术研究首选。</p>
+      </div>
+      <div class="brief">
+        <div class="brief-date">Apr 9 · Google</div>
+        <h3>Gemma 3n — 端侧极轻量</h3>
+        <p>2B/4B 超轻量，手机级设备可运行，比 Gemma 4 更省资源，适合边缘部署场景。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE BAND -->
+  <div class="quote-band">
+    <blockquote>「开源模型综合能力首次全面追平闭源旗舰——本地部署的成本优势，从此无可辩驳。」</blockquote>
+    <cite>— 爆爆观察 · 2026年4月</cite>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <hr class="divider">
+  <div class="section-header"><h2>🎬 视频 · 图像生成</h2><div class="section-header-line"></div></div>
+
+  <div class="three-col">
+    <div class="tri">
+      <span class="tag hot">🏆 双榜冠军</span>
+      <h3>Happy Horse 1.0<br>开源视频全球第一</h3>
+      <p>Artificial Analysis 排行榜文字转视频 Elo 1333、图转视频 Elo 1392，领先第二名逾 50 分。<strong>核心杀手锏</strong>：同步输出视频+音效，完全开源可本地部署。身份神秘，疑似与阿里 Wan 系列有技术关联。</p>
+    </div>
+    <div class="tri">
+      <span class="tag hot">NEW · Apr 1-3</span>
+      <h3>Wan 2.7 系列<br>全模态视频生成</h3>
+      <p>阿里巴巴发布。<strong>Wan2.7-Image</strong>（4月1日）主攻"活人感"人物与精准色彩控制；<strong>Wan2.7-Video</strong>（4月3日）支持文本/图像/视频/音频全模态输入，覆盖生成、编辑、续写、参考全链路。</p>
+    </div>
+    <div class="tri">
+      <span class="tag">Apr 2026</span>
+      <h3>SkyReels V4<br>国产登顶全球榜</h3>
+      <p>2026年春季国产视频模型首次占据 Artificial Analysis 全球第一。"四位一体"：多模态参考、音视频同步、运动流畅、高提示词遵循度。目前为 API 形式，持续关注开源进展。</p>
+    </div>
+  </div>
+
+  <!-- TTS + HW SECTION -->
+  <hr class="divider">
+  <div class="section-header"><h2>🎙️ TTS 语音合成</h2><div class="section-header-line"></div></div>
+
+  <div class="two-wide">
+    <div class="two-wide-main">
+      <table class="tts-table">
+        <thead>
+          <tr>
+            <th>模型</th>
+            <th>发布方</th>
+            <th>亮点</th>
+            <th>本地可用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mistral TTS</strong><br><span style="font-size:11px;color:#888;">Mar 26</span></td>
+            <td>Mistral AI</td>
+            <td>5秒克隆声音，捕捉口音/语调/语流，直撼 ElevenLabs。企业级开源。</td>
+            <td><span class="pill">✅ 开源</span></td>
+          </tr>
+          <tr>
+            <td><strong>CosyVoice2-0.5B</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
+            <td>阿里</td>
+            <td>超低延迟流式输出，0.5B 极轻量，中文表现优秀，本地跑毫无压力。</td>
+            <td><span class="pill">✅ 开源</span></td>
+          </tr>
+          <tr>
+            <td><strong>Fish Speech V1.5</strong></td>
+            <td>Fish Audio</td>
+            <td>业界音质最佳，多语言零样本克隆，支持情感控制。</td>
+            <td><span class="pill">✅ 开源</span></td>
+          </tr>
+          <tr>
+            <td><strong>FishAudio S1</strong><br><span style="font-size:11px;color:#888;">4B</span></td>
+            <td>Fish Audio</td>
+            <td>情绪表现力最强，适合需要情感丰富语音的创作场景。</td>
+            <td><span class="pill">✅ 开源</span></td>
+          </tr>
+          <tr>
+            <td><strong>IndexTTS-2</strong></td>
+            <td>IndexTeam</td>
+            <td>精准时长控制，视频配音专项，解决 AI 配音口型不同步难题。</td>
+            <td><span class="pill">✅ 开源</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="two-wide-aside">
+      <div class="scoreboard">
+        <h3>🎬 视频模型排行榜（Artificial Analysis）</h3>
+        <div class="score-row"><span class="score-rank">01</span><span class="score-name">Happy Horse 1.0</span><span class="score-elo">Elo 1392</span></div>
+        <div class="score-row"><span class="score-rank">02</span><span class="score-name">SkyReels V4</span><span class="score-elo">—</span></div>
+        <div class="score-row"><span class="score-rank">03</span><span class="score-name">Seedance 2.0</span><span class="score-elo">—</span></div>
+        <div class="score-row"><span class="score-rank">04</span><span class="score-name">Kling 2.0</span><span class="score-elo">—</span></div>
+        <div class="score-row"><span class="score-rank">05</span><span class="score-name">Veo 3.1</span><span class="score-elo">—</span></div>
+      </div>
+      <div class="hw-box">
+        <h3>💻 M5 Max 本周部署首选</h3>
+        <div class="hw-item">
+          <strong>Gemma 4 26B</strong>
+          <span>~16GB Q4 · 立刻部署 · 通用最佳</span>
+        </div>
+        <div class="hw-item">
+          <strong>Qwen 3 14B</strong>
+          <span>~8.4GB Q4 · 中文首选 · 超快</span>
+        </div>
+        <div class="hw-item">
+          <strong>Llama 4 Scout</strong>
+          <span>~24GB Q4 · 10M 上下文 · 长文档专用</span>
+        </div>
+        <div class="hw-item">
+          <strong>CosyVoice2-0.5B</strong>
+          <span>极轻量 · TTS 本地首选</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<!-- FOOTER -->
+<div class="footer-bar">
+  <span>爆爆 AI 周报 Vol.1</span>
+  <span>仅收录本地可部署开源模型 · 7天内信息为主</span>
+  <span>2026.04.14 · 每周一 09:00 自动推送</span>
+</div>
+
+</body>
+</html>
