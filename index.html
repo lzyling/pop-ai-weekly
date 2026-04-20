@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>爆爆 AI 周报 · Vol.1</title>
+<title>爆爆 AI 周报 · Vol.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -361,6 +361,7 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
   border-radius: 2px;
   letter-spacing: 0.05em;
 }
+.pill.gray { background: var(--mid-gray); }
 
 /* ─── SECTION DIVIDER ─── */
 .divider {
@@ -430,7 +431,7 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
     <div class="nameplate-title">
       <h1>爆爆 AI 周报</h1>
     </div>
-    <div class="nameplate-meta">Vol.1 · 第 1 期<br>2026年4月14日</div>
+    <div class="nameplate-meta">Vol.2 · 第 2 期<br>2026年4月20日</div>
   </div>
   <div class="nameplate-bottom">
     <span>每周一早 09:00 推送</span>
@@ -441,50 +442,50 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
 
 <div class="page">
 
-  <!-- LEAD STORY -->
+  <!-- LEAD STORY: LLM -->
   <hr class="divider">
   <div class="section-header"><h2>🧠 本周头条 · 语言模型</h2><div class="section-header-line"></div></div>
 
   <div class="lead">
     <div class="lead-main">
-      <div class="section-label">大模型爆发周</div>
-      <h2 class="lead-headline">四大巨头一周内集中开源，本地部署门槛再破历史低点</h2>
-      <p class="lead-deck">Qwen 3、Gemma 4、Llama 4、GLM-5.1 密集亮相，开源模型综合能力首次全面追平 GPT-4o。MBP M5 Max 128GB 迎来运行旗舰级模型的最佳时机。</p>
+      <div class="section-label">消化周 · 社区爆发</div>
+      <h2 class="lead-headline">Gemma 4 突破 200 万下载，Qwen 3.6 开源箭在弦上</h2>
+      <p class="lead-deck">上周大爆发后，本周开源 LLM 社区进入"消化期"——Gemma 4 强势扩散，Qwen 3.6 中型号宣布即将开源，MBP M5 Max 本地玩家迎来最佳实践窗口。</p>
       <div class="lead-body">
-        <p><strong>Gemma 4（Google · Apr 6）</strong>是本周最适合 M5 Max 立即部署的选择。Apache 2.0 协议，31B 版本仅需约 14GB 内存，Metal 加速实测 85 tokens/s，256K 超长上下文，多模态图文双输入——性能/体积比为目前开源之最。</p>
-        <p><strong>Qwen 3（阿里 · Apr 8）</strong>全系发布，从 0.6B 到 235B MoE 全线 Apache 2.0。72B Q4 版约 44GB，235B MoE 激活参数仅 22B，中文理解与代码能力双料第一，是中文场景的无脑首选。</p>
-        <p><strong>Llama 4 Scout（Meta · Apr 5）</strong>以 10M token 超长上下文震撼登场，Q4 量化约 24GB，整本书、完整代码库一口吞入，长文档处理划时代。</p>
+        <p><strong>Gemma 4（Google · Apr 2）⚠️</strong>本周 Hugging Face 下载量突破 200 万，成为史上最快达到该里程碑的开源模型。Latent.Space 社区调查显示，31B 版本在 MBP M5 Max 上以约 80+ tokens/s 运行，本地通用任务综合体验登顶 2026 年开源榜。通过 Ollama、LM Studio、Unsloth 均可一键部署。</p>
+        <p><strong>Qwen 3.6（阿里 · 即将开源）</strong>官方 GitHub 已建仓（QwenLM/Qwen3.6），明确支持 MLX Apple Silicon 本地部署。中等参数量版本将率先开放，1M 超长上下文 + 强代码能力，Apple Silicon 玩家重点关注。</p>
+        <p><strong>GLM-5.1（智谱 · 早四月）⚠️</strong>744B MoE、MIT 协议，SWE-Bench Pro 编程基准全球第一，超越所有闭源模型。单机需多卡，暂时个人门槛较高，但编程自动化场景革命性意义不可忽视。</p>
       </div>
     </div>
     <div class="lead-sidebar">
-      <div class="section-label" style="margin-bottom:12px;">本周其他发布</div>
+      <div class="section-label" style="margin-bottom:12px;">本周周边动态</div>
       <div class="brief">
-        <div class="brief-date">Apr 初 · 智谱</div>
-        <h3>GLM-5.1 — 编程全球第一</h3>
-        <p>744B MoE，MIT 协议，SWE-Bench Pro 排行榜 #1，超越所有闭源模型。多卡运行，个人用户暂时门槛较高。</p>
+        <div class="brief-date">Apr 29 即将 · Meta</div>
+        <h3>LlamaCon — 下一代 Llama 揭幕</h3>
+        <p>Meta 官方年度大会，4月29日举行。社区预期将发布 Llama 4 Behemoth 和 Scout 更新，以及 1B/3B 轻量 on-device 系列。M5 Max 玩家请关注。</p>
       </div>
       <div class="brief">
-        <div class="brief-date">Apr 7 · Cohere</div>
-        <h3>Command A — 11B 激活高效推理</h3>
-        <p>111B MoE，CC-BY-NC，Q4 约 18GB，企业合规场景友好，适合 RAG/Agent 应用。</p>
+        <div class="brief-date">持续 · 本周</div>
+        <h3>Llama 4 Scout 社区实测：M5 Max 128GB 最优方案</h3>
+        <p>社区确认：Scout Q4 量化约 24GB，10M token 上下文实测通过，速度 ~50 tokens/s。长文档/整代码库一次性分析，目前无可替代。</p>
       </div>
       <div class="brief">
-        <div class="brief-date">Apr 3 · Ai2</div>
-        <h3>OLMo 2 32B — 学术全开放</h3>
-        <p>Apache 2.0，32B 稠密，Q4 约 20GB，权重/训练代码/数据集全部开放，学术研究首选。</p>
+        <div class="brief-date">Apr 初 · OpenAI</div>
+        <h3>gpt-oss-120b — 闭源巨头意外开放</h3>
+        <p>OpenAI 悄然开源 120B MoE 模型（MIT 协议），117B 总参数仅 5.1B 激活，极低推理成本。消息属实则为重磅，关注后续 HuggingFace 验证。</p>
       </div>
       <div class="brief">
-        <div class="brief-date">Apr 9 · Google</div>
-        <h3>Gemma 3n — 端侧极轻量</h3>
-        <p>2B/4B 超轻量，手机级设备可运行，比 Gemma 4 更省资源，适合边缘部署场景。</p>
+        <div class="brief-date">持续 · 2026年</div>
+        <h3>Mistral Small 4 — 6.5B 激活高效率</h3>
+        <p>Apache 2.0，119B MoE，激活仅 6.5B，Q4 约 18GB，速度极快。代码/RAG 任务性价比当前最高，是 M5 Max 日常高频场景理想选择。</p>
       </div>
     </div>
   </div>
 
   <!-- QUOTE BAND -->
   <div class="quote-band">
-    <blockquote>「开源模型综合能力首次全面追平闭源旗舰——本地部署的成本优势，从此无可辩驳。」</blockquote>
-    <cite>— 爆爆观察 · 2026年4月</cite>
+    <blockquote>「Qwen 3.6 官方 repo 已支持 MLX Apple Silicon——M5 Max 128GB 将是本轮最强开源模型的最佳归宿。」</blockquote>
+    <cite>— 爆爆观察 · 2026年4月20日</cite>
   </div>
 
   <!-- VIDEO SECTION -->
@@ -493,19 +494,19 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
 
   <div class="three-col">
     <div class="tri">
-      <span class="tag hot">🏆 双榜冠军</span>
-      <h3>Happy Horse 1.0<br>开源视频全球第一</h3>
-      <p>Artificial Analysis 排行榜文字转视频 Elo 1333、图转视频 Elo 1392，领先第二名逾 50 分。<strong>核心杀手锏</strong>：同步输出视频+音效，完全开源可本地部署。身份神秘，疑似与阿里 Wan 系列有技术关联。</p>
+      <span class="tag hot">NEW · Apr 2026</span>
+      <h3>Veo 3.1 Lite<br>Google 降本视频新选择</h3>
+      <p>Google 本周发布 Veo 3.1 Lite，定位为"最具成本效益的视频生成模型"，通过 Google AI Studio 和 Vertex AI 提供 API 访问。云端闭源，但标志视频生成进入平民化阶段。<strong>本地替代</strong>仍推荐 Wan 2.1 系列。</p>
     </div>
     <div class="tri">
-      <span class="tag hot">NEW · Apr 1-3</span>
-      <h3>Wan 2.7 系列<br>全模态视频生成</h3>
-      <p>阿里巴巴发布。<strong>Wan2.7-Image</strong>（4月1日）主攻"活人感"人物与精准色彩控制；<strong>Wan2.7-Video</strong>（4月3日）支持文本/图像/视频/音频全模态输入，覆盖生成、编辑、续写、参考全链路。</p>
+      <span class="tag hot">🏆 开源首选</span>
+      <h3>Wan 2.1-VACE<br>视频全链路创作神器</h3>
+      <p>阿里巴巴开源视频领域最强全能工具。<strong>VACE</strong>（Video All-in-one Creation and Editing）支持生成、编辑、续写、参考风格控制，一个模型覆盖完整视频制作链路。ComfyUI 原生支持，HuggingFace/GitHub 免费下载。M5 Max 128GB 可流畅运行 14B 版。</p>
     </div>
     <div class="tri">
-      <span class="tag">Apr 2026</span>
-      <h3>SkyReels V4<br>国产登顶全球榜</h3>
-      <p>2026年春季国产视频模型首次占据 Artificial Analysis 全球第一。"四位一体"：多模态参考、音视频同步、运动流畅、高提示词遵循度。目前为 API 形式，持续关注开源进展。</p>
+      <span class="tag">⚠️ 7天外 · 持续热议</span>
+      <h3>Happy Horse 1.0<br>开源视频榜双冠</h3>
+      <p>Artificial Analysis 文字转视频 Elo 1333、图转视频 Elo 1392，仍稳居全球榜首。核心优势：生成视频同步输出音效，完全开源可本地部署。身份神秘，技术疑似源自阿里/字节系，社区持续挖掘。</p>
     </div>
   </div>
 
@@ -515,76 +516,120 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
 
   <div class="two-wide">
     <div class="two-wide-main">
+
+      <!-- 本周 TTS 头条 -->
+      <div style="padding-bottom:16px; border-bottom: 1px solid var(--light-gray); margin-bottom:16px;">
+        <div class="section-label">本周头条 · Apr 15</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; line-height:1.2; margin-bottom:8px;">
+          Gemini 3.1 Flash TTS — 200+ 音频标签定义表达力新标准
+        </h3>
+        <p style="font-size:14px; line-height:1.75; color:#333;">
+          Google 于 4 月 15 日正式推出 Gemini 3.1 Flash TTS，30 种预置声音、70+ 语言支持，最大亮点是可通过<strong>自然语言 audio tag</strong>精细控制语速、停顿、情绪、场景语境，已部署至 Google AI Studio 和 Vertex AI。<strong>注意：云端 API，暂无开源版本</strong>，但其设计理念（用描述性语言驱动声音表现力）正在被开源社区快速跟进。可作为对比基准参考。
+        </p>
+      </div>
+
+      <!-- 开源 TTS 表格 -->
       <table class="tts-table">
         <thead>
           <tr>
-            <th>模型</th>
+            <th>开源模型</th>
             <th>发布方</th>
             <th>亮点</th>
-            <th>本地可用</th>
+            <th>M5 Max 适配</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Mistral TTS</strong><br><span style="font-size:11px;color:#888;">Mar 26</span></td>
-            <td>Mistral AI</td>
-            <td>5秒克隆声音，捕捉口音/语调/语流，直撼 ElevenLabs。企业级开源。</td>
-            <td><span class="pill">✅ 开源</span></td>
+            <td><strong>Qwen3-TTS</strong><br><span style="font-size:11px;color:#888;">⚠️ Jan 2026</span></td>
+            <td>阿里云 Qwen</td>
+            <td>3秒语音克隆，97ms 延迟流式输出，1.7B/0.6B 两档，支持 10 种语言，VoiceDesign 可用文本描述定制声音风格。</td>
+            <td><span class="pill">✅ 推荐</span></td>
+          </tr>
+          <tr>
+            <td><strong>Fish Speech V1.5</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
+            <td>Fish Audio</td>
+            <td>多语言零样本克隆，音质业界标杆，情感控制自然，中文支持优秀。</td>
+            <td><span class="pill">✅ 推荐</span></td>
+          </tr>
+          <tr>
+            <td><strong>FishAudio S1</strong><br><span style="font-size:11px;color:#888;">4B 旗舰</span></td>
+            <td>Fish Audio</td>
+            <td>情绪表达力最强，适合有声书、情感配音等创作场景，本地可运行。</td>
+            <td><span class="pill">✅ 推荐</span></td>
           </tr>
           <tr>
             <td><strong>CosyVoice2-0.5B</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
             <td>阿里</td>
-            <td>超低延迟流式输出，0.5B 极轻量，中文表现优秀，本地跑毫无压力。</td>
-            <td><span class="pill">✅ 开源</span></td>
+            <td>极轻量，超低延迟流式，中文最流畅，本地运行几乎零负担。</td>
+            <td><span class="pill">✅ 首选</span></td>
           </tr>
           <tr>
-            <td><strong>Fish Speech V1.5</strong></td>
-            <td>Fish Audio</td>
-            <td>业界音质最佳，多语言零样本克隆，支持情感控制。</td>
-            <td><span class="pill">✅ 开源</span></td>
-          </tr>
-          <tr>
-            <td><strong>FishAudio S1</strong><br><span style="font-size:11px;color:#888;">4B</span></td>
-            <td>Fish Audio</td>
-            <td>情绪表现力最强，适合需要情感丰富语音的创作场景。</td>
-            <td><span class="pill">✅ 开源</span></td>
-          </tr>
-          <tr>
-            <td><strong>IndexTTS-2</strong></td>
+            <td><strong>IndexTTS-2</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
             <td>IndexTeam</td>
-            <td>精准时长控制，视频配音专项，解决 AI 配音口型不同步难题。</td>
-            <td><span class="pill">✅ 开源</span></td>
+            <td>精准时长控制，解决 AI 配音口型不同步痛点，视频制作专项利器。</td>
+            <td><span class="pill">✅ 推荐</span></td>
+          </tr>
+          <tr>
+            <td><strong>Mistral TTS</strong><br><span style="font-size:11px;color:#888;">⚠️ Mar 26</span></td>
+            <td>Mistral AI</td>
+            <td>5秒克隆，捕捉口音/语调/语流，直撼 ElevenLabs。企业级开源方案。</td>
+            <td><span class="pill">✅ 可用</span></td>
           </tr>
         </tbody>
       </table>
     </div>
+
     <div class="two-wide-aside">
       <div class="scoreboard">
-        <h3>🎬 视频模型排行榜（Artificial Analysis）</h3>
-        <div class="score-row"><span class="score-rank">01</span><span class="score-name">Happy Horse 1.0</span><span class="score-elo">Elo 1392</span></div>
-        <div class="score-row"><span class="score-rank">02</span><span class="score-name">SkyReels V4</span><span class="score-elo">—</span></div>
-        <div class="score-row"><span class="score-rank">03</span><span class="score-name">Seedance 2.0</span><span class="score-elo">—</span></div>
-        <div class="score-row"><span class="score-rank">04</span><span class="score-name">Kling 2.0</span><span class="score-elo">—</span></div>
-        <div class="score-row"><span class="score-rank">05</span><span class="score-name">Veo 3.1</span><span class="score-elo">—</span></div>
+        <h3>🏆 本周本地 LLM 社区热度榜</h3>
+        <div class="score-row"><span class="score-rank">01</span><span class="score-name">Qwen 3.5 全系</span><span class="score-elo">最广泛推荐</span></div>
+        <div class="score-row"><span class="score-rank">02</span><span class="score-name">Gemma 4 31B</span><span class="score-elo">200万下载</span></div>
+        <div class="score-row"><span class="score-rank">03</span><span class="score-name">GLM-5 / GLM-4.7</span><span class="score-elo">综合榜前列</span></div>
+        <div class="score-row"><span class="score-rank">04</span><span class="score-name">MiniMax M2.7</span><span class="score-elo">Agent 专项</span></div>
+        <div class="score-row"><span class="score-rank">05</span><span class="score-name">DeepSeek V3.2</span><span class="score-elo">开源通用强</span></div>
       </div>
       <div class="hw-box">
-        <h3>💻 M5 Max 本周部署首选</h3>
+        <h3>💻 M5 Max 128GB 本周部署方案</h3>
         <div class="hw-item">
-          <strong>Gemma 4 26B</strong>
-          <span>~16GB Q4 · 立刻部署 · 通用最佳</span>
+          <strong>Gemma 4 31B · 通用首选</strong>
+          <span>~18GB Q4 · Ollama 一键 · 85 tok/s</span>
         </div>
         <div class="hw-item">
-          <strong>Qwen 3 14B</strong>
-          <span>~8.4GB Q4 · 中文首选 · 超快</span>
+          <strong>Llama 4 Scout · 长文档专用</strong>
+          <span>~24GB Q4 · 10M ctx · ~50 tok/s</span>
         </div>
         <div class="hw-item">
-          <strong>Llama 4 Scout</strong>
-          <span>~24GB Q4 · 10M 上下文 · 长文档专用</span>
+          <strong>Mistral Small 4 · 高频轻任务</strong>
+          <span>~18GB Q4 · 速度最快 · RAG 最优</span>
         </div>
         <div class="hw-item">
-          <strong>CosyVoice2-0.5B</strong>
-          <span>极轻量 · TTS 本地首选</span>
+          <strong>Wan 2.1-VACE 14B · 视频创作</strong>
+          <span>ComfyUI · 128GB 全量运行</span>
         </div>
+        <div class="hw-item">
+          <strong>CosyVoice2-0.5B · TTS</strong>
+          <span>极轻量 · 中文最佳 · 实时流式</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPCOMING -->
+  <hr class="divider">
+  <div class="section-header"><h2>📅 下周预告</h2><div class="section-header-line"></div></div>
+  <div style="padding: 16px 0 20px; border-bottom: 1px solid var(--ink);">
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
+      <div style="padding-right:24px; border-right: var(--col-gap);">
+        <div class="section-label">Apr 29 · Meta</div>
+        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>LlamaCon 2026</strong>：Meta 年度发布会，预期 Llama 4 Behemoth（旗舰）、Scout 更新、1B/3B 轻量端侧模型亮相。开源 LLM 年度最大事件之一，重点关注 Apple Silicon 支持情况。</p>
+      </div>
+      <div style="padding: 0 24px; border-right: var(--col-gap);">
+        <div class="section-label">即将 · 阿里</div>
+        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>Qwen 3.6 中型号开源</strong>：官方已在 GitHub 建仓，明确支持 MLX Apple Silicon，开源时间窗口极近。M5 Max 用户提前关注 QwenLM/Qwen3.6 仓库动态。</p>
+      </div>
+      <div style="padding-left:24px;">
+        <div class="section-label">持续 · 视频赛道</div>
+        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>Wan 2.x 新版本</strong>：阿里视频系列迭代节奏加快，VACE 之后预期将有 Wan 2.2 或专项能力版本落地。同时关注 Happy Horse 开发团队是否公布技术细节。</p>
       </div>
     </div>
   </div>
@@ -593,9 +638,9 @@ body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', 
 
 <!-- FOOTER -->
 <div class="footer-bar">
-  <span>爆爆 AI 周报 Vol.1</span>
-  <span>仅收录本地可部署开源模型 · 7天内信息为主</span>
-  <span>2026.04.14 · 每周一 09:00 自动推送</span>
+  <span>爆爆 AI 周报 Vol.2</span>
+  <span>仅收录本地可部署开源模型 · ⚠️ 标注表示发布超过7天 · 7天内信息为主</span>
+  <span>2026.04.20 · 每周一 09:00 自动推送</span>
 </div>
 
 </body>
