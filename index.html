@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.1 · 2026年4月21日</title>
+    <title>爆爆 AI 周报 Vol.2 · 2026年4月22日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
         
@@ -207,13 +207,24 @@
             font-weight: 700;
         }
         
-        .article .mbp-tag {
+        .article .api-tag {
             display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
+            background: #e3f2fd;
+            color: #1565c0;
             padding: 1px 8px;
             font-size: 0.7rem;
-            border: 1px solid #a5d6a7;
+            border: 1px solid #90caf9;
+            margin-top: 8px;
+            margin-right: 5px;
+        }
+        
+        .article .cloud-tag {
+            display: inline-block;
+            background: #f3e5f5;
+            color: #7b1fa2;
+            padding: 1px 8px;
+            font-size: 0.7rem;
+            border: 1px solid #ce93d8;
             margin-top: 8px;
         }
         
@@ -271,18 +282,18 @@
         <!-- Masthead -->
         <header class="masthead">
             <div class="masthead-title">爆爆 AI 周报</div>
-            <div class="masthead-subtitle">Local AI Deployment Weekly Digest</div>
+            <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 1</span>
-                <span>2026年4月21日 星期二</span>
+                <span>Vol. 2</span>
+                <span>2026年4月22日 星期三</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
         
         <!-- Headline Banner -->
         <div class="headline-banner">
-            <h2>Qwen3.6-35B-A3B 发布 · M5 Max 本地推理实测 · 开源语音克隆新标杆</h2>
-            <div class="date-range">2026年4月14日 — 4月21日</div>
+            <h2>Kimi K2.6 万亿参数开源 · 豆包 2.0 全模态升级 · Claude Opus 4.7 发布</h2>
+            <div class="date-range">2026年4月15日 — 4月22日</div>
         </div>
         
         <!-- LLM Section -->
@@ -293,55 +304,87 @@
         
         <div class="article-grid">
             <div class="article featured">
-                <h4>Qwen3.6-35B-A3B 正式发布</h4>
+                <h4>Moonshot Kimi K2.6：万亿参数 MoE 开源</h4>
+                <div class="meta">
+                    <span class="tag">Moonshot</span>
+                    <span class="date">2026-04-20</span>
+                    <span>Open Weight</span>
+                </div>
+                <p>
+                    Moonshot AI 发布 <span class="highlight">Kimi K2.6</span>，1T 参数 MoE 架构（32B 激活 / 384 专家），256K 上下文，原生多模态。最大亮点是 <span class="highlight">Agent Swarm</span> 架构，支持 300 个子 Agent 并行协调、4000 步长程任务。HLE-Full  agentic 评测 54.0% 超越 GPT-5.4（52.1%）。发布首日即获 vLLM、OpenRouter、Cloudflare Workers AI、MLX 等生态支持。
+                </p>
+                <span class="api-tag">API: api.moonshot.cn</span>
+                <span class="cloud-tag">阿里云 / 腾讯云 / Cloudflare 已上线</span>
+            </div>
+            
+            <div class="article featured">
+                <h4>Claude Opus 4.7：Anthropic 最强编程模型</h4>
+                <div class="meta">
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-04-16</span>
+                    <span>API Available</span>
+                </div>
+                <p>
+                    Anthropic 发布 Claude Opus 4.7，当前最强通用可用模型。软件工程能力显著增强，视觉理解更精准，指令遵循更可靠，长程 Agent 工作稳定性提升。定价维持 $5/$25 per MTok（与 Opus 4.6 相同）。Claude Code 同步更新，新增 /tui 全屏渲染、移动端推送通知、MCP 插件优化等。Sonnet 4 和 Opus 4 正式进入弃用倒计时。
+                </p>
+                <span class="api-tag">API: api.anthropic.com</span>
+                <span class="cloud-tag">Vertex AI / AWS Bedrock 同步上线</span>
+            </div>
+            
+            <div class="article">
+                <h4>豆包大模型 2.0：全模态 + 深度 Agent</h4>
+                <div class="meta">
+                    <span class="tag">火山引擎</span>
+                    <span class="date">2026-04-15</span>
+                    <span>API Available</span>
+                </div>
+                <p>
+                    字节跳动火山引擎发布 <span class="highlight">豆包大模型 2.0</span>（Doubao-Seed-2.0），含 Pro/Lite/Mini/Code 四款。Pro 版视觉推理、空间理解、长视频分析达业界顶尖；HLE-text 54.2 分领跑全球；Code 版深度优化前端与 TRAE 集成。日均 Tokens 使用量已增长超 500 倍。Coding Plan 套餐首月最低 8 元。
+                </p>
+                <span class="api-tag">API: 火山方舟 / Ark</span>
+                <span class="cloud-tag">国内开发者首选</span>
+            </div>
+            
+            <div class="article">
+                <h4>Qwen3.6-35B-A3B：阿里开源 Agent 编程利器</h4>
                 <div class="meta">
                     <span class="tag">Alibaba</span>
                     <span class="date">2026-04-16</span>
                     <span>Apache 2.0</span>
                 </div>
                 <p>
-                    阿里巴巴于4月16日发布 Qwen3.6-35B-A3B，采用 MoE 架构（35B 总参数 / 3B 激活参数）。支持 262K 上下文窗口，可扩展至约 1M  tokens。Q4 量化后仅需 <span class="highlight">20.9 GB</span> 显存，32GB Mac 即可流畅运行。MLX 社区已提供量化版本，但 4bit 版本体积异常（约 90GB），社区正在排查。
+                    阿里巴巴开源 Qwen3.6-35B-A3B，35B 总参数 / 3B 激活的 MoE 模型。Terminal-Bench2.0、NL2Repo、QwenClawBench 等 agentic 评测中超越前代，可与更大密集模型竞争。262K 上下文，支持 OpenClaw、Qwen Code、Claude Code 等 Agent 框架。阿里云 Model Studio 已提供 API。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：可跑全精度 + 多并发</span>
+                <span class="api-tag">API: dashscope-intl.aliyuncs.com</span>
+                <span class="cloud-tag">HuggingFace / ModelScope 开源权重</span>
             </div>
             
             <div class="article">
-                <h4>Apple M5 Neural Accelerator + MLX 实测</h4>
+                <h4>OpenAI GPT-5.4 mini & nano：轻量 Coding 专用</h4>
                 <div class="meta">
-                    <span class="tag">Apple</span>
-                    <span class="date">2026-04-18</span>
-                    <span>MLX Framework</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date warning">2026-03-17 ⚠</span>
+                    <span>API Available</span>
                 </div>
                 <p>
-                    Apple 机器学习团队发布 M5 芯片 MLX 性能基准测试。M5 GPU 中的 Neural Accelerator 在 LLM 推理的首 token 时间上实现 <span class="highlight">最高 4 倍</span> 加速（对比 M4 基线）。24GB 统一内存的 M5 MacBook Pro 已可运行多种架构和规模的模型，为本地 AI 工作站树立新标杆。
+                    GPT-5.4 mini 发布，专为 coding、computer use、多模态理解和子 Agent 优化的高效模型。支持 Responses API 工具调用，适合高并发工作负载。GPT-5.4 主模型（3月5日发布）已合并 Codex 和 GPT-5.2 能力，统一端点即可调用编程与推理能力。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：可运行 70B-class 密集模型</span>
+                <span class="api-tag">API: api.openai.com</span>
+                <span class="cloud-tag">Codex 默认模型</span>
             </div>
             
             <div class="article">
-                <h4>Gemma 4 系列：本地部署新默认</h4>
+                <h4>Google Gemini 3.1 Pro：长上下文推理旗舰</h4>
                 <div class="meta">
                     <span class="tag">Google</span>
-                    <span class="date warning">2026-03-28 ⚠</span>
-                    <span>Apache 2.0</span>
+                    <span class="date warning">2026-02-19 ⚠</span>
+                    <span>API Available</span>
                 </div>
                 <p>
-                    Google Gemma 4 系列（含 26B MoE）成为当前本地部署的"默认推荐"。原生多模态能力，Q4 量化仅需 16GB 内存，所有主流本地推理框架（llama.cpp、MLX、vLLM）首日即支持。适合 16GB 统一内存的入门 Mac 用户。
+                    Gemini 3.1 Pro 持续迭代，4 月 API 更新：Pro 系列移出免费层，仅付费可用；Flash 系列仍免费。新增 Computer Use MCP 支持（3 Pro / 3 Flash），可自主点击、填表、导航 UI。Veo 3.1 和 3.1 Fast 视频模型进入公开预览，原生音频同步生成。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：可并发运行多个实例</span>
-            </div>
-            
-            <div class="article">
-                <h4>MiniMax M2.7：Agentic 工作负载新选择</h4>
-                <div class="meta">
-                    <span class="tag">MiniMax</span>
-                    <span class="date warning">2026-04-08 ⚠</span>
-                    <span>Open Weight</span>
-                </div>
-                <p>
-                    MiniMax M2.7 在工具调用和 Agentic 场景中被社区反复推荐。Q4 量化需 64GB+ 内存，适合重度工具使用场景。在多项 agentic 基准测试中表现接近闭源模型。
-                </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：Q4 量化可跑，留有余量</span>
+                <span class="api-tag">API: ai.google.dev</span>
+                <span class="cloud-tag">Vertex AI / AI Studio</span>
             </div>
         </div>
         
@@ -355,117 +398,125 @@
         
         <div class="article-grid">
             <div class="article featured">
-                <h4>Wan 2.2：首个开源 MoE 视频生成模型</h4>
+                <h4>可灵 Kling 3.0：国产视频生成登顶全球</h4>
+                <div class="meta">
+                    <span class="tag">快手</span>
+                    <span class="date">2026-04-08</span>
+                    <span>API Available</span>
+                </div>
+                <p>
+                    可灵 3.0 被业界评为 2026 年 AI 影视制作分水岭。与 Seedance 2.0、Veo 3.1 同处第一梯队，性价比最优。API 支持文生视频、图生视频、Omni 3.0 视频编辑，模型覆盖 kling-v3 / kling-v2-6 / kling-v3-omni / kling-video-o1。4 月 8 日新增 17 款视频特效。官方 Skill 已支持 OpenClaw、Claude Code、Cursor、Codex 等 Agent 工具直接调用。
+                </p>
+                <span class="api-tag">API: klingai.com/api</span>
+                <span class="cloud-tag">Atlas Cloud / 国内直连</span>
+            </div>
+            
+            <div class="article">
+                <h4>Wan 2.2：开源 MoE 视频生成</h4>
                 <div class="meta">
                     <span class="tag">Alibaba</span>
                     <span class="date warning">2026-04-10 ⚠</span>
                     <span>Open Source</span>
                 </div>
                 <p>
-                    阿里巴巴 Wan-AI 团队发布 Wan 2.2 系列，业界首个采用 MoE 架构的开源视频生成模型。包含 T2V-A14B（文生视频）和 I2V-A14B（图生视频）两个版本，支持 720P/24fps 专业级输出，具备精确的镜头控制（平移、倾斜、轨道、升降）。社区反馈运动一致性和画质较前代 Wan 2.1 显著提升。
+                    阿里 Wan-AI 团队发布 Wan 2.2，业界首个 MoE 架构开源视频生成模型。T2V-A14B 和 I2V-A14B 支持 720P/24fps，具备精确镜头控制（平移、倾斜、轨道、升降）。运动一致性和画质较前代显著提升。Novita AI、Higgsfield 等平台已提供 API 托管。
                 </p>
-                <span class="mbp-tag">⚠️ MBP M5 Max 128GB：14B MoE 可尝试，推荐云端辅助</span>
+                <span class="api-tag">API: Novita / Higgsfield / 自建</span>
+                <span class="cloud-tag">开源可商用</span>
             </div>
             
             <div class="article">
-                <h4>LTX Video 2.3：轻量本地视频首选</h4>
+                <h4>Veo 3.1：Google 视频生成 + 原生音频</h4>
                 <div class="meta">
-                    <span class="tag">Lightricks</span>
-                    <span class="date warning">2026-04-05 ⚠</span>
-                    <span>Open Source</span>
+                    <span class="tag">Google</span>
+                    <span class="date">2026-04-15</span>
+                    <span>API Preview</span>
                 </div>
                 <p>
-                    LTX Video 2.3 发布，支持视频+音频同步生成。16fps 输出，ComfyUI 生态完整支持。作为当前最轻量的开源视频模型之一，适合消费级 GPU 本地部署，是入门 AI 视频生成的最佳起点。
+                    Google Veo 3.1 和 3.1 Fast 进入公开预览，最大亮点是 <span class="highlight">原生音频同步生成</span>——视频画面与环境音效/对话在同一 pass 完成。Sora 2 已于 3 月停止服务，Veo 3.1 成为 OpenAI 生态外最强视频 API 选择。支持 1080p 输出，电影级镜头控制。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：ComfyUI 本地可跑</span>
+                <span class="api-tag">API: Google AI Studio / Vertex AI</span>
+                <span class="cloud-tag">预览版限额开放</span>
             </div>
             
             <div class="article">
-                <h4>GLM-Image & Z-Image-Turbo</h4>
+                <h4>Seedance 2.0：字节跳动视频模型国际版</h4>
                 <div class="meta">
-                    <span class="tag">Zhipu AI</span>
-                    <span class="date warning">2026-03-20 ⚠</span>
-                    <span>Open Source</span>
+                    <span class="tag">ByteDance</span>
+                    <span class="date warning">2026-03-28 ⚠</span>
+                    <span>API Available</span>
                 </div>
                 <p>
-                    智谱 AI 开源 GLM-Image 系列，采用自回归+扩散解码器混合架构。Z-Image-Turbo 版本针对速度优化，Qwen-Image-2512 在多语言图文理解上表现突出。ComfyUI 和 Diffusers 均已适配。
+                    Seedance 2.0 国际 API 通过 Atlas Cloud 等平台开放，直接端点稳定性待确认。与 Kling 3.0 技术同源，角色一致性和多镜头叙事能力突出。适合需要跨平台部署的国际化产品。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：图像生成无压力</span>
-            </div>
-            
-            <div class="article">
-                <h4>FLUX.2 与 Stable Diffusion 生态</h4>
-                <div class="meta">
-                    <span class="tag">Black Forest Labs</span>
-                    <span class="date warning">2026-03-15 ⚠</span>
-                    <span>Open Source</span>
-                </div>
-                <p>
-                    FLUX.2 系列持续领跑开源图像生成质量榜。Modular MAX 推理框架可实现比 torch.compile 快约 4 倍的生成速度。Stable Diffusion 3.5 社区微调模型数量持续增长，LoRA 生态成熟。
-                </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：高速批量生成</span>
+                <span class="api-tag">API: Atlas Cloud / BytePlus</span>
+                <span class="cloud-tag">国际开发者通道</span>
             </div>
         </div>
         
         <div class="divider"></div>
         
-        <!-- TTS Section -->
+        <!-- TTS / Agent Section -->
         <div class="section-header">
-            <h3>🔊 语音合成</h3>
+            <h3>🔊 语音合成 · Agent · 编程助手</h3>
             <div class="section-line"></div>
         </div>
         
         <div class="article-grid">
             <div class="article featured">
-                <h4>Mistral Voxtral TTS：开源语音克隆新标杆</h4>
+                <h4>Mistral Voxtral TTS：开源语音克隆击败 ElevenLabs</h4>
                 <div class="meta">
-                    <span class="tag">Mistral AI</span>
+                    <span class="tag">Mistral</span>
                     <span class="date">2026-03-26</span>
-                    <span>Apache 2.0</span>
+                    <span>API Available</span>
                 </div>
                 <p>
-                    Mistral 于3月26日发布 Voxtral TTS，3B 参数开源权重模型。支持 9 种语言（英/法/德/西/荷/葡/意/印/阿），仅需 <span class="highlight">3 秒</span> 参考音频即可实现零样本语音克隆。H200 上首音频延迟仅 70ms，实时因子约 9.7x。人类偏好测试中击败 ElevenLabs Flash v2.5，与 v3 打成平手。
+                    Mistral 发布 Voxtral TTS，3B 参数开源权重，支持 9 语言（英/法/德/西/荷/葡/意/印/阿）。<span class="highlight">3 秒参考音频</span>即可零样本克隆，H200 首音频延迟 70ms，实时因子 9.7x。人类偏好测试击败 ElevenLabs Flash v2.5，与 v3 持平。Mistral API 已上线，支持流式输出和自定义 voice profile。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：本地实时语音代理无压力</span>
+                <span class="api-tag">API: api.mistral.ai</span>
+                <span class="cloud-tag">Apache 2.0 权重可自托管</span>
             </div>
             
             <div class="article">
-                <h4>Qwen3-TTS：阿里开源语音方案</h4>
+                <h4>OpenAI Codex：从编程到全能 Agent</h4>
                 <div class="meta">
-                    <span class="tag">Alibaba</span>
-                    <span class="date warning">2026-01-15 ⚠</span>
-                    <span>Open Source</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-04-16</span>
+                    <span>Product Update</span>
                 </div>
                 <p>
-                    Qwen3-TTS 年初发布，在中文语音合成场景表现优异。社区 4 个月生产环境实测反馈：在中文有声书、文章朗读场景中稳定性良好，语音克隆质量中等偏上。与 Chatterbox-Turbo 相比，中文韵律更自然。
+                    OpenAI 发布 <span class="highlight">"Codex for (almost) everything"</span>，桌面端从纯编程工具扩展为全能 AI 工作站：原生控制 Mac/Windows、内置浏览器、图像生成、偏好记忆、后台任务队列。90+ 插件生态，支持并行 Agentic 任务执行。Codex Security 同步上线，企业级代码审计。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：中文 TTS 首选</span>
+                <span class="api-tag">Desktop: macOS / Windows</span>
+                <span class="cloud-tag">CLI + IDE 插件全平台</span>
             </div>
             
             <div class="article">
-                <h4>Kokoro：轻量 TTS 质量之王</h4>
+                <h4>Claude Code：TUI 全屏 + 移动端推送</h4>
                 <div class="meta">
-                    <span class="tag">Community</span>
-                    <span class="date warning">2026-02-20 ⚠</span>
-                    <span>Open Source</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-04-16</span>
+                    <span>Product Update</span>
                 </div>
                 <p>
-                    Kokoro 在独立 TTS 基准测试中取得 <span class="highlight">4.5 MOS</span>（最高质量分）和 17% CER（最低字符错误率），超越所有测试的闭源模型。模型体积小巧，推理速度极快，是资源受限场景的首选方案。
+                    Claude Code 4 月重大更新：/tui 全屏渲染模式、移动端推送通知、更干净的 transcript 和焦点控制、MCP 插件监控、Remote Control 支持。配合 Opus 4.7 的 Agent 能力，可实现 5 天不间断自主运维——监控、告警响应、系统操作全闭环。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：轻量并发首选</span>
+                <span class="api-tag">CLI: npm install -g @anthropic-ai/claude-code</span>
+                <span class="cloud-tag">Pro 订阅可用</span>
             </div>
             
             <div class="article">
-                <h4>Fish Audio S2 Pro & Dia2</h4>
+                <h4>Cursor / TRAE：多模型切换成标配</h4>
                 <div class="meta">
-                    <span class="tag">Fish Audio / Community</span>
-                    <span class="date warning">2026-03-10 ⚠</span>
-                    <span>Open Source</span>
+                    <span class="tag">IDE 生态</span>
+                    <span class="date">2026-04-14</span>
+                    <span>Industry Trend</span>
                 </div>
                 <p>
-                    Fish Audio S2 Pro 专注于高质量可控语音生成，支持精细的情感和风格控制。Dia2 在多语言混合朗读场景中表现突出。两者均已集成至主流 TTS 推理框架。
+                    4 月主流 AI 编程工具全面支持多模型切换：Cursor 支持 Claude/GPT/Gemini/自研 Composer 2 及第三方（GLM、Kimi）；TRAE 深度集成豆包 Code 模型。行业进入"协同智能"阶段——不再绑定单一模型，按任务类型自动路由到最优后端。
                 </p>
-                <span class="mbp-tag">✅ MBP M5 Max 128GB：情感控制场景推荐</span>
+                <span class="api-tag">IDE 插件</span>
+                <span class="cloud-tag">模型即服务时代</span>
             </div>
         </div>
         
@@ -473,21 +524,22 @@
         
         <!-- Quick Notes -->
         <div class="section-header">
-            <h3>📋 本周速记</h3>
+            <h3>📋 本周趋势观察</h3>
             <div class="section-line"></div>
         </div>
         
         <div class="article-grid full-width">
             <div class="article">
-                <h4>本地部署趋势观察</h4>
+                <h4>云端优先，API 为王</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-04-21</span>
+                    <span class="date">2026-04-22</span>
                 </div>
                 <p>
-                    <strong>MoE 架构成为主流：</strong> Qwen3.6 和 Wan 2.2 均采用 MoE（混合专家）架构，以更小激活参数实现更大模型能力，显著降低本地部署门槛。32GB 内存已可运行 35B 级 MoE 模型。<br><br>
-                    <strong>M5 Max 128GB 定位清晰：</strong> 当前唯一能流畅运行 70B 密集模型 / 多并发 MoE 模型的笔记本平台。M5 Ultra Mac Studio 推迟至 Q4，M5 Max 成为上半年本地 AI 工作站唯一选择。<br><br>
-                    <strong>开源 TTS 追上闭源：</strong> Voxtral 和 Kokoro 在质量上已与 ElevenLabs 打平甚至超越，本地语音代理生态进入实用阶段。
+                    <strong>MoE 架构统治云端：</strong> Kimi K2.6（1T/32B）、Qwen3.6-35B-A3B（35B/3B）均采用 MoE，以极小激活参数实现超大模型能力，API 成本大幅下降。云端推理效率成为新战场。<br><br>
+                    <strong>Agent Swarm 从概念到产品：</strong> Kimi K2.6 的 300 子 Agent 并行、Claude Code 的 5 天自主运维、OpenAI Codex 的后台任务队列——长程 Agent 不再是 demo，是生产工具。<br><br>
+                    <strong>国产模型 API 竞争力爆发：</strong> 豆包 2.0、Kimi K2.6、可灵 3.0、Qwen3.6 在各自领域达到或超越国际顶尖水平，国内开发者拥有世界级 API 选择。火山方舟、阿里云 Model Studio、Moonshot API 生态日趋成熟。<br><br>
+                    <strong>视频生成进入"可用"阶段：</strong> Kling 3.0 / Veo 3.1 / Wan 2.2 在 720P-1080P 质量、镜头控制、角色一致性上达到商业可用。API 调用 + 后期剪辑的工作流已跑通。
                 </p>
             </div>
         </div>
@@ -495,7 +547,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="pop-brand">🎈 爆爆 POP · Kelven 的私人 AI 秘书</div>
-            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：Hugging Face、GitHub、Reddit r/LocalLLaMA、官方博客</p>
+            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：官方博客、API 文档、开发者社区</p>
             <p style="margin-top: 8px; font-size: 0.75rem;">GitHub: github.com/lzyling/pop-ai-weekly · 在线阅读: lzyling.github.io/pop-ai-weekly/</p>
         </footer>
     </div>
