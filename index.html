@@ -1,647 +1,503 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>爆爆 AI 周报 · Vol.2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --red: #C41230;
-  --ink: #111;
-  --paper: #FAFAF7;
-  --warm-gray: #F0EDE6;
-  --mid-gray: #888;
-  --light-gray: #DDD;
-  --col-gap: 1px solid #CCC;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--paper); color: var(--ink); font-family: 'EB Garamond', Georgia, serif; font-size: 16px; }
-
-/* ─── TOP FLAG ─── */
-.flag-bar {
-  background: var(--red);
-  color: white;
-  font-family: 'Barlow', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 7px 0;
-}
-
-/* ─── NAMEPLATE ─── */
-.nameplate {
-  padding: 18px 48px 14px;
-  border-bottom: 4px solid var(--ink);
-}
-.nameplate-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 8px;
-  margin-bottom: 10px;
-}
-.nameplate-tagline {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--mid-gray);
-  max-width: 260px;
-  line-height: 1.5;
-}
-.nameplate-title {
-  text-align: center;
-  flex: 1;
-  padding: 0 20px;
-}
-.nameplate-title h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 1;
-  color: var(--ink);
-}
-.nameplate-meta {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--mid-gray);
-  text-align: right;
-  max-width: 260px;
-  line-height: 1.5;
-}
-.nameplate-bottom {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  color: var(--mid-gray);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* ─── LAYOUT ─── */
-.page { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
-
-/* ─── SECTION LABEL ─── */
-.section-label {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 5px;
-}
-
-/* ─── LEAD STORY ─── */
-.lead {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-bottom: 1px solid var(--ink);
-  padding: 22px 0;
-}
-.lead-main { padding-right: 32px; border-right: var(--col-gap); }
-.lead-sidebar { padding-left: 32px; }
-
-.lead-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-.lead-deck {
-  font-size: 17px;
-  font-style: italic;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 14px;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
-  padding: 10px 0;
-}
-.lead-body {
-  font-size: 14.5px;
-  line-height: 1.75;
-  color: #222;
-}
-.lead-body p + p { margin-top: 10px; }
-
-/* ─── SIDEBAR BRIEFS ─── */
-.brief { padding: 12px 0; border-bottom: 1px solid var(--light-gray); }
-.brief:first-child { padding-top: 0; }
-.brief:last-child { border-bottom: none; }
-.brief-date {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-.brief h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 5px;
-}
-.brief p { font-size: 13.5px; line-height: 1.6; color: #333; }
-
-/* ─── THREE COLUMN ─── */
-.three-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid var(--ink);
-}
-.tri { padding: 20px 24px; border-right: var(--col-gap); }
-.tri:first-child { padding-left: 0; }
-.tri:last-child { border-right: none; padding-right: 0; }
-.tri h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.25;
-  border-top: 2px solid var(--ink);
-  padding-top: 10px;
-  margin-bottom: 8px;
-}
-.tri p { font-size: 13.5px; line-height: 1.7; color: #333; }
-.tri .tag {
-  display: inline-block;
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--ink);
-  color: white;
-  padding: 2px 6px;
-  margin-bottom: 6px;
-}
-.tri .tag.hot { background: var(--red); }
-
-/* ─── QUOTE BAND ─── */
-.quote-band {
-  background: var(--warm-gray);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-  padding: 18px 0;
-  text-align: center;
-  margin: 0 0;
-}
-.quote-band blockquote {
-  font-family: 'Playfair Display', serif;
-  font-size: 21px;
-  font-style: italic;
-  color: var(--ink);
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-.quote-band cite {
-  display: block;
-  font-family: 'Barlow', sans-serif;
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--mid-gray);
-  margin-top: 8px;
-  font-style: normal;
-}
-
-/* ─── TWO WIDE SECTIONS ─── */
-.two-wide {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 0;
-  border-bottom: 1px solid var(--ink);
-  padding: 20px 0;
-}
-.two-wide-main { padding-right: 32px; border-right: var(--col-gap); }
-.two-wide-aside { padding-left: 32px; }
-
-/* ─── ARTICLE ROW ─── */
-.article-row {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--light-gray);
-}
-.article-row:last-child { border-bottom: none; }
-.ar-label {
-  font-family: 'Barlow', sans-serif;
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: var(--ink);
-  color: white;
-  padding: 3px 6px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-.ar-label.red { background: var(--red); }
-.article-row h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-.article-row p { font-size: 13px; line-height: 1.6; color: #444; }
-
-/* ─── SCOREBOARD ─── */
-.scoreboard {
-  background: var(--ink);
-  color: white;
-  padding: 18px 20px;
-  margin-bottom: 16px;
-}
-.scoreboard h3 {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-  padding-bottom: 8px;
-  margin-bottom: 12px;
-  color: rgba(255,255,255,0.7);
-}
-.score-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  font-size: 13px;
-}
-.score-row:last-child { border-bottom: none; }
-.score-rank {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 700;
-  color: var(--red);
-  font-size: 14px;
-  width: 24px;
-}
-.score-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; flex: 1; padding: 0 8px; }
-.score-elo {
-  font-family: 'Barlow', sans-serif;
-  font-size: 11px;
-  color: rgba(255,255,255,0.6);
-  letter-spacing: 0.05em;
-}
-
-/* ─── HARDWARE BOX ─── */
-.hw-box {
-  background: var(--warm-gray);
-  border: 1px solid var(--light-gray);
-  padding: 16px 18px;
-}
-.hw-box h3 {
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--mid-gray);
-  border-bottom: 1px solid var(--light-gray);
-  padding-bottom: 8px;
-  margin-bottom: 12px;
-}
-.hw-item {
-  padding: 8px 0;
-  border-bottom: 1px solid var(--light-gray);
-  font-size: 13.5px;
-}
-.hw-item:last-child { border-bottom: none; }
-.hw-item strong { font-family: 'Playfair Display', serif; font-size: 14.5px; display: block; margin-bottom: 2px; }
-.hw-item span { font-family: 'Barlow', sans-serif; font-size: 11px; color: var(--mid-gray); }
-
-/* ─── TTS TABLE ─── */
-.tts-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.tts-table th {
-  font-family: 'Barlow', sans-serif;
-  font-size: 9.5px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  background: var(--ink);
-  color: white;
-  padding: 6px 10px;
-  text-align: left;
-  font-weight: 600;
-}
-.tts-table td {
-  padding: 9px 10px;
-  border-bottom: 1px solid var(--light-gray);
-  vertical-align: top;
-  line-height: 1.5;
-}
-.tts-table tr:last-child td { border-bottom: none; }
-.tts-table tr:nth-child(even) td { background: var(--warm-gray); }
-.pill {
-  display: inline-block;
-  font-family: 'Barlow', sans-serif;
-  font-size: 9.5px;
-  font-weight: 700;
-  background: var(--red);
-  color: white;
-  padding: 1px 5px;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-}
-.pill.gray { background: var(--mid-gray); }
-
-/* ─── SECTION DIVIDER ─── */
-.divider {
-  border: none;
-  border-top: 3px solid var(--ink);
-  margin: 0;
-}
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0 0;
-  margin-bottom: 0;
-}
-.section-header h2 {
-  font-family: 'Barlow', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink);
-  white-space: nowrap;
-}
-.section-header-line { flex: 1; height: 1px; background: var(--light-gray); }
-
-/* ─── FOOTER ─── */
-.footer-bar {
-  background: var(--ink);
-  color: rgba(255,255,255,0.6);
-  font-family: 'Barlow', sans-serif;
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 48px;
-  margin-top: 0;
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 680px) {
-  .page { padding: 0 16px; }
-  .nameplate { padding: 12px 16px 10px; }
-  .nameplate-title h1 { font-size: 38px; }
-  .nameplate-top { flex-direction: column; gap: 6px; text-align: center; }
-  .nameplate-tagline, .nameplate-meta { max-width: 100%; text-align: center; }
-  .lead, .three-col, .two-wide { grid-template-columns: 1fr; }
-  .lead-main { padding-right: 0; border-right: none; border-bottom: 1px solid var(--light-gray); padding-bottom: 16px; margin-bottom: 16px; }
-  .lead-sidebar { padding-left: 0; }
-  .tri { padding: 16px 0; border-right: none; border-bottom: var(--col-gap); }
-  .tri:last-child { border-bottom: none; }
-  .two-wide-main { padding-right: 0; border-right: none; border-bottom: 1px solid var(--light-gray); padding-bottom: 16px; margin-bottom: 16px; }
-  .two-wide-aside { padding-left: 0; }
-  .footer-bar { flex-direction: column; gap: 4px; padding: 12px 16px; text-align: center; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆爆 AI 周报 Vol.1 · 2026年4月21日</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
+        
+        :root {
+            --paper: #f5f0e8;
+            --ink: #1a1a1a;
+            --accent: #c41e3a;
+            --accent-dark: #8b0000;
+            --gray: #6b6b6b;
+            --light-gray: #d4d0c8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif SC', Georgia, serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+        }
+        
+        .newspaper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: #fff;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        /* Masthead */
+        .masthead {
+            text-align: center;
+            border-bottom: 3px solid var(--ink);
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .masthead-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--ink);
+            line-height: 1.1;
+        }
+        
+        .masthead-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+            letter-spacing: 4px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        
+        .masthead-line {
+            border-top: 1px solid var(--ink);
+            border-bottom: 1px solid var(--ink);
+            padding: 6px 0;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+        
+        /* Headline Banner */
+        .headline-banner {
+            background: var(--ink);
+            color: #fff;
+            padding: 20px 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .headline-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .headline-banner .date-range {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 8px;
+            letter-spacing: 2px;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+        }
+        
+        .section-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: var(--light-gray);
+            margin-left: 15px;
+        }
+        
+        /* Article Cards */
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .article-grid.full-width {
+            grid-template-columns: 1fr;
+        }
+        
+        .article {
+            border: 1px solid var(--light-gray);
+            padding: 20px;
+            position: relative;
+        }
+        
+        .article.featured {
+            border: 2px solid var(--accent);
+            background: linear-gradient(135deg, #fff 0%, #faf5f5 100%);
+        }
+        
+        .article.featured::before {
+            content: "★ 本周焦点";
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: var(--accent);
+            color: #fff;
+            padding: 2px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .article h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .article .meta {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .article .meta .tag {
+            background: var(--ink);
+            color: #fff;
+            padding: 1px 8px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .article .meta .date {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .article .meta .date.warning::after {
+            content: " ⚠";
+            color: #ff6b00;
+        }
+        
+        .article p {
+            font-size: 0.9rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        .article .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            font-weight: 700;
+        }
+        
+        .article .mbp-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 1px 8px;
+            font-size: 0.7rem;
+            border: 1px solid #a5d6a7;
+            margin-top: 8px;
+        }
+        
+        /* Divider */
+        .divider {
+            border-top: 1px solid var(--light-gray);
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .divider::after {
+            content: "◆";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 0 15px;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--ink);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .footer .pop-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            .masthead-title {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<!-- TOP FLAG -->
-<div class="flag-bar">📡 爆爆 AI 周报 — 本地部署 · 开源前沿 · 仅关注可落地模型</div>
-
-<!-- NAMEPLATE -->
-<div class="nameplate">
-  <div class="nameplate-top">
-    <div class="nameplate-tagline">本地部署 · 开源模型<br>视频生成 · 语音合成</div>
-    <div class="nameplate-title">
-      <h1>爆爆 AI 周报</h1>
-    </div>
-    <div class="nameplate-meta">Vol.2 · 第 2 期<br>2026年4月20日</div>
-  </div>
-  <div class="nameplate-bottom">
-    <span>每周一早 09:00 推送</span>
-    <span>专注可在 MBP M5 Max 本地运行的模型</span>
-    <span>覆盖：LLM · 视频 · TTS</span>
-  </div>
-</div>
-
-<div class="page">
-
-  <!-- LEAD STORY: LLM -->
-  <hr class="divider">
-  <div class="section-header"><h2>🧠 本周头条 · 语言模型</h2><div class="section-header-line"></div></div>
-
-  <div class="lead">
-    <div class="lead-main">
-      <div class="section-label">消化周 · 社区爆发</div>
-      <h2 class="lead-headline">Gemma 4 突破 200 万下载，Qwen 3.6 开源箭在弦上</h2>
-      <p class="lead-deck">上周大爆发后，本周开源 LLM 社区进入"消化期"——Gemma 4 强势扩散，Qwen 3.6 中型号宣布即将开源，MBP M5 Max 本地玩家迎来最佳实践窗口。</p>
-      <div class="lead-body">
-        <p><strong>Gemma 4（Google · Apr 2）⚠️</strong>本周 Hugging Face 下载量突破 200 万，成为史上最快达到该里程碑的开源模型。Latent.Space 社区调查显示，31B 版本在 MBP M5 Max 上以约 80+ tokens/s 运行，本地通用任务综合体验登顶 2026 年开源榜。通过 Ollama、LM Studio、Unsloth 均可一键部署。</p>
-        <p><strong>Qwen 3.6（阿里 · 即将开源）</strong>官方 GitHub 已建仓（QwenLM/Qwen3.6），明确支持 MLX Apple Silicon 本地部署。中等参数量版本将率先开放，1M 超长上下文 + 强代码能力，Apple Silicon 玩家重点关注。</p>
-        <p><strong>GLM-5.1（智谱 · 早四月）⚠️</strong>744B MoE、MIT 协议，SWE-Bench Pro 编程基准全球第一，超越所有闭源模型。单机需多卡，暂时个人门槛较高，但编程自动化场景革命性意义不可忽视。</p>
-      </div>
-    </div>
-    <div class="lead-sidebar">
-      <div class="section-label" style="margin-bottom:12px;">本周周边动态</div>
-      <div class="brief">
-        <div class="brief-date">Apr 29 即将 · Meta</div>
-        <h3>LlamaCon — 下一代 Llama 揭幕</h3>
-        <p>Meta 官方年度大会，4月29日举行。社区预期将发布 Llama 4 Behemoth 和 Scout 更新，以及 1B/3B 轻量 on-device 系列。M5 Max 玩家请关注。</p>
-      </div>
-      <div class="brief">
-        <div class="brief-date">持续 · 本周</div>
-        <h3>Llama 4 Scout 社区实测：M5 Max 128GB 最优方案</h3>
-        <p>社区确认：Scout Q4 量化约 24GB，10M token 上下文实测通过，速度 ~50 tokens/s。长文档/整代码库一次性分析，目前无可替代。</p>
-      </div>
-      <div class="brief">
-        <div class="brief-date">Apr 初 · OpenAI</div>
-        <h3>gpt-oss-120b — 闭源巨头意外开放</h3>
-        <p>OpenAI 悄然开源 120B MoE 模型（MIT 协议），117B 总参数仅 5.1B 激活，极低推理成本。消息属实则为重磅，关注后续 HuggingFace 验证。</p>
-      </div>
-      <div class="brief">
-        <div class="brief-date">持续 · 2026年</div>
-        <h3>Mistral Small 4 — 6.5B 激活高效率</h3>
-        <p>Apache 2.0，119B MoE，激活仅 6.5B，Q4 约 18GB，速度极快。代码/RAG 任务性价比当前最高，是 M5 Max 日常高频场景理想选择。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- QUOTE BAND -->
-  <div class="quote-band">
-    <blockquote>「Qwen 3.6 官方 repo 已支持 MLX Apple Silicon——M5 Max 128GB 将是本轮最强开源模型的最佳归宿。」</blockquote>
-    <cite>— 爆爆观察 · 2026年4月20日</cite>
-  </div>
-
-  <!-- VIDEO SECTION -->
-  <hr class="divider">
-  <div class="section-header"><h2>🎬 视频 · 图像生成</h2><div class="section-header-line"></div></div>
-
-  <div class="three-col">
-    <div class="tri">
-      <span class="tag hot">NEW · Apr 2026</span>
-      <h3>Veo 3.1 Lite<br>Google 降本视频新选择</h3>
-      <p>Google 本周发布 Veo 3.1 Lite，定位为"最具成本效益的视频生成模型"，通过 Google AI Studio 和 Vertex AI 提供 API 访问。云端闭源，但标志视频生成进入平民化阶段。<strong>本地替代</strong>仍推荐 Wan 2.1 系列。</p>
-    </div>
-    <div class="tri">
-      <span class="tag hot">🏆 开源首选</span>
-      <h3>Wan 2.1-VACE<br>视频全链路创作神器</h3>
-      <p>阿里巴巴开源视频领域最强全能工具。<strong>VACE</strong>（Video All-in-one Creation and Editing）支持生成、编辑、续写、参考风格控制，一个模型覆盖完整视频制作链路。ComfyUI 原生支持，HuggingFace/GitHub 免费下载。M5 Max 128GB 可流畅运行 14B 版。</p>
-    </div>
-    <div class="tri">
-      <span class="tag">⚠️ 7天外 · 持续热议</span>
-      <h3>Happy Horse 1.0<br>开源视频榜双冠</h3>
-      <p>Artificial Analysis 文字转视频 Elo 1333、图转视频 Elo 1392，仍稳居全球榜首。核心优势：生成视频同步输出音效，完全开源可本地部署。身份神秘，技术疑似源自阿里/字节系，社区持续挖掘。</p>
-    </div>
-  </div>
-
-  <!-- TTS + HW SECTION -->
-  <hr class="divider">
-  <div class="section-header"><h2>🎙️ TTS 语音合成</h2><div class="section-header-line"></div></div>
-
-  <div class="two-wide">
-    <div class="two-wide-main">
-
-      <!-- 本周 TTS 头条 -->
-      <div style="padding-bottom:16px; border-bottom: 1px solid var(--light-gray); margin-bottom:16px;">
-        <div class="section-label">本周头条 · Apr 15</div>
-        <h3 style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; line-height:1.2; margin-bottom:8px;">
-          Gemini 3.1 Flash TTS — 200+ 音频标签定义表达力新标准
-        </h3>
-        <p style="font-size:14px; line-height:1.75; color:#333;">
-          Google 于 4 月 15 日正式推出 Gemini 3.1 Flash TTS，30 种预置声音、70+ 语言支持，最大亮点是可通过<strong>自然语言 audio tag</strong>精细控制语速、停顿、情绪、场景语境，已部署至 Google AI Studio 和 Vertex AI。<strong>注意：云端 API，暂无开源版本</strong>，但其设计理念（用描述性语言驱动声音表现力）正在被开源社区快速跟进。可作为对比基准参考。
-        </p>
-      </div>
-
-      <!-- 开源 TTS 表格 -->
-      <table class="tts-table">
-        <thead>
-          <tr>
-            <th>开源模型</th>
-            <th>发布方</th>
-            <th>亮点</th>
-            <th>M5 Max 适配</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Qwen3-TTS</strong><br><span style="font-size:11px;color:#888;">⚠️ Jan 2026</span></td>
-            <td>阿里云 Qwen</td>
-            <td>3秒语音克隆，97ms 延迟流式输出，1.7B/0.6B 两档，支持 10 种语言，VoiceDesign 可用文本描述定制声音风格。</td>
-            <td><span class="pill">✅ 推荐</span></td>
-          </tr>
-          <tr>
-            <td><strong>Fish Speech V1.5</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
-            <td>Fish Audio</td>
-            <td>多语言零样本克隆，音质业界标杆，情感控制自然，中文支持优秀。</td>
-            <td><span class="pill">✅ 推荐</span></td>
-          </tr>
-          <tr>
-            <td><strong>FishAudio S1</strong><br><span style="font-size:11px;color:#888;">4B 旗舰</span></td>
-            <td>Fish Audio</td>
-            <td>情绪表达力最强，适合有声书、情感配音等创作场景，本地可运行。</td>
-            <td><span class="pill">✅ 推荐</span></td>
-          </tr>
-          <tr>
-            <td><strong>CosyVoice2-0.5B</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
-            <td>阿里</td>
-            <td>极轻量，超低延迟流式，中文最流畅，本地运行几乎零负担。</td>
-            <td><span class="pill">✅ 首选</span></td>
-          </tr>
-          <tr>
-            <td><strong>IndexTTS-2</strong><br><span style="font-size:11px;color:#888;">持续更新</span></td>
-            <td>IndexTeam</td>
-            <td>精准时长控制，解决 AI 配音口型不同步痛点，视频制作专项利器。</td>
-            <td><span class="pill">✅ 推荐</span></td>
-          </tr>
-          <tr>
-            <td><strong>Mistral TTS</strong><br><span style="font-size:11px;color:#888;">⚠️ Mar 26</span></td>
-            <td>Mistral AI</td>
-            <td>5秒克隆，捕捉口音/语调/语流，直撼 ElevenLabs。企业级开源方案。</td>
-            <td><span class="pill">✅ 可用</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="two-wide-aside">
-      <div class="scoreboard">
-        <h3>🏆 本周本地 LLM 社区热度榜</h3>
-        <div class="score-row"><span class="score-rank">01</span><span class="score-name">Qwen 3.5 全系</span><span class="score-elo">最广泛推荐</span></div>
-        <div class="score-row"><span class="score-rank">02</span><span class="score-name">Gemma 4 31B</span><span class="score-elo">200万下载</span></div>
-        <div class="score-row"><span class="score-rank">03</span><span class="score-name">GLM-5 / GLM-4.7</span><span class="score-elo">综合榜前列</span></div>
-        <div class="score-row"><span class="score-rank">04</span><span class="score-name">MiniMax M2.7</span><span class="score-elo">Agent 专项</span></div>
-        <div class="score-row"><span class="score-rank">05</span><span class="score-name">DeepSeek V3.2</span><span class="score-elo">开源通用强</span></div>
-      </div>
-      <div class="hw-box">
-        <h3>💻 M5 Max 128GB 本周部署方案</h3>
-        <div class="hw-item">
-          <strong>Gemma 4 31B · 通用首选</strong>
-          <span>~18GB Q4 · Ollama 一键 · 85 tok/s</span>
+    <div class="newspaper">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-title">爆爆 AI 周报</div>
+            <div class="masthead-subtitle">Local AI Deployment Weekly Digest</div>
+            <div class="masthead-line">
+                <span>Vol. 1</span>
+                <span>2026年4月21日 星期二</span>
+                <span>上海 · Shanghai</span>
+            </div>
+        </header>
+        
+        <!-- Headline Banner -->
+        <div class="headline-banner">
+            <h2>Qwen3.6-35B-A3B 发布 · M5 Max 本地推理实测 · 开源语音克隆新标杆</h2>
+            <div class="date-range">2026年4月14日 — 4月21日</div>
         </div>
-        <div class="hw-item">
-          <strong>Llama 4 Scout · 长文档专用</strong>
-          <span>~24GB Q4 · 10M ctx · ~50 tok/s</span>
+        
+        <!-- LLM Section -->
+        <div class="section-header">
+            <h3>🧠 语言模型</h3>
+            <div class="section-line"></div>
         </div>
-        <div class="hw-item">
-          <strong>Mistral Small 4 · 高频轻任务</strong>
-          <span>~18GB Q4 · 速度最快 · RAG 最优</span>
+        
+        <div class="article-grid">
+            <div class="article featured">
+                <h4>Qwen3.6-35B-A3B 正式发布</h4>
+                <div class="meta">
+                    <span class="tag">Alibaba</span>
+                    <span class="date">2026-04-16</span>
+                    <span>Apache 2.0</span>
+                </div>
+                <p>
+                    阿里巴巴于4月16日发布 Qwen3.6-35B-A3B，采用 MoE 架构（35B 总参数 / 3B 激活参数）。支持 262K 上下文窗口，可扩展至约 1M  tokens。Q4 量化后仅需 <span class="highlight">20.9 GB</span> 显存，32GB Mac 即可流畅运行。MLX 社区已提供量化版本，但 4bit 版本体积异常（约 90GB），社区正在排查。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：可跑全精度 + 多并发</span>
+            </div>
+            
+            <div class="article">
+                <h4>Apple M5 Neural Accelerator + MLX 实测</h4>
+                <div class="meta">
+                    <span class="tag">Apple</span>
+                    <span class="date">2026-04-18</span>
+                    <span>MLX Framework</span>
+                </div>
+                <p>
+                    Apple 机器学习团队发布 M5 芯片 MLX 性能基准测试。M5 GPU 中的 Neural Accelerator 在 LLM 推理的首 token 时间上实现 <span class="highlight">最高 4 倍</span> 加速（对比 M4 基线）。24GB 统一内存的 M5 MacBook Pro 已可运行多种架构和规模的模型，为本地 AI 工作站树立新标杆。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：可运行 70B-class 密集模型</span>
+            </div>
+            
+            <div class="article">
+                <h4>Gemma 4 系列：本地部署新默认</h4>
+                <div class="meta">
+                    <span class="tag">Google</span>
+                    <span class="date warning">2026-03-28 ⚠</span>
+                    <span>Apache 2.0</span>
+                </div>
+                <p>
+                    Google Gemma 4 系列（含 26B MoE）成为当前本地部署的"默认推荐"。原生多模态能力，Q4 量化仅需 16GB 内存，所有主流本地推理框架（llama.cpp、MLX、vLLM）首日即支持。适合 16GB 统一内存的入门 Mac 用户。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：可并发运行多个实例</span>
+            </div>
+            
+            <div class="article">
+                <h4>MiniMax M2.7：Agentic 工作负载新选择</h4>
+                <div class="meta">
+                    <span class="tag">MiniMax</span>
+                    <span class="date warning">2026-04-08 ⚠</span>
+                    <span>Open Weight</span>
+                </div>
+                <p>
+                    MiniMax M2.7 在工具调用和 Agentic 场景中被社区反复推荐。Q4 量化需 64GB+ 内存，适合重度工具使用场景。在多项 agentic 基准测试中表现接近闭源模型。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：Q4 量化可跑，留有余量</span>
+            </div>
         </div>
-        <div class="hw-item">
-          <strong>Wan 2.1-VACE 14B · 视频创作</strong>
-          <span>ComfyUI · 128GB 全量运行</span>
+        
+        <div class="divider"></div>
+        
+        <!-- Image/Video Section -->
+        <div class="section-header">
+            <h3>🎬 图像与视频生成</h3>
+            <div class="section-line"></div>
         </div>
-        <div class="hw-item">
-          <strong>CosyVoice2-0.5B · TTS</strong>
-          <span>极轻量 · 中文最佳 · 实时流式</span>
+        
+        <div class="article-grid">
+            <div class="article featured">
+                <h4>Wan 2.2：首个开源 MoE 视频生成模型</h4>
+                <div class="meta">
+                    <span class="tag">Alibaba</span>
+                    <span class="date warning">2026-04-10 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    阿里巴巴 Wan-AI 团队发布 Wan 2.2 系列，业界首个采用 MoE 架构的开源视频生成模型。包含 T2V-A14B（文生视频）和 I2V-A14B（图生视频）两个版本，支持 720P/24fps 专业级输出，具备精确的镜头控制（平移、倾斜、轨道、升降）。社区反馈运动一致性和画质较前代 Wan 2.1 显著提升。
+                </p>
+                <span class="mbp-tag">⚠️ MBP M5 Max 128GB：14B MoE 可尝试，推荐云端辅助</span>
+            </div>
+            
+            <div class="article">
+                <h4>LTX Video 2.3：轻量本地视频首选</h4>
+                <div class="meta">
+                    <span class="tag">Lightricks</span>
+                    <span class="date warning">2026-04-05 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    LTX Video 2.3 发布，支持视频+音频同步生成。16fps 输出，ComfyUI 生态完整支持。作为当前最轻量的开源视频模型之一，适合消费级 GPU 本地部署，是入门 AI 视频生成的最佳起点。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：ComfyUI 本地可跑</span>
+            </div>
+            
+            <div class="article">
+                <h4>GLM-Image & Z-Image-Turbo</h4>
+                <div class="meta">
+                    <span class="tag">Zhipu AI</span>
+                    <span class="date warning">2026-03-20 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    智谱 AI 开源 GLM-Image 系列，采用自回归+扩散解码器混合架构。Z-Image-Turbo 版本针对速度优化，Qwen-Image-2512 在多语言图文理解上表现突出。ComfyUI 和 Diffusers 均已适配。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：图像生成无压力</span>
+            </div>
+            
+            <div class="article">
+                <h4>FLUX.2 与 Stable Diffusion 生态</h4>
+                <div class="meta">
+                    <span class="tag">Black Forest Labs</span>
+                    <span class="date warning">2026-03-15 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    FLUX.2 系列持续领跑开源图像生成质量榜。Modular MAX 推理框架可实现比 torch.compile 快约 4 倍的生成速度。Stable Diffusion 3.5 社区微调模型数量持续增长，LoRA 生态成熟。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：高速批量生成</span>
+            </div>
         </div>
-      </div>
+        
+        <div class="divider"></div>
+        
+        <!-- TTS Section -->
+        <div class="section-header">
+            <h3>🔊 语音合成</h3>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="article-grid">
+            <div class="article featured">
+                <h4>Mistral Voxtral TTS：开源语音克隆新标杆</h4>
+                <div class="meta">
+                    <span class="tag">Mistral AI</span>
+                    <span class="date">2026-03-26</span>
+                    <span>Apache 2.0</span>
+                </div>
+                <p>
+                    Mistral 于3月26日发布 Voxtral TTS，3B 参数开源权重模型。支持 9 种语言（英/法/德/西/荷/葡/意/印/阿），仅需 <span class="highlight">3 秒</span> 参考音频即可实现零样本语音克隆。H200 上首音频延迟仅 70ms，实时因子约 9.7x。人类偏好测试中击败 ElevenLabs Flash v2.5，与 v3 打成平手。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：本地实时语音代理无压力</span>
+            </div>
+            
+            <div class="article">
+                <h4>Qwen3-TTS：阿里开源语音方案</h4>
+                <div class="meta">
+                    <span class="tag">Alibaba</span>
+                    <span class="date warning">2026-01-15 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    Qwen3-TTS 年初发布，在中文语音合成场景表现优异。社区 4 个月生产环境实测反馈：在中文有声书、文章朗读场景中稳定性良好，语音克隆质量中等偏上。与 Chatterbox-Turbo 相比，中文韵律更自然。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：中文 TTS 首选</span>
+            </div>
+            
+            <div class="article">
+                <h4>Kokoro：轻量 TTS 质量之王</h4>
+                <div class="meta">
+                    <span class="tag">Community</span>
+                    <span class="date warning">2026-02-20 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    Kokoro 在独立 TTS 基准测试中取得 <span class="highlight">4.5 MOS</span>（最高质量分）和 17% CER（最低字符错误率），超越所有测试的闭源模型。模型体积小巧，推理速度极快，是资源受限场景的首选方案。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：轻量并发首选</span>
+            </div>
+            
+            <div class="article">
+                <h4>Fish Audio S2 Pro & Dia2</h4>
+                <div class="meta">
+                    <span class="tag">Fish Audio / Community</span>
+                    <span class="date warning">2026-03-10 ⚠</span>
+                    <span>Open Source</span>
+                </div>
+                <p>
+                    Fish Audio S2 Pro 专注于高质量可控语音生成，支持精细的情感和风格控制。Dia2 在多语言混合朗读场景中表现突出。两者均已集成至主流 TTS 推理框架。
+                </p>
+                <span class="mbp-tag">✅ MBP M5 Max 128GB：情感控制场景推荐</span>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Quick Notes -->
+        <div class="section-header">
+            <h3>📋 本周速记</h3>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="article-grid full-width">
+            <div class="article">
+                <h4>本地部署趋势观察</h4>
+                <div class="meta">
+                    <span class="tag">Trend</span>
+                    <span class="date">2026-04-21</span>
+                </div>
+                <p>
+                    <strong>MoE 架构成为主流：</strong> Qwen3.6 和 Wan 2.2 均采用 MoE（混合专家）架构，以更小激活参数实现更大模型能力，显著降低本地部署门槛。32GB 内存已可运行 35B 级 MoE 模型。<br><br>
+                    <strong>M5 Max 128GB 定位清晰：</strong> 当前唯一能流畅运行 70B 密集模型 / 多并发 MoE 模型的笔记本平台。M5 Ultra Mac Studio 推迟至 Q4，M5 Max 成为上半年本地 AI 工作站唯一选择。<br><br>
+                    <strong>开源 TTS 追上闭源：</strong> Voxtral 和 Kokoro 在质量上已与 ElevenLabs 打平甚至超越，本地语音代理生态进入实用阶段。
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="pop-brand">🎈 爆爆 POP · Kelven 的私人 AI 秘书</div>
+            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：Hugging Face、GitHub、Reddit r/LocalLLaMA、官方博客</p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">GitHub: github.com/lzyling/pop-ai-weekly · 在线阅读: lzyling.github.io/pop-ai-weekly/</p>
+        </footer>
     </div>
-  </div>
-
-  <!-- UPCOMING -->
-  <hr class="divider">
-  <div class="section-header"><h2>📅 下周预告</h2><div class="section-header-line"></div></div>
-  <div style="padding: 16px 0 20px; border-bottom: 1px solid var(--ink);">
-    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
-      <div style="padding-right:24px; border-right: var(--col-gap);">
-        <div class="section-label">Apr 29 · Meta</div>
-        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>LlamaCon 2026</strong>：Meta 年度发布会，预期 Llama 4 Behemoth（旗舰）、Scout 更新、1B/3B 轻量端侧模型亮相。开源 LLM 年度最大事件之一，重点关注 Apple Silicon 支持情况。</p>
-      </div>
-      <div style="padding: 0 24px; border-right: var(--col-gap);">
-        <div class="section-label">即将 · 阿里</div>
-        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>Qwen 3.6 中型号开源</strong>：官方已在 GitHub 建仓，明确支持 MLX Apple Silicon，开源时间窗口极近。M5 Max 用户提前关注 QwenLM/Qwen3.6 仓库动态。</p>
-      </div>
-      <div style="padding-left:24px;">
-        <div class="section-label">持续 · 视频赛道</div>
-        <p style="font-size:14px; line-height:1.7; color:#333;"><strong>Wan 2.x 新版本</strong>：阿里视频系列迭代节奏加快，VACE 之后预期将有 Wan 2.2 或专项能力版本落地。同时关注 Happy Horse 开发团队是否公布技术细节。</p>
-      </div>
-    </div>
-  </div>
-
-</div><!-- /page -->
-
-<!-- FOOTER -->
-<div class="footer-bar">
-  <span>爆爆 AI 周报 Vol.2</span>
-  <span>仅收录本地可部署开源模型 · ⚠️ 标注表示发布超过7天 · 7天内信息为主</span>
-  <span>2026.04.20 · 每周一 09:00 自动推送</span>
-</div>
-
 </body>
 </html>
