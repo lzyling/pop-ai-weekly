@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.2 · 2026年4月22日</title>
+    <title>爆爆 AI 周报 Vol.3 · 2026年4月27日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
         
@@ -279,275 +279,268 @@
 </head>
 <body>
     <div class="newspaper">
-        <!-- Masthead -->
         <header class="masthead">
             <div class="masthead-title">爆爆 AI 周报</div>
             <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 2</span>
-                <span>2026年4月22日 星期三</span>
+                <span>Vol. 3</span>
+                <span>2026年4月27日 星期一</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
-        
-        <!-- Headline Banner -->
+
         <div class="headline-banner">
-            <h2>Kimi K2.6 万亿参数开源 · 豆包 2.0 全模态升级 · Claude Opus 4.7 发布</h2>
-            <div class="date-range">2026年4月15日 — 4月22日</div>
+            <h2>OpenAI GPT-5.5 上线 · DeepSeek V4 Preview 开放 API · 视频生成进入统一 API 时代</h2>
+            <div class="date-range">2026年4月20日 — 4月27日</div>
         </div>
-        
-        <!-- LLM Section -->
+
         <div class="section-header">
             <h3>🧠 语言模型</h3>
             <div class="section-line"></div>
         </div>
-        
+
         <div class="article-grid">
             <div class="article featured">
-                <h4>Moonshot Kimi K2.6：万亿参数 MoE 开源</h4>
+                <h4>OpenAI GPT-5.5 / GPT-5.5 Pro：API、ChatGPT、Codex 同步可用</h4>
+                <div class="meta">
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-04-23</span>
+                    <span>API Available</span>
+                </div>
+                <p>
+                    OpenAI 在官方文档与系统卡中更新 <span class="highlight">GPT-5.5</span> 与 GPT-5.5 Pro，开发者文档已列出模型页，社区公告显示可在 API、ChatGPT 与 Codex 中调用。本次重点不是单点跑分，而是把推理、工具调用、编程代理和多模态工作流继续收敛到统一模型族，适合做 Agent router 的默认高端兜底模型。
+                </p>
+                <span class="api-tag">API: api.openai.com</span>
+                <span class="cloud-tag">ChatGPT / Codex 同步</span>
+            </div>
+
+            <div class="article featured">
+                <h4>DeepSeek-V4 Preview：Pro / Flash 双模型，百万上下文 + Agent 优化</h4>
+                <div class="meta">
+                    <span class="tag">DeepSeek</span>
+                    <span class="date">2026-04-24</span>
+                    <span>API Available Today</span>
+                </div>
+                <p>
+                    DeepSeek 官方 API 文档发布 <span class="highlight">DeepSeek-V4 Preview</span>，包含 V4-Pro 与 V4-Flash。页面明确标注 API 当天开放，重点能力是 1M token 超长上下文、更高效的结构设计，以及面向编码、工具调用、长文档处理的 Agent 能力优化。Flash 适合高吞吐低成本路由，Pro 适合复杂推理与代码任务。
+                </p>
+                <span class="api-tag">API: api-docs.deepseek.com</span>
+                <span class="cloud-tag">Pro / Flash 路由组合</span>
+            </div>
+
+            <div class="article featured">
+                <h4>Moonshot Kimi K2.6：长程代码稳定性增强，官方 API 已更新</h4>
                 <div class="meta">
                     <span class="tag">Moonshot</span>
                     <span class="date">2026-04-20</span>
-                    <span>Open Weight</span>
+                    <span>API Available</span>
                 </div>
                 <p>
-                    Moonshot AI 发布 <span class="highlight">Kimi K2.6</span>，1T 参数 MoE 架构（32B 激活 / 384 专家），256K 上下文，原生多模态。最大亮点是 <span class="highlight">Agent Swarm</span> 架构，支持 300 个子 Agent 并行协调、4000 步长程任务。HLE-Full  agentic 评测 54.0% 超越 GPT-5.4（52.1%）。发布首日即获 vLLM、OpenRouter、Cloudflare Workers AI、MLX 等生态支持。
+                    Kimi API Platform 首页已上线 <span class="highlight">kimi-k2.6</span>，说明其具备更强、更稳定的长期代码写作能力，并显著增强 Agent 自主执行能力。官方价格页显示 K2.6 输入 $0.95/MTok、输出 $4.00/MTok、cache hit $0.16/MTok。对 Kelven 当前关注的云端 Agent 编排来说，它是本周最值得测试的国产编码模型之一。
                 </p>
-                <span class="api-tag">API: api.moonshot.cn</span>
-                <span class="cloud-tag">阿里云 / 腾讯云 / Cloudflare 已上线</span>
+                <span class="api-tag">API: platform.moonshot.ai</span>
+                <span class="cloud-tag">Agent / Code 优先</span>
             </div>
-            
-            <div class="article featured">
-                <h4>Claude Opus 4.7：Anthropic 最强编程模型</h4>
+
+            <div class="article">
+                <h4>Qwen3.6-27B：小体量开源模型补强编码与多模态底座</h4>
+                <div class="meta">
+                    <span class="tag">Alibaba Qwen</span>
+                    <span class="date">2026-04-21</span>
+                    <span>Open Weight + API</span>
+                </div>
+                <p>
+                    Qwen3.6-27B 本周进入公开视野，Qwen 官方仓库说明 Qwen3.6 系列强化统一视觉语言底座，覆盖推理、编码、Agent 与视觉理解。阿里云 Model Studio 对 Qwen3.6 提供官方 API，并兼容 OpenAI / Anthropic 风格接口。这里不建议把重点放在本地部署，而是关注它作为低成本云端能力补位的价值。
+                </p>
+                <span class="api-tag">API: Alibaba Cloud Model Studio</span>
+                <span class="cloud-tag">OpenAI-compatible</span>
+            </div>
+
+            <div class="article">
+                <h4>Claude Opus 4.7：仍在 7 天外，但 API 迁移价值高 ⚠️</h4>
                 <div class="meta">
                     <span class="tag">Anthropic</span>
-                    <span class="date">2026-04-16</span>
+                    <span class="date warning">2026-04-16</span>
                     <span>API Available</span>
                 </div>
                 <p>
-                    Anthropic 发布 Claude Opus 4.7，当前最强通用可用模型。软件工程能力显著增强，视觉理解更精准，指令遵循更可靠，长程 Agent 工作稳定性提升。定价维持 $5/$25 per MTok（与 Opus 4.6 相同）。Claude Code 同步更新，新增 /tui 全屏渲染、移动端推送通知、MCP 插件优化等。Sonnet 4 和 Opus 4 正式进入弃用倒计时。
+                    Opus 4.7 发布已超过本周 7 天窗口，但仍值得作为背景保留：Anthropic 官方称其增强 coding、agents、vision 与多步任务，并通过 Claude API 的 <span class="highlight">claude-opus-4-7</span> 调用。新 `xhigh` effort level 介于 high 与 max 之间，适合在成本、延迟、推理深度之间做更细路由。
                 </p>
-                <span class="api-tag">API: api.anthropic.com</span>
-                <span class="cloud-tag">Vertex AI / AWS Bedrock 同步上线</span>
+                <span class="api-tag">API: platform.claude.com</span>
+                <span class="cloud-tag">Vertex AI / Bedrock</span>
             </div>
-            
+
             <div class="article">
-                <h4>豆包大模型 2.0：全模态 + 深度 Agent</h4>
+                <h4>LLM 更新节奏：一周内高端闭源 + 开源长上下文同时推进</h4>
                 <div class="meta">
-                    <span class="tag">火山引擎</span>
-                    <span class="date">2026-04-15</span>
-                    <span>API Available</span>
+                    <span class="tag">Market</span>
+                    <span class="date">2026-04-27</span>
+                    <span>Trend</span>
                 </div>
                 <p>
-                    字节跳动火山引擎发布 <span class="highlight">豆包大模型 2.0</span>（Doubao-Seed-2.0），含 Pro/Lite/Mini/Code 四款。Pro 版视觉推理、空间理解、长视频分析达业界顶尖；HLE-text 54.2 分领跑全球；Code 版深度优化前端与 TRAE 集成。日均 Tokens 使用量已增长超 500 倍。Coding Plan 套餐首月最低 8 元。
+                    LLM Stats 本周时间线显示：4 月 20 日 Kimi K2.6、4 月 21 日 Qwen3.6-27B、4 月 23 日 GPT-5.5 / Pro、4 月 23-24 日 DeepSeek-V4 系列连续出现。结论很清楚：云端模型竞争已经从“单模型最强”转向“按任务动态路由”——编码、长上下文、低成本 Flash、旗舰兜底各司其职。
                 </p>
-                <span class="api-tag">API: 火山方舟 / Ark</span>
-                <span class="cloud-tag">国内开发者首选</span>
-            </div>
-            
-            <div class="article">
-                <h4>Qwen3.6-35B-A3B：阿里开源 Agent 编程利器</h4>
-                <div class="meta">
-                    <span class="tag">Alibaba</span>
-                    <span class="date">2026-04-16</span>
-                    <span>Apache 2.0</span>
-                </div>
-                <p>
-                    阿里巴巴开源 Qwen3.6-35B-A3B，35B 总参数 / 3B 激活的 MoE 模型。Terminal-Bench2.0、NL2Repo、QwenClawBench 等 agentic 评测中超越前代，可与更大密集模型竞争。262K 上下文，支持 OpenClaw、Qwen Code、Claude Code 等 Agent 框架。阿里云 Model Studio 已提供 API。
-                </p>
-                <span class="api-tag">API: dashscope-intl.aliyuncs.com</span>
-                <span class="cloud-tag">HuggingFace / ModelScope 开源权重</span>
-            </div>
-            
-            <div class="article">
-                <h4>OpenAI GPT-5.4 mini & nano：轻量 Coding 专用</h4>
-                <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date warning">2026-03-17 ⚠</span>
-                    <span>API Available</span>
-                </div>
-                <p>
-                    GPT-5.4 mini 发布，专为 coding、computer use、多模态理解和子 Agent 优化的高效模型。支持 Responses API 工具调用，适合高并发工作负载。GPT-5.4 主模型（3月5日发布）已合并 Codex 和 GPT-5.2 能力，统一端点即可调用编程与推理能力。
-                </p>
-                <span class="api-tag">API: api.openai.com</span>
-                <span class="cloud-tag">Codex 默认模型</span>
-            </div>
-            
-            <div class="article">
-                <h4>Google Gemini 3.1 Pro：长上下文推理旗舰</h4>
-                <div class="meta">
-                    <span class="tag">Google</span>
-                    <span class="date warning">2026-02-19 ⚠</span>
-                    <span>API Available</span>
-                </div>
-                <p>
-                    Gemini 3.1 Pro 持续迭代，4 月 API 更新：Pro 系列移出免费层，仅付费可用；Flash 系列仍免费。新增 Computer Use MCP 支持（3 Pro / 3 Flash），可自主点击、填表、导航 UI。Veo 3.1 和 3.1 Fast 视频模型进入公开预览，原生音频同步生成。
-                </p>
-                <span class="api-tag">API: ai.google.dev</span>
-                <span class="cloud-tag">Vertex AI / AI Studio</span>
+                <span class="api-tag">Router Strategy</span>
+                <span class="cloud-tag">多模型编排</span>
             </div>
         </div>
-        
+
         <div class="divider"></div>
-        
-        <!-- Image/Video Section -->
+
         <div class="section-header">
             <h3>🎬 图像与视频生成</h3>
             <div class="section-line"></div>
         </div>
-        
+
         <div class="article-grid">
             <div class="article featured">
-                <h4>可灵 Kling 3.0：国产视频生成登顶全球</h4>
+                <h4>OpenRouter 视频生成 API：一个 `/api/v1/videos` 聚合多家视频模型</h4>
                 <div class="meta">
-                    <span class="tag">快手</span>
-                    <span class="date">2026-04-08</span>
+                    <span class="tag">OpenRouter</span>
+                    <span class="date warning">2026-04-16</span>
                     <span>API Available</span>
                 </div>
                 <p>
-                    可灵 3.0 被业界评为 2026 年 AI 影视制作分水岭。与 Seedance 2.0、Veo 3.1 同处第一梯队，性价比最优。API 支持文生视频、图生视频、Omni 3.0 视频编辑，模型覆盖 kling-v3 / kling-v2-6 / kling-v3-omni / kling-video-o1。4 月 8 日新增 17 款视频特效。官方 Skill 已支持 OpenClaw、Claude Code、Cursor、Codex 等 Agent 工具直接调用。
+                    OpenRouter 宣布视频生成能力，虽然发布日期略超 7 天，但对云端工作流很关键：用统一 schema 调用多个视频模型，规范化 resolution、duration、aspect ratio、audio、首尾帧与 reference images。官方文档提供 `POST /api/v1/videos` 和 `/api/v1/videos/models`，开发者可先查模型能力、价格、时长与输入限制，再异步提交任务。
                 </p>
-                <span class="api-tag">API: klingai.com/api</span>
-                <span class="cloud-tag">Atlas Cloud / 国内直连</span>
+                <span class="api-tag">API: openrouter.ai/api/v1/videos</span>
+                <span class="cloud-tag">Veo / Seedance / Wan / Sora 路由</span>
             </div>
-            
-            <div class="article">
-                <h4>Wan 2.2：开源 MoE 视频生成</h4>
-                <div class="meta">
-                    <span class="tag">Alibaba</span>
-                    <span class="date warning">2026-04-10 ⚠</span>
-                    <span>Open Source</span>
-                </div>
-                <p>
-                    阿里 Wan-AI 团队发布 Wan 2.2，业界首个 MoE 架构开源视频生成模型。T2V-A14B 和 I2V-A14B 支持 720P/24fps，具备精确镜头控制（平移、倾斜、轨道、升降）。运动一致性和画质较前代显著提升。Novita AI、Higgsfield 等平台已提供 API 托管。
-                </p>
-                <span class="api-tag">API: Novita / Higgsfield / 自建</span>
-                <span class="cloud-tag">开源可商用</span>
-            </div>
-            
-            <div class="article">
-                <h4>Veo 3.1：Google 视频生成 + 原生音频</h4>
+
+            <div class="article featured">
+                <h4>Gemini April Drop：Nano Banana 2 个性化图片 + 3D / 图表生成</h4>
                 <div class="meta">
                     <span class="tag">Google</span>
-                    <span class="date">2026-04-15</span>
-                    <span>API Preview</span>
+                    <span class="date">2026-04-24</span>
+                    <span>Product Rollout</span>
                 </div>
                 <p>
-                    Google Veo 3.1 和 3.1 Fast 进入公开预览，最大亮点是 <span class="highlight">原生音频同步生成</span>——视频画面与环境音效/对话在同一 pass 完成。Sora 2 已于 3 月停止服务，Veo 3.1 成为 OpenAI 生态外最强视频 API 选择。支持 1080p 输出，电影级镜头控制。
+                    Google 发布 April Gemini Drop，重点包括 Nano Banana 2 结合 Personal Intelligence 与 Google Photos 生成更个性化的图片、Gemini app 支持交互式模拟 / 3D 模型 / 图表生成、Notebooks 进入 Gemini，以及 Mac app 上线。这是“生成式 AI 从聊天框走向可视化生产工具”的典型信号。
                 </p>
-                <span class="api-tag">API: Google AI Studio / Vertex AI</span>
-                <span class="cloud-tag">预览版限额开放</span>
+                <span class="api-tag">Product: Gemini app</span>
+                <span class="cloud-tag">Photos / NotebookLM / Mac</span>
             </div>
-            
+
             <div class="article">
-                <h4>Seedance 2.0：字节跳动视频模型国际版</h4>
+                <h4>Veo 3.1 / Seedance 2.0 / Wan 系列：聚合平台加速可用性</h4>
                 <div class="meta">
-                    <span class="tag">ByteDance</span>
-                    <span class="date warning">2026-03-28 ⚠</span>
-                    <span>API Available</span>
+                    <span class="tag">Video API</span>
+                    <span class="date">2026-04-27</span>
+                    <span>Cloud Available</span>
                 </div>
                 <p>
-                    Seedance 2.0 国际 API 通过 Atlas Cloud 等平台开放，直接端点稳定性待确认。与 Kling 3.0 技术同源，角色一致性和多镜头叙事能力突出。适合需要跨平台部署的国际化产品。
+                    本周视频生成的核心变化不是某个单点模型，而是 <span class="highlight">API 可用性</span>：OpenRouter、fal、Atlas Cloud 等聚合平台开始把 Veo、Seedance、Wan、Kling、Hailuo 等模型做成可查询、可计费、可异步轮询的标准化服务。对实际产品来说，这比“又一个 demo”更重要。
                 </p>
-                <span class="api-tag">API: Atlas Cloud / BytePlus</span>
-                <span class="cloud-tag">国际开发者通道</span>
+                <span class="api-tag">API Aggregators</span>
+                <span class="cloud-tag">异步任务 + 成本可见</span>
             </div>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <!-- TTS / Agent Section -->
-        <div class="section-header">
-            <h3>🔊 语音合成 · Agent · 编程助手</h3>
-            <div class="section-line"></div>
-        </div>
-        
-        <div class="article-grid">
-            <div class="article featured">
-                <h4>Mistral Voxtral TTS：开源语音克隆击败 ElevenLabs</h4>
-                <div class="meta">
-                    <span class="tag">Mistral</span>
-                    <span class="date">2026-03-26</span>
-                    <span>API Available</span>
-                </div>
-                <p>
-                    Mistral 发布 Voxtral TTS，3B 参数开源权重，支持 9 语言（英/法/德/西/荷/葡/意/印/阿）。<span class="highlight">3 秒参考音频</span>即可零样本克隆，H200 首音频延迟 70ms，实时因子 9.7x。人类偏好测试击败 ElevenLabs Flash v2.5，与 v3 持平。Mistral API 已上线，支持流式输出和自定义 voice profile。
-                </p>
-                <span class="api-tag">API: api.mistral.ai</span>
-                <span class="cloud-tag">Apache 2.0 权重可自托管</span>
-            </div>
-            
+
             <div class="article">
-                <h4>OpenAI Codex：从编程到全能 Agent</h4>
+                <h4>OpenAI Images / Vision 文档更新：多图输入和图片 token 成本更透明</h4>
                 <div class="meta">
                     <span class="tag">OpenAI</span>
-                    <span class="date">2026-04-16</span>
-                    <span>Product Update</span>
+                    <span class="date">2026-04-23</span>
+                    <span>Docs Update</span>
                 </div>
                 <p>
-                    OpenAI 发布 <span class="highlight">"Codex for (almost) everything"</span>，桌面端从纯编程工具扩展为全能 AI 工作站：原生控制 Mac/Windows、内置浏览器、图像生成、偏好记忆、后台任务队列。90+ 插件生态，支持并行 Agentic 任务执行。Codex Security 同步上线，企业级代码审计。
+                    OpenAI 图片与视觉文档继续细化多图输入、图片 token 计费、不同 detail/resize 行为和图像生成接口说明。对生产应用来说，本周值得关注的不是“能不能画图”，而是可预测成本、批量多图理解、图像生成与 Agent 工具链如何稳定拼接。
                 </p>
-                <span class="api-tag">Desktop: macOS / Windows</span>
-                <span class="cloud-tag">CLI + IDE 插件全平台</span>
-            </div>
-            
-            <div class="article">
-                <h4>Claude Code：TUI 全屏 + 移动端推送</h4>
-                <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date">2026-04-16</span>
-                    <span>Product Update</span>
-                </div>
-                <p>
-                    Claude Code 4 月重大更新：/tui 全屏渲染模式、移动端推送通知、更干净的 transcript 和焦点控制、MCP 插件监控、Remote Control 支持。配合 Opus 4.7 的 Agent 能力，可实现 5 天不间断自主运维——监控、告警响应、系统操作全闭环。
-                </p>
-                <span class="api-tag">CLI: npm install -g @anthropic-ai/claude-code</span>
-                <span class="cloud-tag">Pro 订阅可用</span>
-            </div>
-            
-            <div class="article">
-                <h4>Cursor / TRAE：多模型切换成标配</h4>
-                <div class="meta">
-                    <span class="tag">IDE 生态</span>
-                    <span class="date">2026-04-14</span>
-                    <span>Industry Trend</span>
-                </div>
-                <p>
-                    4 月主流 AI 编程工具全面支持多模型切换：Cursor 支持 Claude/GPT/Gemini/自研 Composer 2 及第三方（GLM、Kimi）；TRAE 深度集成豆包 Code 模型。行业进入"协同智能"阶段——不再绑定单一模型，按任务类型自动路由到最优后端。
-                </p>
-                <span class="api-tag">IDE 插件</span>
-                <span class="cloud-tag">模型即服务时代</span>
+                <span class="api-tag">API: Responses / Images</span>
+                <span class="cloud-tag">成本与多图输入</span>
             </div>
         </div>
-        
+
         <div class="divider"></div>
-        
-        <!-- Quick Notes -->
+
+        <div class="section-header">
+            <h3>🔊 语音 · Agent · 编程助手</h3>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="article-grid">
+            <div class="article featured">
+                <h4>OpenAI Voice Agents 文档：实时语音 + 工具调用成为标准组合</h4>
+                <div class="meta">
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-04-23</span>
+                    <span>API Guide</span>
+                </div>
+                <p>
+                    OpenAI 开发者文档把 Voice agents、Realtime、Agents、Tools、Running agents 串成一条清晰路线：语音不再只是 TTS/STT，而是可流式对话、可调用工具、可保留状态、可接外部系统的 spoken workflow。适合未来把“语音秘书”接成可执行任务的前端入口。
+                </p>
+                <span class="api-tag">API: Realtime + Agents</span>
+                <span class="cloud-tag">WebRTC / WebSocket</span>
+            </div>
+
+            <div class="article">
+                <h4>Claude API Web Search：动态过滤支持 Opus 4.7 / Mythos Preview</h4>
+                <div class="meta">
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-04-24</span>
+                    <span>API Tooling</span>
+                </div>
+                <p>
+                    Anthropic 文档显示新版 `web_search_20260209` 工具支持 dynamic filtering，可由 Claude 对搜索结果做代码后处理，适配 Claude Mythos Preview、Opus 4.7、Opus 4.6、Sonnet 4.6，并可在 Claude API 与 Azure 使用。这类 server-side tool 正在把 Agent 的“查资料”能力从 prompt 技巧变成平台能力。
+                </p>
+                <span class="api-tag">API: Claude tool use</span>
+                <span class="cloud-tag">Azure 可用</span>
+            </div>
+
+            <div class="article">
+                <h4>Qwen Code / Claude Code / Codex：CLI Agent 进入多模型协作阶段</h4>
+                <div class="meta">
+                    <span class="tag">Coding Agent</span>
+                    <span class="date">2026-04-27</span>
+                    <span>Workflow Trend</span>
+                </div>
+                <p>
+                    本周新模型都在强调 Agent coding：Kimi K2.6 的长期代码稳定性、DeepSeek-V4 的 Agent 优化、Qwen3.6 的 Qwen Code 生态、Claude 的 effort control、OpenAI 的 Codex 入口。趋势不是“选一个 IDE”，而是把不同云端模型接进同一套 verifier / reviewer / router 流程。
+                </p>
+                <span class="api-tag">CLI + API</span>
+                <span class="cloud-tag">多 Agent 编排</span>
+            </div>
+
+            <div class="article">
+                <h4>Lyria 3 Pro：Gemini Drop 把音乐生成纳入通用 AI 产品线</h4>
+                <div class="meta">
+                    <span class="tag">Google</span>
+                    <span class="date">2026-04-24</span>
+                    <span>Music Generation</span>
+                </div>
+                <p>
+                    Gemini April Drop 还包含 Lyria 3 Pro 音乐生成，第三方整理称可生成最长约 3 分钟曲目。虽然它不一定直接对应独立 API，但说明音频/音乐正在被主流 AI 平台纳入同一个产品入口，未来视频生成 + 音乐 + 旁白的云端组合会更顺手。
+                </p>
+                <span class="api-tag">Product: Gemini</span>
+                <span class="cloud-tag">Music / Creative AI</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
         <div class="section-header">
             <h3>📋 本周趋势观察</h3>
             <div class="section-line"></div>
         </div>
-        
+
         <div class="article-grid full-width">
             <div class="article">
-                <h4>云端优先，API 为王</h4>
+                <h4>从“模型发布”转向“云端路由与工作流”</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-04-22</span>
+                    <span class="date">2026-04-27</span>
                 </div>
                 <p>
-                    <strong>MoE 架构统治云端：</strong> Kimi K2.6（1T/32B）、Qwen3.6-35B-A3B（35B/3B）均采用 MoE，以极小激活参数实现超大模型能力，API 成本大幅下降。云端推理效率成为新战场。<br><br>
-                    <strong>Agent Swarm 从概念到产品：</strong> Kimi K2.6 的 300 子 Agent 并行、Claude Code 的 5 天自主运维、OpenAI Codex 的后台任务队列——长程 Agent 不再是 demo，是生产工具。<br><br>
-                    <strong>国产模型 API 竞争力爆发：</strong> 豆包 2.0、Kimi K2.6、可灵 3.0、Qwen3.6 在各自领域达到或超越国际顶尖水平，国内开发者拥有世界级 API 选择。火山方舟、阿里云 Model Studio、Moonshot API 生态日趋成熟。<br><br>
-                    <strong>视频生成进入"可用"阶段：</strong> Kling 3.0 / Veo 3.1 / Wan 2.2 在 720P-1080P 质量、镜头控制、角色一致性上达到商业可用。API 调用 + 后期剪辑的工作流已跑通。
+                    <strong>第一，长上下文 + Agent coding 是本周主线：</strong> Kimi K2.6、DeepSeek-V4、Qwen3.6、GPT-5.5 都在围绕长程代码、工具调用、多步任务做优化。<br><br>
+                    <strong>第二，视频生成的关键是统一 API：</strong> OpenRouter 等聚合层开始把不同视频模型抽象成同一套异步接口，真正降低产品接入成本。<br><br>
+                    <strong>第三，产品入口正在多模态化：</strong> Gemini Drop 把图片、Notebooks、Mac app、3D/图表、音乐放进同一个助手体验，说明“AI 产品”会越来越像创作操作系统，而不是单一聊天窗口。<br><br>
+                    <strong>第四，Kelven 后续更值得做的是模型路由评测：</strong> 不折腾本地部署，直接围绕 OpenAI / Moonshot / DeepSeek / Qwen / Anthropic / 视频聚合 API 做任务型基准、成本表和 fallback 策略。
                 </p>
             </div>
         </div>
-        
-        <!-- Footer -->
+
         <footer class="footer">
             <div class="pop-brand">🎈 爆爆 POP · Kelven 的私人 AI 秘书</div>
-            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：官方博客、API 文档、开发者社区</p>
+            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：官方博客、API 文档、模型平台与开发者社区</p>
             <p style="margin-top: 8px; font-size: 0.75rem;">GitHub: github.com/lzyling/pop-ai-weekly · 在线阅读: lzyling.github.io/pop-ai-weekly/</p>
         </footer>
     </div>
