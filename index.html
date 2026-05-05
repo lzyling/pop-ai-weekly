@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.3 · 2026年4月27日</title>
+    <title>爆爆 AI 周报 Vol.4 · 2026年5月5日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
-        
+
         :root {
             --paper: #f5f0e8;
             --ink: #1a1a1a;
@@ -15,20 +15,20 @@
             --gray: #6b6b6b;
             --light-gray: #d4d0c8;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Noto Serif SC', Georgia, serif;
             background: var(--paper);
             color: var(--ink);
             line-height: 1.7;
         }
-        
+
         .newspaper {
             max-width: 1100px;
             margin: 0 auto;
@@ -37,7 +37,7 @@
             box-shadow: 0 0 30px rgba(0,0,0,0.1);
             min-height: 100vh;
         }
-        
+
         /* Masthead */
         .masthead {
             text-align: center;
@@ -45,7 +45,7 @@
             padding-bottom: 15px;
             margin-bottom: 10px;
         }
-        
+
         .masthead-title {
             font-family: 'Playfair Display', serif;
             font-size: 3.2rem;
@@ -55,7 +55,7 @@
             color: var(--ink);
             line-height: 1.1;
         }
-        
+
         .masthead-subtitle {
             font-size: 0.9rem;
             color: var(--gray);
@@ -63,7 +63,7 @@
             margin-top: 5px;
             text-transform: uppercase;
         }
-        
+
         .masthead-line {
             border-top: 1px solid var(--ink);
             border-bottom: 1px solid var(--ink);
@@ -74,7 +74,7 @@
             font-size: 0.75rem;
             letter-spacing: 1px;
         }
-        
+
         /* Headline Banner */
         .headline-banner {
             background: var(--ink);
@@ -83,21 +83,21 @@
             margin: 20px 0;
             text-align: center;
         }
-        
+
         .headline-banner h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 700;
             line-height: 1.3;
         }
-        
+
         .headline-banner .date-range {
             font-size: 0.85rem;
             opacity: 0.8;
             margin-top: 8px;
             letter-spacing: 2px;
         }
-        
+
         /* Section Headers */
         .section-header {
             display: flex;
@@ -106,7 +106,7 @@
             border-bottom: 2px solid var(--accent);
             padding-bottom: 8px;
         }
-        
+
         .section-header h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
@@ -115,14 +115,14 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+
         .section-line {
             flex: 1;
             height: 1px;
             background: var(--light-gray);
             margin-left: 15px;
         }
-        
+
         /* Article Cards */
         .article-grid {
             display: grid;
@@ -130,22 +130,22 @@
             gap: 25px;
             margin-bottom: 30px;
         }
-        
+
         .article-grid.full-width {
             grid-template-columns: 1fr;
         }
-        
+
         .article {
             border: 1px solid var(--light-gray);
             padding: 20px;
             position: relative;
         }
-        
+
         .article.featured {
             border: 2px solid var(--accent);
             background: linear-gradient(135deg, #fff 0%, #faf5f5 100%);
         }
-        
+
         .article.featured::before {
             content: "★ 本周焦点";
             position: absolute;
@@ -158,7 +158,7 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
-        
+
         .article h4 {
             font-family: 'Playfair Display', serif;
             font-size: 1.15rem;
@@ -166,7 +166,7 @@
             margin-bottom: 8px;
             line-height: 1.3;
         }
-        
+
         .article .meta {
             font-size: 0.75rem;
             color: var(--gray);
@@ -175,7 +175,7 @@
             gap: 12px;
             flex-wrap: wrap;
         }
-        
+
         .article .meta .tag {
             background: var(--ink);
             color: #fff;
@@ -184,29 +184,29 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .article .meta .date {
             color: var(--accent);
             font-weight: 700;
         }
-        
+
         .article .meta .date.warning::after {
             content: " ⚠";
             color: #ff6b00;
         }
-        
+
         .article p {
             font-size: 0.9rem;
             text-align: justify;
             hyphens: auto;
         }
-        
+
         .article .highlight {
             background: #fff3cd;
             padding: 2px 6px;
             font-weight: 700;
         }
-        
+
         .article .api-tag {
             display: inline-block;
             background: #e3f2fd;
@@ -217,7 +217,7 @@
             margin-top: 8px;
             margin-right: 5px;
         }
-        
+
         .article .cloud-tag {
             display: inline-block;
             background: #f3e5f5;
@@ -227,14 +227,26 @@
             border: 1px solid #ce93d8;
             margin-top: 8px;
         }
-        
+
+        .article .source-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.72rem;
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
+
+        .article .source-link:hover {
+            text-decoration: underline;
+        }
+
         /* Divider */
         .divider {
             border-top: 1px solid var(--light-gray);
             margin: 25px 0;
             position: relative;
         }
-        
+
         .divider::after {
             content: "◆";
             position: absolute;
@@ -246,7 +258,7 @@
             color: var(--accent);
             font-size: 0.8rem;
         }
-        
+
         /* Footer */
         .footer {
             margin-top: 40px;
@@ -256,7 +268,7 @@
             font-size: 0.8rem;
             color: var(--gray);
         }
-        
+
         .footer .pop-brand {
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
@@ -264,7 +276,7 @@
             color: var(--accent);
             margin-bottom: 5px;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             .article-grid {
@@ -283,105 +295,81 @@
             <div class="masthead-title">爆爆 AI 周报</div>
             <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 3</span>
-                <span>2026年4月27日 星期一</span>
+                <span>Vol. 4</span>
+                <span>2026年5月5日 星期二</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
 
         <div class="headline-banner">
-            <h2>OpenAI GPT-5.5 上线 · DeepSeek V4 Preview 开放 API · 视频生成进入统一 API 时代</h2>
-            <div class="date-range">2026年4月20日 — 4月27日</div>
+            <h2>OpenAI 进入 AWS · OpenRouter 统一视频 API 成型 · Agent 编程工具继续云端化</h2>
+            <div class="date-range">2026年4月28日 — 5月5日</div>
         </div>
 
         <div class="section-header">
-            <h3>🧠 语言模型</h3>
+            <h3>🧠 语言模型与云端 API</h3>
             <div class="section-line"></div>
         </div>
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenAI GPT-5.5 / GPT-5.5 Pro：API、ChatGPT、Codex 同步可用</h4>
+                <h4>OpenAI 模型、Codex 与 Managed Agents 登陆 AWS / Bedrock</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-04-23</span>
-                    <span>API Available</span>
+                    <span class="tag">OpenAI × AWS</span>
+                    <span class="date">2026-04-28</span>
+                    <span>Limited Preview</span>
                 </div>
                 <p>
-                    OpenAI 在官方文档与系统卡中更新 <span class="highlight">GPT-5.5</span> 与 GPT-5.5 Pro，开发者文档已列出模型页，社区公告显示可在 API、ChatGPT 与 Codex 中调用。本次重点不是单点跑分，而是把推理、工具调用、编程代理和多模态工作流继续收敛到统一模型族，适合做 Agent router 的默认高端兜底模型。
+                    OpenAI 与 AWS 扩大合作，宣布 <span class="highlight">OpenAI models on AWS、Codex on AWS、Amazon Bedrock Managed Agents powered by OpenAI</span> 三项能力进入 limited preview。核心意义不是又多一个入口，而是企业可以在现有 AWS 身份、安全、合规、采购体系里调用 OpenAI 前沿模型与 Agent 能力，云端生产落地阻力明显降低。
                 </p>
-                <span class="api-tag">API: api.openai.com</span>
-                <span class="cloud-tag">ChatGPT / Codex 同步</span>
+                <span class="api-tag">API: Amazon Bedrock / OpenAI</span>
+                <span class="cloud-tag">Codex CLI / VS Code / Desktop</span>
+                <a class="source-link" href="https://openai.com/index/openai-on-aws/">来源：OpenAI · OpenAI models, Codex, and Managed Agents come to AWS</a>
             </div>
 
             <div class="article featured">
-                <h4>DeepSeek-V4 Preview：Pro / Flash 双模型，百万上下文 + Agent 优化</h4>
+                <h4>DeepSeek-V4 Preview：Pro / Flash 双模型，API 同时兼容 OpenAI 与 Anthropic</h4>
                 <div class="meta">
                     <span class="tag">DeepSeek</span>
-                    <span class="date">2026-04-24</span>
-                    <span>API Available Today</span>
+                    <span class="date warning">2026-04-24</span>
+                    <span>API Available · 超过7天</span>
                 </div>
                 <p>
-                    DeepSeek 官方 API 文档发布 <span class="highlight">DeepSeek-V4 Preview</span>，包含 V4-Pro 与 V4-Flash。页面明确标注 API 当天开放，重点能力是 1M token 超长上下文、更高效的结构设计，以及面向编码、工具调用、长文档处理的 Agent 能力优化。Flash 适合高吞吐低成本路由，Pro 适合复杂推理与代码任务。
+                    DeepSeek API 更新到 V4-Pro 与 V4-Flash，模型名为 <span class="highlight">deepseek-v4-pro / deepseek-v4-flash</span>。官方变更日志说明它们可通过 OpenAI ChatCompletions 与 Anthropic interface 调用，旧的 deepseek-chat / deepseek-reasoner 将于 2026-07-24 停止服务。本条略超 7 天窗口，但对 API 路由迁移很重要，所以保留并标注。
                 </p>
-                <span class="api-tag">API: api-docs.deepseek.com</span>
-                <span class="cloud-tag">Pro / Flash 路由组合</span>
-            </div>
-
-            <div class="article featured">
-                <h4>Moonshot Kimi K2.6：长程代码稳定性增强，官方 API 已更新</h4>
-                <div class="meta">
-                    <span class="tag">Moonshot</span>
-                    <span class="date">2026-04-20</span>
-                    <span>API Available</span>
-                </div>
-                <p>
-                    Kimi API Platform 首页已上线 <span class="highlight">kimi-k2.6</span>，说明其具备更强、更稳定的长期代码写作能力，并显著增强 Agent 自主执行能力。官方价格页显示 K2.6 输入 $0.95/MTok、输出 $4.00/MTok、cache hit $0.16/MTok。对 Kelven 当前关注的云端 Agent 编排来说，它是本周最值得测试的国产编码模型之一。
-                </p>
-                <span class="api-tag">API: platform.moonshot.ai</span>
-                <span class="cloud-tag">Agent / Code 优先</span>
+                <span class="api-tag">API: api.deepseek.com</span>
+                <span class="cloud-tag">OpenAI / Anthropic-compatible</span>
+                <a class="source-link" href="https://api-docs.deepseek.com/updates">来源：DeepSeek API Docs · Change Log</a>
             </div>
 
             <div class="article">
-                <h4>Qwen3.6-27B：小体量开源模型补强编码与多模态底座</h4>
+                <h4>ChatGPT 更新模型选择入口与账户安全：产品层“可控性”继续增强</h4>
                 <div class="meta">
-                    <span class="tag">Alibaba Qwen</span>
-                    <span class="date">2026-04-21</span>
-                    <span>Open Weight + API</span>
+                    <span class="tag">ChatGPT</span>
+                    <span class="date">2026-04-28 / 04-30</span>
+                    <span>Product Rollout</span>
                 </div>
                 <p>
-                    Qwen3.6-27B 本周进入公开视野，Qwen 官方仓库说明 Qwen3.6 系列强化统一视觉语言底座，覆盖推理、编码、Agent 与视觉理解。阿里云 Model Studio 对 Qwen3.6 提供官方 API，并兼容 OpenAI / Anthropic 风格接口。这里不建议把重点放在本地部署，而是关注它作为低成本云端能力补位的价值。
+                    ChatGPT 在 4 月 28 日把模型选择放到 composer 中，并把 Thinking / Pro 的 thinking effort 选择整合进 model picker；4 月 30 日又推出 Advanced Account Security，支持 passkeys/security keys、恢复密钥、短会话与登录通知。这类更新直接影响高阶模型的日常使用和企业账号安全策略。
                 </p>
-                <span class="api-tag">API: Alibaba Cloud Model Studio</span>
-                <span class="cloud-tag">OpenAI-compatible</span>
+                <span class="api-tag">Product: ChatGPT Web</span>
+                <span class="cloud-tag">Model picker / Security</span>
+                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">来源：OpenAI Help Center · ChatGPT Release Notes</a>
             </div>
 
             <div class="article">
-                <h4>Claude Opus 4.7：仍在 7 天外，但 API 迁移价值高 ⚠️</h4>
+                <h4>GPT-5.5 已进入 GitHub Copilot 多端入口，但日期略超窗口</h4>
                 <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date warning">2026-04-16</span>
-                    <span>API Available</span>
+                    <span class="tag">GitHub Copilot</span>
+                    <span class="date warning">2026-04-24</span>
+                    <span>Rollout · 超过7天</span>
                 </div>
                 <p>
-                    Opus 4.7 发布已超过本周 7 天窗口，但仍值得作为背景保留：Anthropic 官方称其增强 coding、agents、vision 与多步任务，并通过 Claude API 的 <span class="highlight">claude-opus-4-7</span> 调用。新 `xhigh` effort level 介于 high 与 max 之间，适合在成本、延迟、推理深度之间做更细路由。
+                    GitHub 在 4 月 24 日宣布 GPT-5.5 向 Copilot Pro+、Business、Enterprise 用户逐步开放，覆盖 VS Code、Visual Studio、Copilot CLI、cloud agent、github.com、移动端、JetBrains、Xcode、Eclipse 等入口。它已经超出本周 7 天窗口，但和 OpenAI on AWS / Codex 云端化同属一条主线：高阶模型正直接进入开发者工作流。
                 </p>
-                <span class="api-tag">API: platform.claude.com</span>
-                <span class="cloud-tag">Vertex AI / Bedrock</span>
-            </div>
-
-            <div class="article">
-                <h4>LLM 更新节奏：一周内高端闭源 + 开源长上下文同时推进</h4>
-                <div class="meta">
-                    <span class="tag">Market</span>
-                    <span class="date">2026-04-27</span>
-                    <span>Trend</span>
-                </div>
-                <p>
-                    LLM Stats 本周时间线显示：4 月 20 日 Kimi K2.6、4 月 21 日 Qwen3.6-27B、4 月 23 日 GPT-5.5 / Pro、4 月 23-24 日 DeepSeek-V4 系列连续出现。结论很清楚：云端模型竞争已经从“单模型最强”转向“按任务动态路由”——编码、长上下文、低成本 Flash、旗舰兜底各司其职。
-                </p>
-                <span class="api-tag">Router Strategy</span>
-                <span class="cloud-tag">多模型编排</span>
+                <span class="api-tag">Product: GitHub Copilot</span>
+                <span class="cloud-tag">Agentic Coding</span>
+                <a class="source-link" href="https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/">来源：GitHub Changelog · GPT-5.5 in Copilot</a>
             </div>
         </div>
 
@@ -394,59 +382,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenRouter 视频生成 API：一个 `/api/v1/videos` 聚合多家视频模型</h4>
+                <h4>OpenRouter April Spotlight：视频生成统一 API + 工作区 + Agent SDK</h4>
                 <div class="meta">
                     <span class="tag">OpenRouter</span>
-                    <span class="date warning">2026-04-16</span>
+                    <span class="date">2026-04-30</span>
                     <span>API Available</span>
                 </div>
                 <p>
-                    OpenRouter 宣布视频生成能力，虽然发布日期略超 7 天，但对云端工作流很关键：用统一 schema 调用多个视频模型，规范化 resolution、duration、aspect ratio、audio、首尾帧与 reference images。官方文档提供 `POST /api/v1/videos` 和 `/api/v1/videos/models`，开发者可先查模型能力、价格、时长与输入限制，再异步提交任务。
+                    OpenRouter 4 月发布汇总把视频生成列为重点：用统一 API 生成 text-to-video / image-to-video，首批支持 Seedance 2.0、Veo 3.1、Wan 2.7、Sora 2 Pro 等，并提供 normalized parameters、异步 job tracking、capability discovery。对产品开发来说，这是“选模型”到“接统一生产接口”的关键一步。
                 </p>
-                <span class="api-tag">API: openrouter.ai/api/v1/videos</span>
-                <span class="cloud-tag">Veo / Seedance / Wan / Sora 路由</span>
+                <span class="api-tag">API: /api/v1/videos</span>
+                <span class="cloud-tag">Seedance / Veo / Wan / Sora</span>
+                <a class="source-link" href="https://openrouter.ai/announcements/april-release-spotlight">来源：OpenRouter · April Release Spotlight</a>
             </div>
 
             <div class="article featured">
-                <h4>Gemini April Drop：Nano Banana 2 个性化图片 + 3D / 图表生成</h4>
+                <h4>阿里云 Model Studio：Wan2.6 reference-to-video 文档更新</h4>
                 <div class="meta">
-                    <span class="tag">Google</span>
-                    <span class="date">2026-04-24</span>
-                    <span>Product Rollout</span>
+                    <span class="tag">Alibaba Cloud</span>
+                    <span class="date">2026-04-29</span>
+                    <span>API Docs Update</span>
                 </div>
                 <p>
-                    Google 发布 April Gemini Drop，重点包括 Nano Banana 2 结合 Personal Intelligence 与 Google Photos 生成更个性化的图片、Gemini app 支持交互式模拟 / 3D 模型 / 图表生成、Notebooks 进入 Gemini，以及 Mac app 上线。这是“生成式 AI 从聊天框走向可视化生产工具”的典型信号。
+                    阿里云 Model Studio 更新 Wan2.6 reference-to-video API 文档，说明可用图片/视频 URL 作为 reference，让人物或物体作为主角生成单人或多人互动视频。接口采用 <span class="highlight">create task → poll result</span> 的异步模式，支持新加坡、美国弗吉尼亚、中国北京等区域端点；示例参数包含 720p、10 秒、音频、多镜头等。
                 </p>
-                <span class="api-tag">Product: Gemini app</span>
-                <span class="cloud-tag">Photos / NotebookLM / Mac</span>
+                <span class="api-tag">API: DashScope video-generation</span>
+                <span class="cloud-tag">Reference-to-video / Async</span>
+                <a class="source-link" href="https://www.alibabacloud.com/help/en/model-studio/wan2-6-reference-student-video">来源：Alibaba Cloud Docs · Wan2.6 reference-to-video</a>
             </div>
 
             <div class="article">
-                <h4>Veo 3.1 / Seedance 2.0 / Wan 系列：聚合平台加速可用性</h4>
+                <h4>Replicate 图生视频集合快速更新：Seedance 2.0 与 Veo 3.1 成为 API 可选项</h4>
                 <div class="meta">
-                    <span class="tag">Video API</span>
-                    <span class="date">2026-04-27</span>
-                    <span>Cloud Available</span>
+                    <span class="tag">Replicate</span>
+                    <span class="date">2026-05-05</span>
+                    <span>Model Catalog</span>
                 </div>
                 <p>
-                    本周视频生成的核心变化不是某个单点模型，而是 <span class="highlight">API 可用性</span>：OpenRouter、fal、Atlas Cloud 等聚合平台开始把 Veo、Seedance、Wan、Kling、Hailuo 等模型做成可查询、可计费、可异步轮询的标准化服务。对实际产品来说，这比“又一个 demo”更重要。
+                    Replicate 的 image-to-video 集合本周显示多个模型处于近期更新状态，其中包括 bytedance/seedance-2.0-fast、bytedance/seedance-2.0、google/veo-3.1-fast、google/veo-3.1 等官方模型。它的价值在于把图生视频模型包装成可计费、可调用、可替换的云端 API，而不是让团队自己维护推理栈。
                 </p>
-                <span class="api-tag">API Aggregators</span>
-                <span class="cloud-tag">异步任务 + 成本可见</span>
+                <span class="api-tag">API: replicate.com/v1</span>
+                <span class="cloud-tag">Official Models</span>
+                <a class="source-link" href="https://replicate.com/collections/image-to-video">来源：Replicate · Generate videos from images</a>
             </div>
 
             <div class="article">
-                <h4>OpenAI Images / Vision 文档更新：多图输入和图片 token 成本更透明</h4>
+                <h4>fal 视频 API 文档继续扩容：4K Kling、Seedance 2.0、视频理解同台可查</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-04-23</span>
-                    <span>Docs Update</span>
+                    <span class="tag">fal.ai</span>
+                    <span class="date">2026-05-04</span>
+                    <span>Docs / API Catalog</span>
                 </div>
                 <p>
-                    OpenAI 图片与视觉文档继续细化多图输入、图片 token 计费、不同 detail/resize 行为和图像生成接口说明。对生产应用来说，本周值得关注的不是“能不能画图”，而是可预测成本、批量多图理解、图像生成与 Agent 工具链如何稳定拼接。
+                    fal 的视频生成 API 页面近期显示 top models 包括 Seedance 2.0 Text to Video、Kling Video v3 Pro 等；Kling v3 4K image-to-video 页面也显示可通过 Playground/API 调用。对云端视频工作流而言，fal 更像“生成式媒体基础设施”：统一认证、队列、状态轮询、文件上传与商业使用标识。
                 </p>
-                <span class="api-tag">API: Responses / Images</span>
-                <span class="cloud-tag">成本与多图输入</span>
+                <span class="api-tag">API: fal.ai models</span>
+                <span class="cloud-tag">Queue / Playground / SDK</span>
+                <a class="source-link" href="https://fal.ai/docs/model-api-reference/video-generation-api/overview">来源：fal.ai Docs · Video Generation API</a>
             </div>
         </div>
 
@@ -459,59 +451,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenAI Voice Agents 文档：实时语音 + 工具调用成为标准组合</h4>
+                <h4>GitHub Copilot in Visual Studio：云端 Agent、个人自定义 Agent、Debugger Agent</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-04-23</span>
-                    <span>API Guide</span>
+                    <span class="tag">GitHub</span>
+                    <span class="date">2026-04-30</span>
+                    <span>Release</span>
                 </div>
                 <p>
-                    OpenAI 开发者文档把 Voice agents、Realtime、Agents、Tools、Running agents 串成一条清晰路线：语音不再只是 TTS/STT，而是可流式对话、可调用工具、可保留状态、可接外部系统的 spoken workflow。适合未来把“语音秘书”接成可执行任务的前端入口。
+                    GitHub Copilot 的 Visual Studio 4 月更新明确把重心放在 agentic workflows：可从 IDE 直接启动 cloud agent session，用户级自定义 Agent 支持存放在个人目录，新 Debugger agent 可基于运行时行为复现、诊断并建议修复。编程助手正在从“补全”变成“云端任务执行者”。
                 </p>
-                <span class="api-tag">API: Realtime + Agents</span>
-                <span class="cloud-tag">WebRTC / WebSocket</span>
+                <span class="api-tag">Product: Visual Studio / Copilot</span>
+                <span class="cloud-tag">Cloud Agent / Debugger Agent</span>
+                <a class="source-link" href="https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update/">来源：GitHub Changelog · Copilot in Visual Studio April update</a>
+            </div>
+
+            <div class="article featured">
+                <h4>ElevenLabs：ElevenMusic 登上产品首页，Agents API 增强结束事件与 MCP 控制</h4>
+                <div class="meta">
+                    <span class="tag">ElevenLabs</span>
+                    <span class="date">2026-04-29 / 04-27</span>
+                    <span>Audio / Agent API</span>
+                </div>
+                <p>
+                    ElevenLabs 博客在 4 月 29 日更新 Introducing ElevenMusic；4 月 27 日 API changelog 则给 ElevenAgents 增加 agent_response_complete WebSocket event、pre_tool_speech、MCP response timeout、agent trust context、source attribution 等能力。语音 Agent 的工程细节正在补齐：什么时候一轮回答结束、工具调用前是否先说话、可信上下文如何配置，都变成了可控参数。
+                </p>
+                <span class="api-tag">API: ElevenAgents / Music API</span>
+                <span class="cloud-tag">Voice Agent / Music</span>
+                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/4/27">来源：ElevenLabs Docs · April 27 changelog</a>
             </div>
 
             <div class="article">
-                <h4>Claude API Web Search：动态过滤支持 Opus 4.7 / Mythos Preview</h4>
+                <h4>OpenRouter Agent SDK：300+ 模型统一进 agentic loop</h4>
                 <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date">2026-04-24</span>
-                    <span>API Tooling</span>
+                    <span class="tag">OpenRouter</span>
+                    <span class="date">2026-04-30</span>
+                    <span>SDK</span>
                 </div>
                 <p>
-                    Anthropic 文档显示新版 `web_search_20260209` 工具支持 dynamic filtering，可由 Claude 对搜索结果做代码后处理，适配 Claude Mythos Preview、Opus 4.7、Opus 4.6、Sonnet 4.6，并可在 Claude API 与 Azure 使用。这类 server-side tool 正在把 Agent 的“查资料”能力从 prompt 技巧变成平台能力。
+                    OpenRouter 的 April Spotlight 同时发布 @openrouter/agent：通过 callModel 处理多轮工具调用、流式输出、停止条件与成本跟踪，覆盖 300+ 模型；还提供 create-agent-tui 与 create-headless-agent 两个 scaffold。它的方向和 Kelven 现在的云端 API 路由非常契合：先把多模型调用抽象成统一 agent loop，再按任务选择模型。
                 </p>
-                <span class="api-tag">API: Claude tool use</span>
-                <span class="cloud-tag">Azure 可用</span>
+                <span class="api-tag">SDK: @openrouter/agent</span>
+                <span class="cloud-tag">Tool calling / Cost tracking</span>
+                <a class="source-link" href="https://openrouter.ai/announcements/april-release-spotlight">来源：OpenRouter · Agent SDK with callModel</a>
             </div>
 
             <div class="article">
-                <h4>Qwen Code / Claude Code / Codex：CLI Agent 进入多模型协作阶段</h4>
+                <h4>Copilot 云端 Agent 计费与性能信号：企业部署开始进入运营阶段</h4>
                 <div class="meta">
-                    <span class="tag">Coding Agent</span>
-                    <span class="date">2026-04-27</span>
-                    <span>Workflow Trend</span>
+                    <span class="tag">GitHub Copilot</span>
+                    <span class="date warning">2026-04-27</span>
+                    <span>Billing / Ops · 超过7天</span>
                 </div>
                 <p>
-                    本周新模型都在强调 Agent coding：Kimi K2.6 的长期代码稳定性、DeepSeek-V4 的 Agent 优化、Qwen3.6 的 Qwen Code 生态、Claude 的 effort control、OpenAI 的 Codex 入口。趋势不是“选一个 IDE”，而是把不同云端模型接进同一套 verifier / reviewer / router 流程。
+                    GitHub 4 月 27 日预告 Copilot code review 将从 2026-06-01 起消耗 GitHub Actions minutes；同日相关 changelog 还提到 Copilot cloud agent 使用 Actions custom images 后启动速度提升 20%。这说明 Agent 产品正在从“功能演示”进入“成本、性能、审计、组织策略”的运营阶段。
                 </p>
-                <span class="api-tag">CLI + API</span>
-                <span class="cloud-tag">多 Agent 编排</span>
-            </div>
-
-            <div class="article">
-                <h4>Lyria 3 Pro：Gemini Drop 把音乐生成纳入通用 AI 产品线</h4>
-                <div class="meta">
-                    <span class="tag">Google</span>
-                    <span class="date">2026-04-24</span>
-                    <span>Music Generation</span>
-                </div>
-                <p>
-                    Gemini April Drop 还包含 Lyria 3 Pro 音乐生成，第三方整理称可生成最长约 3 分钟曲目。虽然它不一定直接对应独立 API，但说明音频/音乐正在被主流 AI 平台纳入同一个产品入口，未来视频生成 + 音乐 + 旁白的云端组合会更顺手。
-                </p>
-                <span class="api-tag">Product: Gemini</span>
-                <span class="cloud-tag">Music / Creative AI</span>
+                <span class="api-tag">Platform: GitHub Actions</span>
+                <span class="cloud-tag">Cost / Performance</span>
+                <a class="source-link" href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">来源：GitHub Changelog · Copilot code review billing</a>
             </div>
         </div>
 
@@ -524,16 +520,16 @@
 
         <div class="article-grid full-width">
             <div class="article">
-                <h4>从“模型发布”转向“云端路由与工作流”</h4>
+                <h4>本周关键词：云端生产化、统一 API、Agent 运维</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-04-27</span>
+                    <span class="date">2026-05-05</span>
                 </div>
                 <p>
-                    <strong>第一，长上下文 + Agent coding 是本周主线：</strong> Kimi K2.6、DeepSeek-V4、Qwen3.6、GPT-5.5 都在围绕长程代码、工具调用、多步任务做优化。<br><br>
-                    <strong>第二，视频生成的关键是统一 API：</strong> OpenRouter 等聚合层开始把不同视频模型抽象成同一套异步接口，真正降低产品接入成本。<br><br>
-                    <strong>第三，产品入口正在多模态化：</strong> Gemini Drop 把图片、Notebooks、Mac app、3D/图表、音乐放进同一个助手体验，说明“AI 产品”会越来越像创作操作系统，而不是单一聊天窗口。<br><br>
-                    <strong>第四，Kelven 后续更值得做的是模型路由评测：</strong> 不折腾本地部署，直接围绕 OpenAI / Moonshot / DeepSeek / Qwen / Anthropic / 视频聚合 API 做任务型基准、成本表和 fallback 策略。
+                    <strong>第一，模型能力正在进入企业云原生通道：</strong> OpenAI 进入 AWS/Bedrock，说明高端模型不只在自家 API 可用，也开始嵌进企业已有云环境。<br><br>
+                    <strong>第二，视频生成的主线是“统一调用层”：</strong> OpenRouter、Replicate、fal、阿里云 Model Studio 都在把视频模型包装成异步任务、统一参数、可轮询结果的 API，而不是单纯炫 demo。<br><br>
+                    <strong>第三，Agent 的下半场是可观测、可计费、可治理：</strong> Copilot、OpenRouter、ElevenLabs 的更新都在补“执行完成事件、工具超时、成本跟踪、云端工作区、Actions minutes”这些工程细节。<br><br>
+                    <strong>第四，Kelven 后续更值得关注的是 API 路由评测：</strong> 暂停本地部署后，周报可以继续跟踪“哪个模型/平台已经能稳定调用、成本是否透明、是否适合接进 OpenClaw 工作流”。
                 </p>
             </div>
         </div>
