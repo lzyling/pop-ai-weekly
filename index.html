@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.4 · 2026年5月5日</title>
+    <title>爆爆 AI 周报 Vol.5 · 2026年5月11日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
 
@@ -295,15 +295,15 @@
             <div class="masthead-title">爆爆 AI 周报</div>
             <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 4</span>
-                <span>2026年5月5日 星期二</span>
+                <span>Vol. 5</span>
+                <span>2026年5月11日 星期一</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
 
         <div class="headline-banner">
-            <h2>OpenAI 进入 AWS · OpenRouter 统一视频 API 成型 · Agent 编程工具继续云端化</h2>
-            <div class="date-range">2026年4月28日 — 5月5日</div>
+            <h2>实时语音模型升级 · Claude Agent 托管化 · 多模型路由继续走向工具化</h2>
+            <div class="date-range">2026年5月5日 — 5月11日</div>
         </div>
 
         <div class="section-header">
@@ -313,63 +313,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenAI 模型、Codex 与 Managed Agents 登陆 AWS / Bedrock</h4>
+                <h4>OpenAI 发布 GPT-Realtime-2：实时语音更稳，价格下调约 20%</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI × AWS</span>
-                    <span class="date">2026-04-28</span>
-                    <span>Limited Preview</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-07</span>
+                    <span>API Model Update</span>
                 </div>
                 <p>
-                    OpenAI 与 AWS 扩大合作，宣布 <span class="highlight">OpenAI models on AWS、Codex on AWS、Amazon Bedrock Managed Agents powered by OpenAI</span> 三项能力进入 limited preview。核心意义不是又多一个入口，而是企业可以在现有 AWS 身份、安全、合规、采购体系里调用 OpenAI 前沿模型与 Agent 能力，云端生产落地阻力明显降低。
+                    OpenAI 在平台更新中推出 <span class="highlight">GPT-Realtime-2</span>，强调更高质量、更可靠、延迟更低的实时语音交互；同时 realtime API 价格约下降 20%。这对语音助手、电话客服、实时翻译和 OpenClaw 语音交互都很关键：语音 Agent 的瓶颈正在从“能不能说”转向“能不能稳定、低延迟、可控成本地说”。
                 </p>
-                <span class="api-tag">API: Amazon Bedrock / OpenAI</span>
-                <span class="cloud-tag">Codex CLI / VS Code / Desktop</span>
-                <a class="source-link" href="https://openai.com/index/openai-on-aws/">来源：OpenAI · OpenAI models, Codex, and Managed Agents come to AWS</a>
+                <span class="api-tag">API: Realtime API</span>
+                <span class="cloud-tag">Voice Agent / Low Latency</span>
+                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
             </div>
 
             <div class="article featured">
-                <h4>DeepSeek-V4 Preview：Pro / Flash 双模型，API 同时兼容 OpenAI 与 Anthropic</h4>
-                <div class="meta">
-                    <span class="tag">DeepSeek</span>
-                    <span class="date warning">2026-04-24</span>
-                    <span>API Available · 超过7天</span>
-                </div>
-                <p>
-                    DeepSeek API 更新到 V4-Pro 与 V4-Flash，模型名为 <span class="highlight">deepseek-v4-pro / deepseek-v4-flash</span>。官方变更日志说明它们可通过 OpenAI ChatCompletions 与 Anthropic interface 调用，旧的 deepseek-chat / deepseek-reasoner 将于 2026-07-24 停止服务。本条略超 7 天窗口，但对 API 路由迁移很重要，所以保留并标注。
-                </p>
-                <span class="api-tag">API: api.deepseek.com</span>
-                <span class="cloud-tag">OpenAI / Anthropic-compatible</span>
-                <a class="source-link" href="https://api-docs.deepseek.com/updates">来源：DeepSeek API Docs · Change Log</a>
-            </div>
-
-            <div class="article">
-                <h4>ChatGPT 更新模型选择入口与账户安全：产品层“可控性”继续增强</h4>
+                <h4>GPT-5.5 Instant 进入 ChatGPT，Pro 账户获得更长上下文与导出能力</h4>
                 <div class="meta">
                     <span class="tag">ChatGPT</span>
-                    <span class="date">2026-04-28 / 04-30</span>
+                    <span class="date">2026-05-05</span>
                     <span>Product Rollout</span>
                 </div>
                 <p>
-                    ChatGPT 在 4 月 28 日把模型选择放到 composer 中，并把 Thinking / Pro 的 thinking effort 选择整合进 model picker；4 月 30 日又推出 Advanced Account Security，支持 passkeys/security keys、恢复密钥、短会话与登录通知。这类更新直接影响高阶模型的日常使用和企业账号安全策略。
+                    ChatGPT Release Notes 显示，5 月 5 日起 GPT-5.5 Instant 面向 Free / Plus / Pro / Team 用户作为默认模型逐步推出；Pro 用户还获得更高 message limits、更长上下文，以及 Deep Research 的 PDF / Markdown / DOCX / PPTX 导出。对日常生产力来说，本周亮点不是单一模型分数，而是高阶模型和研究结果开始被包装成更顺手的云端产品能力。
                 </p>
-                <span class="api-tag">Product: ChatGPT Web</span>
-                <span class="cloud-tag">Model picker / Security</span>
+                <span class="api-tag">Product: ChatGPT</span>
+                <span class="cloud-tag">GPT-5.5 / Deep Research</span>
                 <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">来源：OpenAI Help Center · ChatGPT Release Notes</a>
             </div>
 
             <div class="article">
-                <h4>GPT-5.5 已进入 GitHub Copilot 多端入口，但日期略超窗口</h4>
+                <h4>Anthropic 推出 Claude Managed Agents 公测：把 Claude Code 任务搬到托管沙箱</h4>
                 <div class="meta">
-                    <span class="tag">GitHub Copilot</span>
-                    <span class="date warning">2026-04-24</span>
-                    <span>Rollout · 超过7天</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-05-06</span>
+                    <span>Public Beta</span>
                 </div>
                 <p>
-                    GitHub 在 4 月 24 日宣布 GPT-5.5 向 Copilot Pro+、Business、Enterprise 用户逐步开放，覆盖 VS Code、Visual Studio、Copilot CLI、cloud agent、github.com、移动端、JetBrains、Xcode、Eclipse 等入口。它已经超出本周 7 天窗口，但和 OpenAI on AWS / Codex 云端化同属一条主线：高阶模型正直接进入开发者工作流。
+                    Anthropic 公布 <span class="highlight">Claude Managed Agents</span>，开发者可通过 API 创建托管会话，在隔离云端环境中执行长时间编码、数据处理、文档生成等任务，并支持自定义容器、网络访问与文件持久化。它延续了 Codex / cloud agent 的同一趋势：AI 编程助手正在从本机插件变成可调度、可审计的云端执行单元。
                 </p>
-                <span class="api-tag">Product: GitHub Copilot</span>
-                <span class="cloud-tag">Agentic Coding</span>
-                <a class="source-link" href="https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/">来源：GitHub Changelog · GPT-5.5 in Copilot</a>
+                <span class="api-tag">API: Anthropic Agents</span>
+                <span class="cloud-tag">Sandbox / Long-running Tasks</span>
+                <a class="source-link" href="https://www.anthropic.com/news/managed-agents">来源：Anthropic · Introducing Claude Managed Agents</a>
+            </div>
+
+            <div class="article">
+                <h4>OpenRouter 给模型路由补上托管 Web 工具：搜索、抓取与上下文控制</h4>
+                <div class="meta">
+                    <span class="tag">OpenRouter</span>
+                    <span class="date">2026-05-07</span>
+                    <span>Tools API</span>
+                </div>
+                <p>
+                    OpenRouter 发布 web_search 与 web_fetch 两个托管工具，让不同模型可以通过同一接口进行网页搜索、内容抽取、引用返回，并支持 URL allowlist / denylist、搜索上下文大小、工具调用上限等控制项。多模型网关不再只是“转发聊天请求”，而是在补齐 agentic loop 所需的工具层、预算层与可控性。
+                </p>
+                <span class="api-tag">API: OpenRouter Tools</span>
+                <span class="cloud-tag">Search / Fetch / Citations</span>
+                <a class="source-link" href="https://openrouter.ai/announcements/web-tools">来源：OpenRouter · Introducing OpenRouter Web Tools</a>
             </div>
         </div>
 
@@ -382,63 +382,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenRouter April Spotlight：视频生成统一 API + 工作区 + Agent SDK</h4>
+                <h4>OpenAI Responses API 新增远程 MCP、Code Interpreter 与图像生成能力整合</h4>
                 <div class="meta">
-                    <span class="tag">OpenRouter</span>
-                    <span class="date">2026-04-30</span>
-                    <span>API Available</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-07</span>
+                    <span>Responses API</span>
                 </div>
                 <p>
-                    OpenRouter 4 月发布汇总把视频生成列为重点：用统一 API 生成 text-to-video / image-to-video，首批支持 Seedance 2.0、Veo 3.1、Wan 2.7、Sora 2 Pro 等，并提供 normalized parameters、异步 job tracking、capability discovery。对产品开发来说，这是“选模型”到“接统一生产接口”的关键一步。
+                    OpenAI 本周把 Responses API 的工具能力向前推进：新增 remote MCP server support、升级 Image Generation、Code Interpreter、File Search，并说明 GPT-5.5 Pro 兼容 Responses API。图像生成在这里不是孤立模型，而是进入同一个“模型 + 工具 + 文件 + 代码”的 API 编排层，适合构建会查资料、会写代码、会产图的复合型工作流。
                 </p>
-                <span class="api-tag">API: /api/v1/videos</span>
-                <span class="cloud-tag">Seedance / Veo / Wan / Sora</span>
-                <a class="source-link" href="https://openrouter.ai/announcements/april-release-spotlight">来源：OpenRouter · April Release Spotlight</a>
+                <span class="api-tag">API: Responses API</span>
+                <span class="cloud-tag">Image Generation / MCP / Code</span>
+                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
             </div>
 
             <div class="article featured">
-                <h4>阿里云 Model Studio：Wan2.6 reference-to-video 文档更新</h4>
+                <h4>火山方舟文档持续更新：Seedance 2.0、Seedream 4/5、Responses 与 MCP 入口集中出现</h4>
                 <div class="meta">
-                    <span class="tag">Alibaba Cloud</span>
-                    <span class="date">2026-04-29</span>
-                    <span>API Docs Update</span>
+                    <span class="tag">Volcengine ARK</span>
+                    <span class="date">2026-05-07</span>
+                    <span>Docs / Platform Update</span>
                 </div>
                 <p>
-                    阿里云 Model Studio 更新 Wan2.6 reference-to-video API 文档，说明可用图片/视频 URL 作为 reference，让人物或物体作为主角生成单人或多人互动视频。接口采用 <span class="highlight">create task → poll result</span> 的异步模式，支持新加坡、美国弗吉尼亚、中国北京等区域端点；示例参数包含 720p、10 秒、音频、多镜头等。
+                    火山引擎开发者文档本周更新到 5 月 7 日，导航中集中出现 Seedance 2.0 教程、Seedream 4.0 / 5.0 API、Responses API、MCP 远程服务、实时语音聊天等入口。虽然更像平台文档更新而非单一发布会，但信号很明确：豆包/火山正在把图像、视频、语音与 Agent 工具统一进可 API 调用的云端平台。
                 </p>
-                <span class="api-tag">API: DashScope video-generation</span>
-                <span class="cloud-tag">Reference-to-video / Async</span>
-                <a class="source-link" href="https://www.alibabacloud.com/help/en/model-studio/wan2-6-reference-student-video">来源：Alibaba Cloud Docs · Wan2.6 reference-to-video</a>
+                <span class="api-tag">API: 火山方舟 / 豆包</span>
+                <span class="cloud-tag">Seedance / Seedream / MCP</span>
+                <a class="source-link" href="https://www.volcengine.com/docs/82379/1099320">来源：Volcengine Docs · 模型列表（更新于 2026-05-07）</a>
             </div>
 
             <div class="article">
-                <h4>Replicate 图生视频集合快速更新：Seedance 2.0 与 Veo 3.1 成为 API 可选项</h4>
+                <h4>OpenRouter GPT-5.5 成本分析：多模型路由开始进入“价格/质量”运营阶段</h4>
                 <div class="meta">
-                    <span class="tag">Replicate</span>
-                    <span class="date">2026-05-05</span>
-                    <span>Model Catalog</span>
-                </div>
-                <p>
-                    Replicate 的 image-to-video 集合本周显示多个模型处于近期更新状态，其中包括 bytedance/seedance-2.0-fast、bytedance/seedance-2.0、google/veo-3.1-fast、google/veo-3.1 等官方模型。它的价值在于把图生视频模型包装成可计费、可调用、可替换的云端 API，而不是让团队自己维护推理栈。
-                </p>
-                <span class="api-tag">API: replicate.com/v1</span>
-                <span class="cloud-tag">Official Models</span>
-                <a class="source-link" href="https://replicate.com/collections/image-to-video">来源：Replicate · Generate videos from images</a>
-            </div>
-
-            <div class="article">
-                <h4>fal 视频 API 文档继续扩容：4K Kling、Seedance 2.0、视频理解同台可查</h4>
-                <div class="meta">
-                    <span class="tag">fal.ai</span>
+                    <span class="tag">OpenRouter</span>
                     <span class="date">2026-05-04</span>
-                    <span>Docs / API Catalog</span>
+                    <span>Market / Routing</span>
                 </div>
                 <p>
-                    fal 的视频生成 API 页面近期显示 top models 包括 Seedance 2.0 Text to Video、Kling Video v3 Pro 等；Kling v3 4K image-to-video 页面也显示可通过 Playground/API 调用。对云端视频工作流而言，fal 更像“生成式媒体基础设施”：统一认证、队列、状态轮询、文件上传与商业使用标识。
+                    OpenRouter 5 月 4 日发布 GPT-5.5 成本分析，讨论其在性能、价格与路由选择上的定位。它对图像/视频也有参考意义：当生成式媒体模型越来越多地被包装进同一网关后，真正影响落地的会是质量、速度、失败率、价格和可替换性，而不是某个 demo 的单次效果。
                 </p>
-                <span class="api-tag">API: fal.ai models</span>
-                <span class="cloud-tag">Queue / Playground / SDK</span>
-                <a class="source-link" href="https://fal.ai/docs/model-api-reference/video-generation-api/overview">来源：fal.ai Docs · Video Generation API</a>
+                <span class="api-tag">Platform: Model Router</span>
+                <span class="cloud-tag">Cost / Quality / Fallback</span>
+                <a class="source-link" href="https://openrouter.ai/articles/gpt-5-5-cost-analysis">来源：OpenRouter · GPT-5.5 Cost Analysis</a>
+            </div>
+
+            <div class="article">
+                <h4>ChatGPT 继续补办公套件入口：macOS 可编辑表格，企业版推出 Gmail / Drive 连接器</h4>
+                <div class="meta">
+                    <span class="tag">ChatGPT</span>
+                    <span class="date">2026-05-05</span>
+                    <span>Productivity</span>
+                </div>
+                <p>
+                    ChatGPT 本周在 macOS App 加入 Excel / Apple Numbers 电子表格直接编辑能力，同时面向 Pro / Business / Enterprise 推出 Google Drive、Gmail、Google Calendar、SharePoint、Outlook Calendar、Outlook Email、Teams、GitHub 等深度研究连接器。生成式 AI 正从“网页聊天框”继续嵌入文件、邮件、日历和代码仓库。
+                </p>
+                <span class="api-tag">Product: ChatGPT App</span>
+                <span class="cloud-tag">Connectors / Spreadsheet</span>
+                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">来源：OpenAI Help Center · ChatGPT Release Notes</a>
             </div>
         </div>
 
@@ -451,63 +451,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>GitHub Copilot in Visual Studio：云端 Agent、个人自定义 Agent、Debugger Agent</h4>
+                <h4>ElevenLabs Agents 平台补工程能力：标签、关键术语、MCP 超时与通话结束控制</h4>
                 <div class="meta">
-                    <span class="tag">GitHub</span>
-                    <span class="date">2026-04-30</span>
-                    <span>Release</span>
+                    <span class="tag">ElevenLabs</span>
+                    <span class="date">2026-05-04</span>
+                    <span>Voice Agent API</span>
                 </div>
                 <p>
-                    GitHub Copilot 的 Visual Studio 4 月更新明确把重心放在 agentic workflows：可从 IDE 直接启动 cloud agent session，用户级自定义 Agent 支持存放在个人目录，新 Debugger agent 可基于运行时行为复现、诊断并建议修复。编程助手正在从“补全”变成“云端任务执行者”。
+                    ElevenLabs 5 月 4 日 changelog 为 Agents 增加 agent tags，并给 Scribe v2 Realtime 加入 keyterm prompting；同一批更新还包括 MCP response timeout、agent response complete event、pre-tool speech、end call tool 等控制项。语音 Agent 的成熟度正在体现在细节上：如何标记、如何等工具、如何结束通话、如何让转写识别专有名词。
                 </p>
-                <span class="api-tag">Product: Visual Studio / Copilot</span>
-                <span class="cloud-tag">Cloud Agent / Debugger Agent</span>
-                <a class="source-link" href="https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update/">来源：GitHub Changelog · Copilot in Visual Studio April update</a>
+                <span class="api-tag">API: ElevenLabs Agents</span>
+                <span class="cloud-tag">TTS / STT / Voice Agent</span>
+                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/5/4">来源：ElevenLabs Docs · May 4 changelog</a>
             </div>
 
             <div class="article featured">
-                <h4>ElevenLabs：ElevenMusic 登上产品首页，Agents API 增强结束事件与 MCP 控制</h4>
+                <h4>OpenAI 给 Agent 开发补底座：后台模式、加密内容与推理摘要</h4>
                 <div class="meta">
-                    <span class="tag">ElevenLabs</span>
-                    <span class="date">2026-04-29 / 04-27</span>
-                    <span>Audio / Agent API</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-07</span>
+                    <span>Agent Infrastructure</span>
                 </div>
                 <p>
-                    ElevenLabs 博客在 4 月 29 日更新 Introducing ElevenMusic；4 月 27 日 API changelog 则给 ElevenAgents 增加 agent_response_complete WebSocket event、pre_tool_speech、MCP response timeout、agent trust context、source attribution 等能力。语音 Agent 的工程细节正在补齐：什么时候一轮回答结束、工具调用前是否先说话、可信上下文如何配置，都变成了可控参数。
+                    除了语音与图像，OpenAI 本周还在 Responses API 中加入 background mode、reasoning summaries、encrypted reasoning items 等能力。它们看起来不像炫酷 demo，但对生产级 Agent 很重要：长任务要能后台跑，推理过程要能摘要给人审计，敏感上下文要能被更细粒度地保护。
                 </p>
-                <span class="api-tag">API: ElevenAgents / Music API</span>
-                <span class="cloud-tag">Voice Agent / Music</span>
-                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/4/27">来源：ElevenLabs Docs · April 27 changelog</a>
+                <span class="api-tag">API: Responses API</span>
+                <span class="cloud-tag">Background / Audit / Privacy</span>
+                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
             </div>
 
             <div class="article">
-                <h4>OpenRouter Agent SDK：300+ 模型统一进 agentic loop</h4>
+                <h4>Kimi API 提醒：moonshot-v1 系列将于 5 月底下线，迁移到 kimi-k2 系列</h4>
                 <div class="meta">
-                    <span class="tag">OpenRouter</span>
-                    <span class="date">2026-04-30</span>
-                    <span>SDK</span>
+                    <span class="tag">Moonshot / Kimi</span>
+                    <span class="date">2026-05-11</span>
+                    <span>API Migration</span>
                 </div>
                 <p>
-                    OpenRouter 的 April Spotlight 同时发布 @openrouter/agent：通过 callModel 处理多轮工具调用、流式输出、停止条件与成本跟踪，覆盖 300+ 模型；还提供 create-agent-tui 与 create-headless-agent 两个 scaffold。它的方向和 Kelven 现在的云端 API 路由非常契合：先把多模型调用抽象成统一 agent loop，再按任务选择模型。
+                    Moonshot/Kimi 开放平台文档提示，因 moonshot-v1 系列 API 将于 <span class="highlight">2026-05-31</span> 正式下线，历史文档已迁移到归档页；新接入建议转向 kimi-k2 系列。对所有接了 Kimi 的产品来说，这不是“新功能”，但属于必须跟进的 API 生命周期事件：模型名、上下文、价格和兼容性都要检查。
                 </p>
-                <span class="api-tag">SDK: @openrouter/agent</span>
-                <span class="cloud-tag">Tool calling / Cost tracking</span>
-                <a class="source-link" href="https://openrouter.ai/announcements/april-release-spotlight">来源：OpenRouter · Agent SDK with callModel</a>
+                <span class="api-tag">API: Kimi Open Platform</span>
+                <span class="cloud-tag">Model Lifecycle / Migration</span>
+                <a class="source-link" href="https://platform.moonshot.cn/docs/guide/start-using-kimi-api">来源：Moonshot / Kimi Docs · 使用 Kimi API</a>
             </div>
 
             <div class="article">
-                <h4>Copilot 云端 Agent 计费与性能信号：企业部署开始进入运营阶段</h4>
+                <h4>Claude Sonnet 4.6 与多 Agent Research 能力进入 Anthropic Console 可用链路</h4>
                 <div class="meta">
-                    <span class="tag">GitHub Copilot</span>
-                    <span class="date warning">2026-04-27</span>
-                    <span>Billing / Ops · 超过7天</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-05-05</span>
+                    <span>Model / Console</span>
                 </div>
                 <p>
-                    GitHub 4 月 27 日预告 Copilot code review 将从 2026-06-01 起消耗 GitHub Actions minutes；同日相关 changelog 还提到 Copilot cloud agent 使用 Actions custom images 后启动速度提升 20%。这说明 Agent 产品正在从“功能演示”进入“成本、性能、审计、组织策略”的运营阶段。
+                    Anthropic Console 的 Release Notes 记录了 Claude Sonnet 4.6 上线以及 Research 功能面向 Max / Team / Enterprise 用户开放。Research 会自动把复杂问题拆给多个 Claude agents，并整合结果。它和 Managed Agents 组合起来看，Anthropic 正在同时推进“模型能力、研究型多 Agent、托管执行环境”三层产品化。
                 </p>
-                <span class="api-tag">Platform: GitHub Actions</span>
-                <span class="cloud-tag">Cost / Performance</span>
-                <a class="source-link" href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">来源：GitHub Changelog · Copilot code review billing</a>
+                <span class="api-tag">Product: Claude / Console</span>
+                <span class="cloud-tag">Research / Multi-Agent</span>
+                <a class="source-link" href="https://support.anthropic.com/en/articles/11813278-console-release-notes">来源：Anthropic Support · Console Release Notes</a>
             </div>
         </div>
 
@@ -520,16 +520,16 @@
 
         <div class="article-grid full-width">
             <div class="article">
-                <h4>本周关键词：云端生产化、统一 API、Agent 运维</h4>
+                <h4>本周关键词：实时语音、托管 Agent、工具层统一</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-05-05</span>
+                    <span class="date">2026-05-11</span>
                 </div>
                 <p>
-                    <strong>第一，模型能力正在进入企业云原生通道：</strong> OpenAI 进入 AWS/Bedrock，说明高端模型不只在自家 API 可用，也开始嵌进企业已有云环境。<br><br>
-                    <strong>第二，视频生成的主线是“统一调用层”：</strong> OpenRouter、Replicate、fal、阿里云 Model Studio 都在把视频模型包装成异步任务、统一参数、可轮询结果的 API，而不是单纯炫 demo。<br><br>
-                    <strong>第三，Agent 的下半场是可观测、可计费、可治理：</strong> Copilot、OpenRouter、ElevenLabs 的更新都在补“执行完成事件、工具超时、成本跟踪、云端工作区、Actions minutes”这些工程细节。<br><br>
-                    <strong>第四，Kelven 后续更值得关注的是 API 路由评测：</strong> 暂停本地部署后，周报可以继续跟踪“哪个模型/平台已经能稳定调用、成本是否透明、是否适合接进 OpenClaw 工作流”。
+                    <strong>第一，语音 Agent 开始拼工程质量：</strong> OpenAI realtime 降价升级、ElevenLabs 补通话结束和 MCP 超时控制，说明实时语音正在从 demo 走向可运营产品。<br><br>
+                    <strong>第二，编程助手继续云端化：</strong> Anthropic Managed Agents、OpenAI background mode、ChatGPT connectors 都在把“AI 帮我做事”从对话框推进到托管执行环境。<br><br>
+                    <strong>第三，工具层成为模型网关的核心差异：</strong> OpenRouter 的 web tools、OpenAI 的 MCP / Code Interpreter / File Search、火山方舟的 Responses / MCP 入口，都说明 API 平台竞争点已不只是模型本身，而是模型如何安全调用工具。<br><br>
+                    <strong>第四，Kelven 后续值得盯紧的是语音 + Agent 的接入成本：</strong> 如果实时语音继续降价、托管 Agent 越来越稳定，OpenClaw 的“会说、会查、会跑任务”的体验会有明显升级空间。
                 </p>
             </div>
         </div>
