@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.5 · 2026年5月11日</title>
+    <title>爆爆 AI 周报 Vol.6 · 2026年5月18日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
 
@@ -295,15 +295,15 @@
             <div class="masthead-title">爆爆 AI 周报</div>
             <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 5</span>
-                <span>2026年5月11日 星期一</span>
+                <span>Vol. 6</span>
+                <span>2026年5月18日 星期一</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
 
         <div class="headline-banner">
-            <h2>实时语音模型升级 · Claude Agent 托管化 · 多模型路由继续走向工具化</h2>
-            <div class="date-range">2026年5月5日 — 5月11日</div>
+            <h2>Codex 手机化 · Claude 工作流下沉 · 语音与 Agent 平台继续工程化</h2>
+            <div class="date-range">2026年5月12日 — 5月18日</div>
         </div>
 
         <div class="section-header">
@@ -313,132 +313,132 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenAI 发布 GPT-Realtime-2：实时语音更稳，价格下调约 20%</h4>
+                <h4>OpenAI 把 Codex 带进 ChatGPT 手机端：长任务可以随时接管</h4>
                 <div class="meta">
                     <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-07</span>
-                    <span>API Model Update</span>
+                    <span class="date">2026-05-14</span>
+                    <span>Codex / Mobile Preview</span>
                 </div>
                 <p>
-                    OpenAI 在平台更新中推出 <span class="highlight">GPT-Realtime-2</span>，强调更高质量、更可靠、延迟更低的实时语音交互；同时 realtime API 价格约下降 20%。这对语音助手、电话客服、实时翻译和 OpenClaw 语音交互都很关键：语音 Agent 的瓶颈正在从“能不能说”转向“能不能稳定、低延迟、可控成本地说”。
+                    OpenAI 宣布 Codex 进入 ChatGPT iOS / Android App 预览版，可从手机查看活跃线程、审批命令、切换方向、看 diff、测试结果和终端输出。Remote SSH 已 GA，Hooks 也对所有计划开放；Codex 不再只是桌面编码助手，而是一个可以跨设备持续运行、随时被人类介入的云端/本地混合 Agent 工作台。
                 </p>
-                <span class="api-tag">API: Realtime API</span>
-                <span class="cloud-tag">Voice Agent / Low Latency</span>
-                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
+                <span class="api-tag">Product: Codex</span>
+                <span class="cloud-tag">Mobile / Remote SSH / Hooks</span>
+                <a class="source-link" href="https://openai.com/index/work-with-codex-from-anywhere/">来源：OpenAI · Work with Codex from anywhere</a>
             </div>
 
             <div class="article featured">
-                <h4>GPT-5.5 Instant 进入 ChatGPT，Pro 账户获得更长上下文与导出能力</h4>
+                <h4>OpenAI 推出 ChatGPT 财务空间：连接 12,000+ 金融机构，GPT-5.5 Thinking 默认处理</h4>
                 <div class="meta">
-                    <span class="tag">ChatGPT</span>
-                    <span class="date">2026-05-05</span>
-                    <span>Product Rollout</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-15</span>
+                    <span>ChatGPT Product</span>
                 </div>
                 <p>
-                    ChatGPT Release Notes 显示，5 月 5 日起 GPT-5.5 Instant 面向 Free / Plus / Pro / Team 用户作为默认模型逐步推出；Pro 用户还获得更高 message limits、更长上下文，以及 Deep Research 的 PDF / Markdown / DOCX / PPTX 导出。对日常生产力来说，本周亮点不是单一模型分数，而是高阶模型和研究结果开始被包装成更顺手的云端产品能力。
+                    ChatGPT 在美国 Pro 用户中预览个人财务体验：通过 Plaid 连接账户，查看支出、投资、订阅、待付款，并用真实财务上下文做预算、目标规划和风险分析。OpenAI 强调该空间不会操作账户，连接数据可删除，且财务对话默认使用 <span class="highlight">GPT-5.5 Thinking</span>。这代表 ChatGPT 正继续从通用聊天框进入高敏感、高价值的垂直工作流。
                 </p>
-                <span class="api-tag">Product: ChatGPT</span>
-                <span class="cloud-tag">GPT-5.5 / Deep Research</span>
-                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">来源：OpenAI Help Center · ChatGPT Release Notes</a>
+                <span class="api-tag">Product: ChatGPT Finances</span>
+                <span class="cloud-tag">Connected Apps / Privacy</span>
+                <a class="source-link" href="https://openai.com/index/personal-finance-chatgpt/">来源：OpenAI · A new personal finance experience in ChatGPT</a>
             </div>
 
             <div class="article">
-                <h4>Anthropic 推出 Claude Managed Agents 公测：把 Claude Code 任务搬到托管沙箱</h4>
+                <h4>Anthropic API 更新：Opus 4.7 Fast mode 支持、Claude Platform 上 AWS</h4>
                 <div class="meta">
                     <span class="tag">Anthropic</span>
-                    <span class="date">2026-05-06</span>
-                    <span>Public Beta</span>
+                    <span class="date">2026-05-12</span>
+                    <span>API Release Notes</span>
                 </div>
                 <p>
-                    Anthropic 公布 <span class="highlight">Claude Managed Agents</span>，开发者可通过 API 创建托管会话，在隔离云端环境中执行长时间编码、数据处理、文档生成等任务，并支持自定义容器、网络访问与文件持久化。它延续了 Codex / cloud agent 的同一趋势：AI 编程助手正在从本机插件变成可调度、可审计的云端执行单元。
+                    Claude Platform Release Notes 显示，Fast mode research preview 已支持 Claude Opus 4.7，可用 <span class="highlight">speed: "fast"</span> 与 beta header 换取更快输出；同时 Claude Platform on AWS 已上线，支持 Messages、Files、Batches、Managed Agents、Agent Skills、代码执行和工具调用，并接入 AWS billing / IAM。Anthropic 的重点仍是把 Claude 做成可被企业云基础设施直接托管的 API 平台。
                 </p>
-                <span class="api-tag">API: Anthropic Agents</span>
-                <span class="cloud-tag">Sandbox / Long-running Tasks</span>
-                <a class="source-link" href="https://www.anthropic.com/news/managed-agents">来源：Anthropic · Introducing Claude Managed Agents</a>
+                <span class="api-tag">API: Claude Platform</span>
+                <span class="cloud-tag">AWS / Fast Mode / Managed Agents</span>
+                <a class="source-link" href="https://platform.claude.com/docs/en/release-notes/overview">来源：Anthropic · Claude Platform Release Notes</a>
             </div>
 
             <div class="article">
-                <h4>OpenRouter 给模型路由补上托管 Web 工具：搜索、抓取与上下文控制</h4>
+                <h4>WaveSpeed 扩展统一 LLM API：把 GPT、Claude、Gemini 等 260+ 模型纳入同一入口</h4>
                 <div class="meta">
-                    <span class="tag">OpenRouter</span>
-                    <span class="date">2026-05-07</span>
-                    <span>Tools API</span>
+                    <span class="tag">WaveSpeed</span>
+                    <span class="date">2026-05-17</span>
+                    <span>Model Router</span>
                 </div>
                 <p>
-                    OpenRouter 发布 web_search 与 web_fetch 两个托管工具，让不同模型可以通过同一接口进行网页搜索、内容抽取、引用返回，并支持 URL allowlist / denylist、搜索上下文大小、工具调用上限等控制项。多模型网关不再只是“转发聊天请求”，而是在补齐 agentic loop 所需的工具层、预算层与可控性。
+                    WaveSpeed 宣布统一 LLM API 扩展到 260+ 语言模型，并和其图像、视频、音频、3D、Avatar 等生成模型平台联动。它不是单个前沿模型发布，但很能代表本周趋势：模型越来越多，团队更需要一个能统一鉴权、计费、路由与 fallback 的云端 API 层，把内容生成流水线串起来。
                 </p>
-                <span class="api-tag">API: OpenRouter Tools</span>
-                <span class="cloud-tag">Search / Fetch / Citations</span>
-                <a class="source-link" href="https://openrouter.ai/announcements/web-tools">来源：OpenRouter · Introducing OpenRouter Web Tools</a>
+                <span class="api-tag">API: Unified LLM</span>
+                <span class="cloud-tag">Routing / Multimodal Platform</span>
+                <a class="source-link" href="https://www.prweb.com/releases/wavespeed-expands-unified-llm-api-with-access-to-gpt-claude-gemini-and-260-models-302773456.html">来源：PRWeb · WaveSpeed expands unified LLM API</a>
             </div>
         </div>
 
         <div class="divider"></div>
 
         <div class="section-header">
-            <h3>🎬 图像与视频生成</h3>
+            <h3>🎬 图像、视频与多模态产品</h3>
             <div class="section-line"></div>
         </div>
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>OpenAI Responses API 新增远程 MCP、Code Interpreter 与图像生成能力整合</h4>
+                <h4>Anthropic 发布 Claude for Small Business：Canva、QuickBooks、HubSpot 等成为 Claude 工作流节点</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-07</span>
-                    <span>Responses API</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-05-13</span>
+                    <span>Agentic Workflows</span>
                 </div>
                 <p>
-                    OpenAI 本周把 Responses API 的工具能力向前推进：新增 remote MCP server support、升级 Image Generation、Code Interpreter、File Search，并说明 GPT-5.5 Pro 兼容 Responses API。图像生成在这里不是孤立模型，而是进入同一个“模型 + 工具 + 文件 + 代码”的 API 编排层，适合构建会查资料、会写代码、会产图的复合型工作流。
+                    Anthropic 推出面向小企业的 Claude for Small Business，把 Claude Cowork 接进 QuickBooks、PayPal、HubSpot、Canva、Docusign、Google Workspace 和 Microsoft 365，并内置 15 个 ready-to-run agentic workflows 与 15 个 skills。它把“生成内容”放进真实 SaaS 流程：Claude 可以起草营销活动、生成 Canva 资产、追发票、做月结，但关键操作保留人工审批。
                 </p>
-                <span class="api-tag">API: Responses API</span>
-                <span class="cloud-tag">Image Generation / MCP / Code</span>
-                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
+                <span class="api-tag">Product: Claude Cowork</span>
+                <span class="cloud-tag">Canva / SaaS Connectors / HITL</span>
+                <a class="source-link" href="https://www.anthropic.com/news/claude-for-small-business">来源：Anthropic · Introducing Claude for Small Business</a>
             </div>
 
             <div class="article featured">
-                <h4>火山方舟文档持续更新：Seedance 2.0、Seedream 4/5、Responses 与 MCP 入口集中出现</h4>
+                <h4>Google 发布 Gemini Intelligence on Android：屏幕/图像上下文驱动跨 App 自动化</h4>
                 <div class="meta">
-                    <span class="tag">Volcengine ARK</span>
-                    <span class="date">2026-05-07</span>
-                    <span>Docs / Platform Update</span>
+                    <span class="tag">Google</span>
+                    <span class="date">2026-05-12</span>
+                    <span>Android / Multimodal Agent</span>
                 </div>
                 <p>
-                    火山引擎开发者文档本周更新到 5 月 7 日，导航中集中出现 Seedance 2.0 教程、Seedream 4.0 / 5.0 API、Responses API、MCP 远程服务、实时语音聊天等入口。虽然更像平台文档更新而非单一发布会，但信号很明确：豆包/火山正在把图像、视频、语音与 Agent 工具统一进可 API 调用的云端平台。
+                    Google 在 Android 上发布 Gemini Intelligence，强调 proactive AI、跨 App 多步骤自动化和屏幕/图像上下文理解：例如从 Gmail 找课程书单、下单购物，或把备忘录里的清单转成配送购物车。虽然这是终端产品更新，不是 API 发布，但它展示了多模态 Agent 的落地形态：视觉上下文 + App 操作 + 隐私控制，正在从演示进入系统级入口。
+                </p>
+                <span class="api-tag">Product: Android / Gemini</span>
+                <span class="cloud-tag">Visual Context / App Automation</span>
+                <a class="source-link" href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">来源：Google Blog · Gemini Intelligence brings proactive AI to Android</a>
+            </div>
+
+            <div class="article">
+                <h4>OpenAI 发布 Codex Windows 沙箱工程文章：安全执行环境成为编程 Agent 基础设施</h4>
+                <div class="meta">
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-13</span>
+                    <span>Engineering / Sandbox</span>
+                </div>
+                <p>
+                    OpenAI 工程团队发布 Codex on Windows 沙箱文章，说明如何让 Agent 在 Windows 上安全执行命令、读写项目并隔离风险。结合本周 Codex 手机端预览，重点已经非常清楚：AI 编程助手竞争不只在模型能力，还在安全沙箱、权限审批、远程连接、可观测输出这些“能不能放心让它干活”的工程底座。
+                </p>
+                <span class="api-tag">Product: Codex</span>
+                <span class="cloud-tag">Windows / Sandbox / Security</span>
+                <a class="source-link" href="https://openai.com/news/engineering/">来源：OpenAI Engineering · Building a safe, effective sandbox to enable Codex on Windows</a>
+            </div>
+
+            <div class="article">
+                <h4>火山引擎 Agent Plan 上线：Doubao-Seed、Seedance、Seedream 与联网搜索打包</h4>
+                <div class="meta">
+                    <span class="tag">Volcengine / Doubao</span>
+                    <span class="date warning">2026-05-11</span>
+                    <span>Agent Package</span>
+                </div>
+                <p>
+                    5 月 11 日，火山引擎正式发布 Agent Plan，把 Doubao-Seed、Doubao-Seedance、Doubao-Seedream 等字节自研模型，GLM-5.1、Kimi-K2.6 等第三方模型，以及联网搜索等 Harness 工具打包成 Agent 套餐。严格按 5 月 18 日 9:00 当前时间看，发布日期已贴近/略超 7 天边界，所以这里按要求标注 ⚠️；但它仍是本周国内云端 Agent 平台最值得关注的信号。
                 </p>
                 <span class="api-tag">API: 火山方舟 / 豆包</span>
-                <span class="cloud-tag">Seedance / Seedream / MCP</span>
-                <a class="source-link" href="https://www.volcengine.com/docs/82379/1099320">来源：Volcengine Docs · 模型列表（更新于 2026-05-07）</a>
-            </div>
-
-            <div class="article">
-                <h4>OpenRouter GPT-5.5 成本分析：多模型路由开始进入“价格/质量”运营阶段</h4>
-                <div class="meta">
-                    <span class="tag">OpenRouter</span>
-                    <span class="date">2026-05-04</span>
-                    <span>Market / Routing</span>
-                </div>
-                <p>
-                    OpenRouter 5 月 4 日发布 GPT-5.5 成本分析，讨论其在性能、价格与路由选择上的定位。它对图像/视频也有参考意义：当生成式媒体模型越来越多地被包装进同一网关后，真正影响落地的会是质量、速度、失败率、价格和可替换性，而不是某个 demo 的单次效果。
-                </p>
-                <span class="api-tag">Platform: Model Router</span>
-                <span class="cloud-tag">Cost / Quality / Fallback</span>
-                <a class="source-link" href="https://openrouter.ai/articles/gpt-5-5-cost-analysis">来源：OpenRouter · GPT-5.5 Cost Analysis</a>
-            </div>
-
-            <div class="article">
-                <h4>ChatGPT 继续补办公套件入口：macOS 可编辑表格，企业版推出 Gmail / Drive 连接器</h4>
-                <div class="meta">
-                    <span class="tag">ChatGPT</span>
-                    <span class="date">2026-05-05</span>
-                    <span>Productivity</span>
-                </div>
-                <p>
-                    ChatGPT 本周在 macOS App 加入 Excel / Apple Numbers 电子表格直接编辑能力，同时面向 Pro / Business / Enterprise 推出 Google Drive、Gmail、Google Calendar、SharePoint、Outlook Calendar、Outlook Email、Teams、GitHub 等深度研究连接器。生成式 AI 正从“网页聊天框”继续嵌入文件、邮件、日历和代码仓库。
-                </p>
-                <span class="api-tag">Product: ChatGPT App</span>
-                <span class="cloud-tag">Connectors / Spreadsheet</span>
-                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">来源：OpenAI Help Center · ChatGPT Release Notes</a>
+                <span class="cloud-tag">Seedance / Seedream / Web Search</span>
+                <a class="source-link" href="https://www.yicai.com/brief/103175153.html">来源：第一财经 · 火山引擎正式发布 Agent Plan</a>
             </div>
         </div>
 
@@ -451,63 +451,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>ElevenLabs Agents 平台补工程能力：标签、关键术语、MCP 超时与通话结束控制</h4>
+                <h4>ElevenLabs 5 月 13 日更新：语音 Agent 的 RAG、SIP 日志、工具回传更完整</h4>
                 <div class="meta">
                     <span class="tag">ElevenLabs</span>
-                    <span class="date">2026-05-04</span>
+                    <span class="date">2026-05-13</span>
                     <span>Voice Agent API</span>
                 </div>
                 <p>
-                    ElevenLabs 5 月 4 日 changelog 为 Agents 增加 agent tags，并给 Scribe v2 Realtime 加入 keyterm prompting；同一批更新还包括 MCP response timeout、agent response complete event、pre-tool speech、end call tool 等控制项。语音 Agent 的成熟度正在体现在细节上：如何标记、如何等工具、如何结束通话、如何让转写识别专有名词。
+                    ElevenLabs Changelog 显示，SDK 已按 5 月 12 日 API schema 重生成，新增 RAG chunk listing、workspace API request analytics、service account API key IP allowlisting、phone number agent 字段、webhook headers、voice metadata moderation 等 typed 支持；Agent 回调也能拿到完整 tool result payload。语音 Agent 正在从“会说话”走向“可追踪、可审计、可接企业电话系统”。
                 </p>
-                <span class="api-tag">API: ElevenLabs Agents</span>
-                <span class="cloud-tag">TTS / STT / Voice Agent</span>
-                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/5/4">来源：ElevenLabs Docs · May 4 changelog</a>
+                <span class="api-tag">API: ElevenAgents</span>
+                <span class="cloud-tag">RAG / SIP / Tool Payload</span>
+                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/5/13">来源：ElevenLabs Docs · May 13 changelog</a>
             </div>
 
             <div class="article featured">
-                <h4>OpenAI 给 Agent 开发补底座：后台模式、加密内容与推理摘要</h4>
-                <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-07</span>
-                    <span>Agent Infrastructure</span>
-                </div>
-                <p>
-                    除了语音与图像，OpenAI 本周还在 Responses API 中加入 background mode、reasoning summaries、encrypted reasoning items 等能力。它们看起来不像炫酷 demo，但对生产级 Agent 很重要：长任务要能后台跑，推理过程要能摘要给人审计，敏感上下文要能被更细粒度地保护。
-                </p>
-                <span class="api-tag">API: Responses API</span>
-                <span class="cloud-tag">Background / Audit / Privacy</span>
-                <a class="source-link" href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">来源：OpenAI · New tools and features in the Responses API</a>
-            </div>
-
-            <div class="article">
-                <h4>Kimi API 提醒：moonshot-v1 系列将于 5 月底下线，迁移到 kimi-k2 系列</h4>
-                <div class="meta">
-                    <span class="tag">Moonshot / Kimi</span>
-                    <span class="date">2026-05-11</span>
-                    <span>API Migration</span>
-                </div>
-                <p>
-                    Moonshot/Kimi 开放平台文档提示，因 moonshot-v1 系列 API 将于 <span class="highlight">2026-05-31</span> 正式下线，历史文档已迁移到归档页；新接入建议转向 kimi-k2 系列。对所有接了 Kimi 的产品来说，这不是“新功能”，但属于必须跟进的 API 生命周期事件：模型名、上下文、价格和兼容性都要检查。
-                </p>
-                <span class="api-tag">API: Kimi Open Platform</span>
-                <span class="cloud-tag">Model Lifecycle / Migration</span>
-                <a class="source-link" href="https://platform.moonshot.cn/docs/guide/start-using-kimi-api">来源：Moonshot / Kimi Docs · 使用 Kimi API</a>
-            </div>
-
-            <div class="article">
-                <h4>Claude Sonnet 4.6 与多 Agent Research 能力进入 Anthropic Console 可用链路</h4>
+                <h4>Anthropic 调整 Agent SDK / 第三方 Harness 计费：订阅与程序化使用边界更清楚</h4>
                 <div class="meta">
                     <span class="tag">Anthropic</span>
-                    <span class="date">2026-05-05</span>
-                    <span>Model / Console</span>
+                    <span class="date">2026-05-14</span>
+                    <span>Billing / Agent SDK</span>
                 </div>
                 <p>
-                    Anthropic Console 的 Release Notes 记录了 Claude Sonnet 4.6 上线以及 Research 功能面向 Max / Team / Enterprise 用户开放。Research 会自动把复杂问题拆给多个 Claude agents，并整合结果。它和 Managed Agents 组合起来看，Anthropic 正在同时推进“模型能力、研究型多 Agent、托管执行环境”三层产品化。
+                    多家媒体报道，Anthropic 将从 6 月 15 日起把 Claude Agent SDK、GitHub Actions、第三方框架等程序化用量从普通订阅池中拆出，改为专门的月度 Agent SDK credits，并按 API 风格计费。对 OpenClaw、Claude Code 周边工具和长任务 Agent 用户来说，这不是“功能更新”，但会直接影响成本模型：订阅制套利空间继续缩小，真正的 Agent 用量会越来越接近 API 计费。
                 </p>
-                <span class="api-tag">Product: Claude / Console</span>
-                <span class="cloud-tag">Research / Multi-Agent</span>
-                <a class="source-link" href="https://support.anthropic.com/en/articles/11813278-console-release-notes">来源：Anthropic Support · Console Release Notes</a>
+                <span class="api-tag">Product: Claude Plans</span>
+                <span class="cloud-tag">Agent SDK / Billing</span>
+                <a class="source-link" href="https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html">来源：InfoWorld · Anthropic puts Claude agents on a meter</a>
+            </div>
+
+            <div class="article">
+                <h4>OpenAI 强化敏感对话上下文识别：产品安全开始进入“情境理解”阶段</h4>
+                <div class="meta">
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-14</span>
+                    <span>Safety / ChatGPT</span>
+                </div>
+                <p>
+                    OpenAI 发布 ChatGPT 敏感对话上下文识别更新，重点不是拒答模板，而是让系统更好理解用户处境、识别危机信号，并在需要时给出更合适的支持路径。随着 ChatGPT 进入财务、健康、企业协作等更私人场景，安全能力会越来越像产品基础设施：不只是过滤有害内容，而是根据场景调整语气、权限和建议边界。
+                </p>
+                <span class="api-tag">Product: ChatGPT Safety</span>
+                <span class="cloud-tag">Context / Sensitive Conversations</span>
+                <a class="source-link" href="https://openai.com/news/">来源：OpenAI News · Helping ChatGPT better recognize context in sensitive conversations</a>
+            </div>
+
+            <div class="article">
+                <h4>OpenAI Deployment Company：模型公司继续补“落地服务层”</h4>
+                <div class="meta">
+                    <span class="tag">OpenAI</span>
+                    <span class="date warning">2026-05-11</span>
+                    <span>Enterprise Deployment</span>
+                </div>
+                <p>
+                    OpenAI 在 5 月 11 日宣布成立 OpenAI Deployment Company，帮助企业围绕 intelligence 构建业务系统。按本期严格时间窗口标注 ⚠️，但它和 Anthropic 本周 SMB 发布形成鲜明对比：OpenAI 更像在补企业实施网络，Anthropic 则把 Agent 工作流打包到小企业 SaaS。AI 服务商的竞争正在从“谁模型更强”转向“谁更会把模型嵌进业务”。
+                </p>
+                <span class="api-tag">Business: Deployment</span>
+                <span class="cloud-tag">Enterprise / Services Layer</span>
+                <a class="source-link" href="https://openai.com/index/openai-launches-the-deployment-company/">来源：OpenAI · OpenAI Deployment Company</a>
             </div>
         </div>
 
@@ -520,16 +520,16 @@
 
         <div class="article-grid full-width">
             <div class="article">
-                <h4>本周关键词：实时语音、托管 Agent、工具层统一</h4>
+                <h4>本周关键词：随身 Agent、业务连接器、计费回归 API</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-05-11</span>
+                    <span class="date">2026-05-18</span>
                 </div>
                 <p>
-                    <strong>第一，语音 Agent 开始拼工程质量：</strong> OpenAI realtime 降价升级、ElevenLabs 补通话结束和 MCP 超时控制，说明实时语音正在从 demo 走向可运营产品。<br><br>
-                    <strong>第二，编程助手继续云端化：</strong> Anthropic Managed Agents、OpenAI background mode、ChatGPT connectors 都在把“AI 帮我做事”从对话框推进到托管执行环境。<br><br>
-                    <strong>第三，工具层成为模型网关的核心差异：</strong> OpenRouter 的 web tools、OpenAI 的 MCP / Code Interpreter / File Search、火山方舟的 Responses / MCP 入口，都说明 API 平台竞争点已不只是模型本身，而是模型如何安全调用工具。<br><br>
-                    <strong>第四，Kelven 后续值得盯紧的是语音 + Agent 的接入成本：</strong> 如果实时语音继续降价、托管 Agent 越来越稳定，OpenClaw 的“会说、会查、会跑任务”的体验会有明显升级空间。
+                    <strong>第一，编程 Agent 开始“随身化”：</strong> Codex 进入手机端，Remote SSH、Hooks、Windows 沙箱一起补齐，说明长任务 Agent 的关键体验是随时监督、随时接管，而不是一次性对话。<br><br>
+                    <strong>第二，AI 产品继续嵌进真实业务系统：</strong> ChatGPT 财务空间、Claude for Small Business、Google Gemini Intelligence 都在连接账户、SaaS、App 和屏幕上下文。AI 正从“回答问题”走向“在已有软件里推进事情”。<br><br>
+                    <strong>第三，语音和 Agent 平台拼工程细节：</strong> ElevenLabs 的 SIP/RAG/tool payload、Anthropic 的 AWS/Managed Agents、OpenAI 的沙箱和安全上下文，都说明生产级能力已经转向审计、权限、路由、账单、回调这些不显眼但很关键的地方。<br><br>
+                    <strong>第四，Kelven 后续值得盯紧的是成本边界：</strong> Anthropic 把程序化 Agent 用量拆出订阅池，统一模型 API 平台继续扩张，意味着未来“跑得久、会调用工具”的 Agent 更可能按真实资源消耗计价。OpenClaw 的工作流要继续关注可替换模型、用量预算和任务中断/恢复能力。
                 </p>
             </div>
         </div>
