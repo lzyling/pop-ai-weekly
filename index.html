@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爆爆 AI 周报 Vol.7 · 2026年5月25日</title>
+    <title>爆爆 AI 周报 Vol.8 · 2026年6月1日</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap');
 
@@ -295,15 +295,15 @@
             <div class="masthead-title">爆爆 AI 周报</div>
             <div class="masthead-subtitle">Cloud AI Weekly Digest · API-First</div>
             <div class="masthead-line">
-                <span>Vol. 7</span>
-                <span>2026年5月25日 星期一</span>
+                <span>Vol. 8</span>
+                <span>2026年6月1日 星期一</span>
                 <span>上海 · Shanghai</span>
             </div>
         </header>
 
         <div class="headline-banner">
-            <h2>Google I/O 进入 Agent 时代 · OpenAI 展示科研推理里程碑 · Codex/Claude 加速企业落地</h2>
-            <div class="date-range">2026年5月18日 — 5月25日</div>
+            <h2>Claude Opus 4.8 与 Codex Windows 同周推进 · Runway / ElevenLabs 把多媒体能力接进 Agent</h2>
+            <div class="date-range">2026年5月25日 — 6月1日</div>
         </div>
 
         <div class="section-header">
@@ -313,63 +313,63 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>Google I/O 2026：Gemini 3.5 Flash 与 Gemini API Managed Agents 同时登场</h4>
+                <h4>Anthropic 发布 Claude Opus 4.8：更强编码与 Agent 长任务能力，同价升级</h4>
                 <div class="meta">
-                    <span class="tag">Google</span>
-                    <span class="date">2026-05-19</span>
-                    <span>Gemini API / Agent</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="date">2026-05-28</span>
+                    <span>Model / API / Coding</span>
                 </div>
                 <p>
-                    Google 在 I/O 上把重点从“模型回答”推向“模型行动”：Gemini 3.5 Flash 面向高速度、低延迟 Agent 工作流，Managed Agents in the Gemini API 则允许开发者用一次 API 调用启动可推理、可用工具、可执行代码的云端 Agent，并运行在隔离 Linux 环境中。Google Antigravity 2.0、CLI、SDK 与 AI Studio 也一起升级，形成从原型到生产的 Agent 开发栈。
+                    Anthropic 将 Opus 升级到 4.8，定位继续瞄准编码、Agentic tasks 与专业知识工作。新版本在 claude.ai 上加入“投入多少努力”的控制，Claude Code 增加 dynamic workflows 以处理更大规模问题；Opus 4.8 fast mode 仍保持 2.5× 速度路线，并把成本进一步压低。对开发者来说，这不是单纯榜单刷新，而是把长任务稳定性、成本和工程协作同时往前推了一步。
                 </p>
-                <span class="api-tag">API: Gemini Managed Agents</span>
-                <span class="cloud-tag">Antigravity / Sandbox / Interactions API</span>
-                <a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/">来源：Google · I/O 2026 Developer Highlights</a>
+                <span class="api-tag">Model: Claude Opus 4.8</span>
+                <span class="cloud-tag">Claude API / Claude Code / Dynamic Workflows</span>
+                <a class="source-link" href="https://www.anthropic.com/news/claude-opus-4-8">来源：Anthropic · Introducing Claude Opus 4.8</a>
             </div>
 
             <div class="article featured">
-                <h4>OpenAI 模型自主推翻离散几何中心猜想：科研推理能力进入新阶段</h4>
+                <h4>OpenAI 更新 GPT-5.5 Instant：ChatGPT 与 API 输出风格继续收敛到“更自然、更短、更实用”</h4>
                 <div class="meta">
                     <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-20</span>
-                    <span>Research / Reasoning</span>
+                    <span class="date">2026-05-28</span>
+                    <span>ChatGPT / API / Model Lifecycle</span>
                 </div>
                 <p>
-                    OpenAI 披露其内部通用推理模型解决了 Erdős 单位距离问题中的长期核心猜想，构造出无限族反例，并由外部数学家核查。这个发布不是直接的 API 更新，但它对前沿模型方向很重要：模型不只是辅助检索或补全证明，而是开始能在高难度、可验证的研究问题里产生原创路径。对云端 AI 服务商来说，科研 Agent 将成为高价值场景。
+                    OpenAI 在 Release Notes 中更新 GPT-5.5 Instant，覆盖 ChatGPT 与 API，重点是回答风格、日常对话自然度和实际帮助任务的节奏控制。同时，OpenAI 宣布 ChatGPT 内的 o3 将在 2026-08-26 退役、GPT-4.5 将在 2026-06-27 退役（说明不影响 API）。这类“默认模型微调 + 老模型下线”的节奏，已经成为云端 AI 服务商控制体验和算力成本的常态。
                 </p>
-                <span class="api-tag">Model: General Reasoning</span>
-                <span class="cloud-tag">AI for Science / Math</span>
-                <a class="source-link" href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">来源：OpenAI · Discrete geometry conjecture</a>
+                <span class="api-tag">API: GPT-5.5 Instant</span>
+                <span class="cloud-tag">Release Notes / Model Sunset</span>
+                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-can-now-generate-images">来源：OpenAI Help Center · ChatGPT Release Notes</a>
             </div>
 
             <div class="article">
-                <h4>Anthropic 收购 Stainless：Claude API 的 SDK 与 MCP 工具链被收进平台核心</h4>
+                <h4>Google 发布 Chrome Enterprise MCP Server：浏览器安全管理也开始交给 Agent 调 API</h4>
                 <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date">2026-05-18</span>
-                    <span>API Developer Experience</span>
+                    <span class="tag">Google</span>
+                    <span class="date">2026-05-28</span>
+                    <span>MCP / Enterprise Agent</span>
                 </div>
                 <p>
-                    Anthropic 收购 Stainless。Stainless 长期为 Anthropic 官方 SDK 提供生成能力，也帮助企业从 API spec 生成 TypeScript、Python、Go、Java 等 SDK、CLI 与 MCP server。这个动作说明 Claude Platform 的竞争焦点继续向“Agent 能连接多少系统、连接得是否可靠”移动：模型能力之外，SDK、MCP、工具连接器会变成平台护城河。
+                    Google Chrome Enterprise 团队发布开源 MCP server，让 Gemini CLI 或其他 MCP-compatible clients 可以直接连接 Chrome Enterprise APIs。它面向 IT 与安全团队，把组织级浏览器策略、DLP、Safe Browsing、报表等管理动作交给 Agent 通过 API 执行。这个方向很值得看：MCP 不只是开发工具协议，正在进入企业 SaaS 的运维控制面。
                 </p>
-                <span class="api-tag">API: Claude Platform</span>
-                <span class="cloud-tag">SDK / MCP / Tooling</span>
-                <a class="source-link" href="https://www.anthropic.com/news/anthropic-acquires-stainless">来源：Anthropic · Anthropic acquires Stainless</a>
+                <span class="api-tag">Protocol: MCP</span>
+                <span class="cloud-tag">Chrome Enterprise / Security Ops</span>
+                <a class="source-link" href="https://blog.google/security/bringing-ai-agents-to-chrome-enterprise-security-management/">来源：Google Security Blog · AI agents for Chrome Enterprise security</a>
             </div>
 
             <div class="article">
-                <h4>Claude 进入 KPMG 全员工作流：276,000+ 员工接入，Managed Agents 嵌入 Digital Gateway</h4>
+                <h4>Anthropic 公开 Agent 隔离经验：从“审批每一步”转向“限制能碰到什么”</h4>
                 <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date">2026-05-19</span>
-                    <span>Enterprise AI</span>
+                    <span class="tag">Anthropic Engineering</span>
+                    <span class="date">2026-05-25</span>
+                    <span>Agent Security / Sandbox</span>
                 </div>
                 <p>
-                    Anthropic 与 KPMG 宣布全球战略合作，Claude 将进入 KPMG Digital Gateway，并开放给全球 276,000+ 员工。文章明确提到 Claude Cowork 与 Managed Agents 会嵌入客户工作平台，用于税务、法律、私募、网络安全等流程。企业 AI 的落地方式越来越清楚：不是让员工单独打开聊天框，而是把 Agent 放进已有业务系统和权限环境。
+                    Anthropic 工程博客系统复盘 claude.ai、Claude Code 和 Claude Cowork 的隔离架构：代码执行容器、本地开发沙箱、Cowork VM、网络出口控制与权限边界。文章特别强调审批疲劳并不可靠，真正的生产级 Agent 需要在环境层做硬边界。对 OpenClaw 这类长任务系统来说，这篇比单个模型发布更有工程参考价值。
                 </p>
-                <span class="api-tag">Product: Claude Cowork / Managed Agents</span>
-                <span class="cloud-tag">KPMG / Azure / Enterprise Workflow</span>
-                <a class="source-link" href="https://www.anthropic.com/news/anthropic-kpmg">来源：Anthropic · KPMG integrates Claude</a>
+                <span class="api-tag">Pattern: Sandbox / VM / Egress Control</span>
+                <span class="cloud-tag">Claude Code / Cowork / Agent Safety</span>
+                <a class="source-link" href="https://www.anthropic.com/engineering/how-we-contain-claude">来源：Anthropic Engineering · How we contain Claude across products</a>
             </div>
         </div>
 
@@ -382,63 +382,33 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>Gemini Omni Flash 发布：从任意输入生成视频，并支持多轮自然语言编辑</h4>
+                <h4>Runway MCP 上线：在 Claude、ChatGPT、Cursor 等 Agent 里直接生成图片和视频</h4>
                 <div class="meta">
-                    <span class="tag">Google</span>
-                    <span class="date">2026-05-19</span>
-                    <span>Video Generation</span>
+                    <span class="tag">Runway</span>
+                    <span class="date">2026-05-27</span>
+                    <span>Video / Image / MCP</span>
                 </div>
                 <p>
-                    Google 发布 Gemini Omni，首个模型 Omni Flash 先从视频生成与编辑切入。它可以接收图像、音频、视频、文本作为输入，生成高质量视频，并在多轮对话中修改环境、角度、风格和细节，同时保持场景连续性。Omni Flash 已面向 Gemini App、Google Flow 和 YouTube Shorts/Create 推出，未来数周将向开发者和企业通过 API 开放。
+                    Runway 发布 MCP server，把生成式图片与视频接进任意 MCP-compatible Agent 或编码工具。用户可以把产品页、参考图或文本提示交给 Agent，让 Runway 在同一对话里返回营销视频、产品图、hero assets 等素材；生成额度绑定现有 Runway 计划，不需要单独 API key。更关键的是，它把多模型选择也抽象进一个工作流：Gen-4.5、Seedance 2.0、GPT Image 2、Kling 3.0 等模型都能通过同一个 Agent 入口调用。
                 </p>
-                <span class="api-tag">Model: Gemini Omni Flash</span>
-                <span class="cloud-tag">Video / Multimodal / SynthID</span>
-                <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/">来源：Google · Introducing Gemini Omni</a>
-            </div>
-
-            <div class="article featured">
-                <h4>OpenAI 与 Google SynthID 联动：AI 图像来源验证开始走向跨平台标准</h4>
-                <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-19</span>
-                    <span>Content Provenance</span>
-                </div>
-                <p>
-                    OpenAI 宣布强化内容来源标识：成为 C2PA conforming generator product，在图像中加入 Google SynthID 跨平台水印，并预览公众可用的 OpenAI 图像验证工具。随着视频、图像生成模型继续商品化，内容可信度会成为平台能力的一部分：水印、元数据、验证入口与平台协作，将和生成质量一样影响产品可用性。
-                </p>
-                <span class="api-tag">Safety: C2PA / SynthID</span>
-                <span class="cloud-tag">ImageGen / Sora / Verification</span>
-                <a class="source-link" href="https://openai.com/index/advancing-content-provenance/">来源：OpenAI · Advancing content provenance</a>
+                <span class="api-tag">Protocol: Runway MCP</span>
+                <span class="cloud-tag">Gen-4.5 / Seedance / Kling / GPT Image</span>
+                <a class="source-link" href="https://runwayml.com/news/mcp">来源：Runway · Introducing Runway MCP</a>
             </div>
 
             <div class="article">
-                <h4>Google Flow 与 Flow Music 升级：创意流程从“生成素材”变成“Agent 协作室”</h4>
+                <h4>Google I/O 重点回放：Gemini Omni Flash 与 Gemini 3.5 Flash 的可用性继续扩大</h4>
                 <div class="meta">
                     <span class="tag">Google</span>
-                    <span class="date">2026-05-19</span>
-                    <span>Creative Studio</span>
+                    <span class="date warning">2026-05-28（核心发布 05-19）</span>
+                    <span>Gemini / Video / Agent</span>
                 </div>
                 <p>
-                    Google Flow 家族加入 Omni Flash、Flow Agent、自定义工具、移动端应用和 Flow Music 的分段编辑能力。Flow Agent 可以规划并推理复杂创意任务，用户还能通过 vibe coding 构建自己的工作流。对内容团队来说，关键变化是：生成式视频/音乐工具正在从单次 prompt 产物，升级为可复用、可迭代、可协作的创意生产环境。
+                    Google 5 月 28 日发布 I/O 2026 重点回放，重新确认 Gemini Omni Flash 正向 Google AI Plus/Pro/Ultra、Gemini App、Google Flow、YouTube Shorts/Create 推出；Gemini 3.5 Flash 则已通过 Google Antigravity、Gemini API in AI Studio、Android Studio、Gemini Enterprise Agent Platform 等入口开放。本条核心发布发生在 5 月 19 日，已超出本期 7 天窗口，所以标注 ⚠️，作为可用性延伸观察而非新发布。
                 </p>
-                <span class="api-tag">Product: Google Flow</span>
-                <span class="cloud-tag">Video Editing / Music / Creative Agent</span>
-                <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates/">来源：Google · Flow and Flow Music updates</a>
-            </div>
-
-            <div class="article">
-                <h4>火山引擎 Agent Plan 亮相 ClawCon：模型、Seedance/Seedream 与联网搜索打包</h4>
-                <div class="meta">
-                    <span class="tag">Volcengine / Doubao</span>
-                    <span class="date warning">2026-05-20（核心发布 05-11）</span>
-                    <span>Agent Package</span>
-                </div>
-                <p>
-                    火山引擎社区文章在 5 月 20 日详解 Agent Plan：从 Coding Plan 扩展到通用 Agent 场景，把 Doubao-Seed、Doubao-Seedance、Doubao-Seedream、GLM-5.1、Kimi-K2.6、联网搜索、embedding API 等能力打包给 Claude Code、OpenClaw、OpenCode、TRAE 等 Agent 平台。严格看，Agent Plan 首次发布是 5 月 11 日，已超过本期 7 天窗口，所以按要求标注 ⚠️。
-                </p>
-                <span class="api-tag">API: 火山方舟 / 豆包</span>
-                <span class="cloud-tag">Seedance / Seedream / Web Search</span>
-                <a class="source-link" href="https://developer.volcengine.com/articles/7641541852197945380">来源：火山引擎开发者社区 · Agent Plan</a>
+                <span class="api-tag">API: Gemini API / AI Studio</span>
+                <span class="cloud-tag">Omni Flash / Flow / Antigravity</span>
+                <a class="source-link" href="https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/">来源：Google · Catch up on 12 major I/O 2026 moments</a>
             </div>
         </div>
 
@@ -451,64 +421,64 @@
 
         <div class="article-grid">
             <div class="article featured">
-                <h4>ElevenLabs 5 月 18 日更新：语音 Agent 版本元数据、文本会话过滤与 Workspace Auth API</h4>
+                <h4>OpenAI Codex 支持 Windows Computer Use 与远程接管：编码 Agent 继续跨设备化</h4>
                 <div class="meta">
-                    <span class="tag">ElevenLabs</span>
-                    <span class="date">2026-05-18</span>
-                    <span>Voice Agent API</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="date">2026-05-29</span>
+                    <span>Codex / Computer Use / Remote Control</span>
                 </div>
                 <p>
-                    ElevenLabs Changelog 显示，ElevenAgents 新增 Agent version metadata 接口、conversation text_only 过滤、procedure/skills 编译模式、Genesys bot connector、SIP trunk headers 映射等；Workspace 侧增加 auth connection 更新 API，支持 basic auth、OAuth2 client credentials/JWT 与 Slack bot auth schema。语音 Agent 的重点继续从“能说话”推进到版本、审计、企业身份与电话系统集成。
+                    Codex 本周新增 Windows 端 Computer Use：符合条件的用户可以让 Codex 在 Windows 应用里看、点、输入，用于测试、调试和迭代产品。更有意思的是远程控制链路：用户可以在 Windows 机器上启动工作，再从 ChatGPT iOS/Android 或 Mac 上的 Codex 查看进度、继续线程、回应提示并 steering，而项目文件、shell、app server 和本地上下文仍留在 Windows 主机。
                 </p>
-                <span class="api-tag">API: ElevenAgents</span>
-                <span class="cloud-tag">SIP / Auth / SDK v2.48.0</span>
-                <a class="source-link" href="https://elevenlabs.io/docs/changelog">来源：ElevenLabs Docs · May 18 changelog</a>
+                <span class="api-tag">Product: Codex App</span>
+                <span class="cloud-tag">Windows / Mobile Remote Control / Usage Profiles</span>
+                <a class="source-link" href="https://help.openai.com/en/articles/6825453-chatgpt-can-now-generate-images">来源：OpenAI Help Center · Codex updates, May 29</a>
             </div>
 
             <div class="article featured">
-                <h4>OpenAI Codex 获 Gartner 企业编码 Agent Leader，并继续向混合/本地企业环境扩展</h4>
+                <h4>ElevenLabs Speech Engine：把实时语音能力拆给自定义 LLM / Agent Runtime</h4>
                 <div class="meta">
-                    <span class="tag">OpenAI</span>
-                    <span class="date">2026-05-22 / 05-18</span>
-                    <span>Enterprise Coding Agent</span>
+                    <span class="tag">ElevenLabs</span>
+                    <span class="date">2026-05-25</span>
+                    <span>Voice Agent API</span>
                 </div>
                 <p>
-                    OpenAI 宣布 Codex 被 Gartner Magic Quadrant 评为企业 AI Coding Agents Leader，并披露 Codex 每周已有 400 万+ 开发者使用；同周，OpenAI 与 Dell 合作，把 Codex 接近企业数据、文档、业务系统和 Dell AI Factory / Data Platform。编程 Agent 的战场正在从 IDE 补全转向“可治理、可审计、可部署在企业数据旁边”的长任务系统。
+                    ElevenLabs 发布 Speech Engine，让开发者把实时语音加到自己的 chat agent 或 LLM 上：ElevenLabs 负责语音识别、turn-taking、TTS 与浏览器播放，开发者服务器保留 Agent 逻辑，并通过 WebSocket 流式返回文本。同期 ElevenAgents 增加 text behavior overrides、Intercom/Telegram/Freshdesk 集成、OTLP trace 输出；Music API 也新增 track/loop/ambience 等 generation_mode。语音 Agent 正在从托管应用走向可组合的底层能力。
                 </p>
-                <span class="api-tag">Product: Codex</span>
-                <span class="cloud-tag">Gartner / Dell / Enterprise Governance</span>
-                <a class="source-link" href="https://openai.com/index/gartner-2026-agentic-coding-leader/">来源：OpenAI · Gartner enterprise coding agents</a>
-                <a class="source-link" href="https://openai.com/index/dell-codex-enterprise-partnership/">来源：OpenAI · Dell Codex enterprise partnership</a>
+                <span class="api-tag">API: Speech Engine / ElevenAgents</span>
+                <span class="cloud-tag">WebSocket / STT / TTS / OTLP Traces</span>
+                <a class="source-link" href="https://elevenlabs.io/docs/changelog/2026/5/25">来源：ElevenLabs Docs · May 25 Changelog</a>
             </div>
 
             <div class="article">
-                <h4>Anthropic Project Glasswing 初报：Claude Mythos Preview 扫出万级高危/严重漏洞</h4>
+                <h4>GitHub Copilot 引入 Claude Opus 4.8，并开始用 Adoption Phase 衡量 Agent 化采用程度</h4>
                 <div class="meta">
-                    <span class="tag">Anthropic</span>
-                    <span class="date">2026-05-22</span>
-                    <span>Cyber Agent</span>
+                    <span class="tag">GitHub Copilot</span>
+                    <span class="date">2026-05-28 / 05-29</span>
+                    <span>Coding Agent / Enterprise Metrics</span>
                 </div>
                 <p>
-                    Anthropic 更新 Project Glasswing：约 50 个合作伙伴使用 Claude Mythos Preview，在关键软件中发现超过一万个高危或严重漏洞；Cloudflare 报告在关键路径系统中找到 2,000 个 bug，其中 400 个为高危或严重。Anthropic 的判断很直接：AI 找漏洞速度正在超过传统验证、披露和修复流程，下一步竞争会落在安全协作与责任发布机制上。
+                    GitHub 在 5 月 28 日把 Claude Opus 4.8 接入 Copilot，面向 Pro+、Business、Enterprise，并覆盖 VS Code、Visual Studio、Copilot CLI、cloud agent、Copilot App、github.com、Mobile、JetBrains、Xcode、Eclipse 等入口。5 月 29 日，Copilot usage metrics API 又加入 AI adoption phase，把用户划分为 code-first、agent-first、multi-agent 等阶段。企业对编码 Agent 的关注点，正在从“能不能写代码”转向“用了多少、在哪些面上用、是否进入多 Agent 工作流”。
                 </p>
-                <span class="api-tag">Model: Claude Mythos Preview</span>
-                <span class="cloud-tag">Cybersecurity / Vulnerability Discovery</span>
-                <a class="source-link" href="https://www.anthropic.com/research/glasswing-initial-update">来源：Anthropic · Project Glasswing update</a>
+                <span class="api-tag">Models: Claude Opus 4.8 in Copilot</span>
+                <span class="cloud-tag">Usage Metrics / Multi-agent Adoption</span>
+                <a class="source-link" href="https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/">来源：GitHub Changelog · Opus 4.8 in Copilot</a>
+                <a class="source-link" href="https://github.blog/changelog/2026-05-29-copilot-usage-metrics-api-adds-cohorts-for-ai-adoption/">来源：GitHub Changelog · Copilot usage metrics cohorts</a>
             </div>
 
             <div class="article">
-                <h4>Cerebras 上线 Kimi K2.6 企业推理：开源权重模型也在走云端高速 API 路线</h4>
+                <h4>Copilot Memory 增加仓库级关闭和 CLI 控制：Agent 记忆进入治理阶段</h4>
                 <div class="meta">
-                    <span class="tag">Moonshot / Cerebras</span>
-                    <span class="date">2026-05-20</span>
-                    <span>Inference Cloud</span>
+                    <span class="tag">GitHub Copilot</span>
+                    <span class="date">2026-05-26</span>
+                    <span>Agent Memory / Governance</span>
                 </div>
                 <p>
-                    VentureBeat 报道 Cerebras 已为企业客户运行 Moonshot AI 的 Kimi K2.6，并称输出速度接近 1,000 tokens/s，由 Artificial Analysis 独立验证。Kimi K2.6 本身不是本周发布，但它在高速推理云上的可用性值得关注：对 Agent 和编程助手来说，模型开源只是第一步，低延迟、高吞吐、可计费的 API 入口会决定真实可用性。
+                    Copilot Memory 仍处于 public preview，但本周补上了更关键的治理控件：仓库管理员可以在 repository settings 里关闭仓库级 Memory；CLI 支持 /memory on、/memory off、/memory show；store_memory 权限提示也会明确写入的是个人偏好还是仓库事实。这些细节很小，但方向很大：当 Agent 跨会话记忆变成默认能力，团队必须知道它记住了什么、谁能看到、如何关闭。
                 </p>
-                <span class="api-tag">Model: Kimi K2.6</span>
-                <span class="cloud-tag">Cerebras / Enterprise Inference</span>
-                <a class="source-link" href="https://venturebeat.com/technology/cerebras-says-its-chips-run-a-trillion-parameter-ai-model-nearly-7-times-faster-than-gpu-clouds">来源：VentureBeat · Cerebras runs Kimi K2.6</a>
+                <span class="api-tag">Feature: Copilot Memory</span>
+                <span class="cloud-tag">CLI / Repository Controls / Scope</span>
+                <a class="source-link" href="https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli/">来源：GitHub Changelog · Copilot Memory controls</a>
             </div>
         </div>
 
@@ -521,23 +491,23 @@
 
         <div class="article-grid full-width">
             <div class="article">
-                <h4>本周关键词：Agent 平台化、视频多模态、企业治理、科研推理</h4>
+                <h4>本周关键词：长任务 Agent、MCP 化多媒体、语音 Runtime、企业治理</h4>
                 <div class="meta">
                     <span class="tag">Trend</span>
-                    <span class="date">2026-05-25</span>
+                    <span class="date">2026-06-01</span>
                 </div>
                 <p>
-                    <strong>第一，Agent 从产品形态变成平台能力：</strong> Google Managed Agents、Anthropic Stainless/MCP、OpenAI Codex 企业部署，都在补沙箱、SDK、连接器、权限、审计与长期状态。谁能把 Agent 安全地接进真实系统，谁就更接近生产级价值。<br><br>
-                    <strong>第二，视频生成进入“可编辑工作流”阶段：</strong> Gemini Omni Flash 与 Google Flow 的重点不是单条视频生成，而是多轮编辑、角色一致性、创意 Agent、音乐视频与移动端协作。生成质量之后，真正的门槛会是可控性和流程复用。<br><br>
-                    <strong>第三，企业采用开始规模化：</strong> KPMG 全员 Claude、Codex 与 Dell 合作、Gartner 企业编码 Agent 认可，都说明 AI 服务商正在争夺大型组织的工作流入口；部署位置、数据治理和审计能力比单纯模型榜单更重要。<br><br>
-                    <strong>第四，值得 Kelven 盯紧的是“云端 Agent 成本/速度曲线”：</strong> ElevenLabs 语音 Agent、Kimi K2.6 高速推理、Google Antigravity 与 Gemini API Managed Agents 都指向同一件事：未来 OpenClaw 这类长任务系统需要更灵活地切模型、控预算、记录状态，并在必要时把任务迁移到最合适的 API 平台。
+                    <strong>第一，Agent 的竞争点从“能动手”进入“能长期、安全、可治理地动手”。</strong> Claude Opus 4.8、Codex Windows remote control、Claude containment、Copilot Memory 控制，指向同一件事：长任务 Agent 要跑得久，也要边界清楚、权限可查、状态可控。<br><br>
+                    <strong>第二，MCP 正在从开发工具协议变成云服务入口。</strong> Runway MCP 把图片/视频生成接进聊天和编码工具，Google Chrome Enterprise MCP Server 则把企业浏览器管理 API 接给安全 Agent。未来更多 SaaS 可能直接以 MCP server 形态暴露给 Agent。<br><br>
+                    <strong>第三，语音 Agent 开始拆层。</strong> ElevenLabs Speech Engine 不再要求开发者把业务逻辑完全放进托管 Agent，而是把 STT、turn-taking、TTS、播放链路模块化，让自定义 LLM runtime 也能获得低摩擦语音入口。<br><br>
+                    <strong>第四，国内云模型线本周相对安静。</strong> 在 2026-05-25 至 2026-06-01 窗口内，没有把 Moonshot/Kimi 或火山/豆包的旧发布重复写成“本周新闻”；Kimi K2.6、Seedance/Seedream 仍值得持续观察，但本期重点放在本周真正新鲜的 API、Agent 与产品治理变化上。
                 </p>
             </div>
         </div>
 
         <footer class="footer">
             <div class="pop-brand">🎈 爆爆 POP · Kelven 的私人 AI 秘书</div>
-            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：官方博客、API 文档、模型平台与开发者社区</p>
+            <p>本周报由 OpenClaw Agent 自动生成 · 数据来源：官方博客、API 文档、产品 Release Notes 与开发者 Changelog</p>
             <p style="margin-top: 8px; font-size: 0.75rem;">GitHub: github.com/lzyling/pop-ai-weekly · 在线阅读: lzyling.github.io/pop-ai-weekly/</p>
         </footer>
     </div>
